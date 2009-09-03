@@ -1942,7 +1942,8 @@ real observational tool. There are also currently plans being made for third
 generation detectors, which could provide the premier gravitational wave
 observatories for the first half of the century. A brief summary of the planned
 upgrades to current and future detectors is given below. An overview can be also
-be found here \cite{Whitcomb:2008}.
+be found here \cite{Whitcomb:2008}. Some of the technologies for these upgrades
+are discussed in \S\ref{section:interferometry}.
 
 \subsubsection{Enhanced LIGO, Virgo+ and GEO-HF}\label{subsection:EnLIGO}
 Following the end of the S5 and VSR1 runs for LIGO, GEO 600 and Virgo there
@@ -1950,7 +1951,7 @@ have been commissioning activities to improve the performance of all the
 detectors. As the LIGO detectors reached their design sensitivities across a
 broad frequency range during S5 plans were made to try and increase sensitivity
 by a factor of two for the following run. This project, called Enhanced LIGO 
-\cite{EnhancedLIGO}, is underway and data taking for the sixth science run (S6) 
+\cite{EnhancedLIGO}, is under way and data taking for the sixth science run (S6) 
 started in July 2009. Enhanced LIGO involves the direct implementation of technologies
 and techniques designed for the later upgrade to Advanced LIGO (AdvLIGO - see
 below) such as, most notably, higher powered lasers, a DC readout scheme, the
@@ -1961,7 +1962,7 @@ around 3 times the current power. The upgrade to higher power requires that
 several of the optical components need to be replaced. These upgrades were only
 carried out on the 4km H1 and L1 detectors due to the H2 detector being
 left in Astrowatch mode during the commissioning period. So far the upgrade have
-not been able to produce as large an increase in senstivity as hoped over a 
+not been able to produce as large an increase in sensitivity as hoped over a 
 broad band, but further commissioning will take place during the run to improve
 performance. It is expected that Enhanced LIGO will carry out an approximately 
 two year science run from July 2009 before being taken off-line for the full 
@@ -1976,7 +1977,7 @@ on the mirrors, the control electronics, mode cleaners and injection optics
 Enhanced LIGO for Virgo Science Run 2 (VSR2). Again sensitivities of Virgo+ are
 not a good as hoped, but may improve over the run.
 
-Plans for the GEO 600 detector are to continue to use it as a test-bed for more
+Plans for the GEO~600 detector are to continue to use it as a test-bed for more
 novel interferometric techniques whilst focusing on increasing in sensitivity
 at higher frequencies (greater than a few hundred Hz). This project is called
 GEO-HF \cite{Willke:2006}. The upgrading towards GEO-HF is expected to take
@@ -1985,7 +1986,7 @@ main upgrades expected to be completed during 2009 are to change the read-out
 scheme from an RF read-out to a DC read-out system \cite{Hild:2008}, install an
 output mode cleaner, place the read-out system in vacuum, injecting squeezed
 light \cite{Vahlbruch:2008, Chelkowski:2007} into the output port, and finally
-increasing the input laser power to 35 W.
+increasing the input laser power to 35~W.
 
 \subsubsection{Advanced LIGO, Advanced Virgo and LCGT}
 Advanced LIGO (AdvLIGO) \cite{AdvLIGO, AdvLIGOweb} and Advanced Virgo (AdvVirgo)
@@ -2113,12 +2114,18 @@ NASAweb, ESAweb}) -- is a joint ESA/NASA mission to observe these low frequency
 gravitational waves, with a sensitive frequency band between 0.1\,mHz and 
 0.1\,Hz. It consists of an array of three drag free spacecraft at the vertices 
 of an equilateral triangle of length of side $5 \times 10^6$~km. This cluster is placed in an 
-Earth-like orbit at a distance of 1~AU from the Sun, and 20 degrees behind the 
-Earth. Proof masses inside the spacecraft (two in each spacecraft) form the end 
-points of three separate but not independent interferometers. Each single 
-two-arm Michelson type interferometer is formed from a vertex (actually 
-consisting of the proof masses in a `central' spacecraft), and the masses in two
-remote spacecraft as indicated in Fig.~\ref{figure:LISA}.
+Earth-like orbit at a distance of 1~AU from the Sun, $20^{\circ}$ behind the 
+Earth and inclined at $60^{\circ}$ to the ecliptic. A current review of LISA 
+technologies, with expanded discussion of, and references for, topics touched 
+upon below, can be found in \cite{Jennrich:2009}. Here we will focus upon a 
+couple of topics regarding the interferometry needed to give the required 
+sensitivity.
+
+Proof masses inside the spacecraft (two in each spacecraft) form the end points 
+of three separate, but not independent, interferometers. Each single two-arm Michelson type interferometer 
+is formed from a vertex (actually consisting of the proof masses in a `central' 
+spacecraft), and the masses in two remote spacecraft as indicated in 
+Fig.~\ref{figure:LISA}.
 
 \epubtkImage{}{%
 \begin{figure}[hptb]
@@ -2135,80 +2142,88 @@ solar radiation pressure). Drag free control servos enable the spacecraft to
 follow the proof masses to a high level of precision, the drag compensation
 being effected using proportional electric thrusters. Illumination of the
 interferometers is by highly stabilised laser light from Nd:YAG lasers at a
-wavelength of 1.064 microns, laser powers of $\simeq$~1~W being available from
+wavelength of 1.064 microns, laser powers of $\simeq$2~W being available from
 monolithic, non planar ring oscillators which are diode pumped. For each
 interferometer -- consisting of a central spacecraft and two distant spacecraft
 -- two lasers in the central spacecraft, each pointing along one of the arms,
 are phase locked together so they effectively behave as a single laser. For LISA
-to achieve its design performance, adjacent arm lengths have to be sensed to an
-accuracy of  better than $30 {\rm \ pm}(\rm Hz)^{-1/2}$. Because of the long
+to achieve its design performance strain sensitivity of around 
+$10^{-20}\,{\rm Hz}^{-1/2}$, adjacent arm lengths have to be sensed to an
+accuracy of about $10 {\rm \ pm}(\rm Hz)^{-1/2}$. Because of the long
 distances involved and the spatial extent of the laser beams (the diffraction
 limited laser spot size, after travelling $5\times10^{6}$~km, is approximately
 50~km in diameter), the low photon fluxes make it impossible to use standard
 mirrors for reflection; thus active mirrors with phase locked laser transponders
 on the spacecraft will be implemented. Telescope mirrors will be used to reduce
 diffraction losses on transmission of the beam and to increase the collecting
-area for reception of the beam.  Given that the available laser power in each
-arm is of the order of 1~W, and that arguments similar to those already
-discussed for ground based detectors can be made, photoelectron shot noise
-considerations suggest that the diameters of the transmitting and receiving
-mirrors on the space craft need to be $\simeq$~30~cm.  
+area for reception of the beam. The laser power in each arm is of the order of 
+2~W, and using arguments similar to those already discussed for ground based 
+detectors, with regard to photoelectron shot noise considerations, mean that 
+the diameters of the transmitting and receiving telescope mirrors on the 
+spacecraft will be 40~cm.  
 
 Further, just as in the case of the ground based detectors, the presence of
 laser frequency noise is a limiting factor. It leads to an error in the
 measurement of each arm length. If the arms are equal these errors cancel out
 but if they are unequal, the comparison of lengths used to search for
-gravitational waves may be dominated by frequency noise. For the $5 \times 10^9$
-m long arms of LISA, a difference in arm length of $10^8$~m is likely. Then for
+gravitational waves may be dominated by frequency noise. For the 
+$5\times10^9$~m long arms of LISA, a difference in arm length of $10^8$~m is likely. Then for
 a relative arm length measurement of $2 \times 10^{-12} {\rm \ m}(\rm
 Hz)^{-1/2}$ (the error budget level allowed in the LISA design for this noise
 source), Equation~(\ref{equation:frequnoise}) suggests that a laser stability of
 $\simeq 6 \times 10^{-6} {\rm \ Hz}(\rm Hz)^{-1/2}$ is required, a level much
-better than can be achieved from the laser on its own.  Thus frequency
-stabilisation has to be provided. The primary method of stabilisation is to lock
-the frequency of one laser in the system on to a Fabry-Perot cavity mounted on
-one of the craft -- see for example~\cite{McNamara} -- and then to effectively
+better than can be achieved from the laser on its own. Thus frequency
+stabilisation has to be provided. The first method of stabilisation is to lock
+the frequency of one laser in the system on to a local frequency reference, e.g.\ a Fabry-Perot cavity mounted on
+one of the craft (see for example~\cite{McNamara}), and then to effectively
 transfer this stability to other lasers in the system by phase locking
 techniques. With the temperature fluctuations inside each craft limited in the
 region of $10^{-3}$~Hz to approximately $10^{-6} {\rm K}(\rm Hz)^{-1/2}$ by
 three stages of thermal insulation, a cavity formed of material of low expansion
 coefficient such as ULE allows a stability level of approximately $30 {\rm \
-Hz}(\rm Hz)^{-1/2}$. This level of laser frequency noise is clearly much worse
-than the required $6 \times 10^{-6}  {\rm \ Hz}(\rm Hz)^{-1/2}$ and a further
-correction scheme is needed. Further frequency correction is provided by
-comparing the phase of the light returning in each arm with the phase of the
-transmitted light. The phase difference, measured over the time of flight in the
-arm, allows an estimate of laser frequency noise to be made~\cite{Shoemaker,
-Faller2, Giampieri}. For the arm of length $L$
-%
-\begin{equation}
-  \delta \phi = (4 \pi /c) L \delta \nu,
-  \label{equation:fnoiselisa}
-\end{equation}
-%
-and thus if the spectral density $\delta \phi$ is measured, the spectral density
-$\delta \nu$ can be estimated.  This estimate can then be used to correct the
-signal obtained by subtracting the phase difference measurements in two adjacent
-arms, allowing the search for gravitational waves to be carried out.  This
-correction is made easier if each arm length is known to a few km and the
-difference in arm length is known to a few tens of metres.  These quantities
-should be available from radar and optical ranging measurements.  If however
-they are not well enough known then they can be found by searching through a
-range of possible values to minimise the effect of frequency noise on the
-`gravitational wave' signal. A current review of LISA technologies can be found 
-in \cite{Jennrich:2009}.
+Hz}(\rm Hz)^{-1/2}$ (again at 3\,mHz). This level of laser frequency noise is clearly much worse
+than the required $1.2 \times 10^{-6}  {\rm \ Hz}(\rm Hz)^{-1/2}$ (at 3\,mHz) 
+and a further correction scheme is needed. A second possible stage of frequency
+stabilisation is arm-locking \cite{Sheard:2003}, which relies on the fact that 
+by design the fractional stability of the LISA arms is of order $\delta{}l/L 
+\sim 10^{-21}\,{\rm Hz}^{-1/2}$ to derive an error signal from the phase difference
+between the local laser and the received light. As the received light is phase 
+locked with the local laser from the craft that sent it it caries a replicate of
+the frequency noise of the local laser noise delayed by one round trip time 
+$\tau=33$\,s. From this noise can be suppressed at frequencies smaller than the 
+round trip frequency $f= 1/\tau = 30$\,mHz. This scheme requires no additional 
+hardware and can be completely implemented in software, but it will still leave 
+frequency noise that is several orders of magnitude above required levels. 
+A third stage frequency stabilisation scheme, which is a post-processing step, 
+is time-delay interferometry (TDI). This makes use of the fact that, because the 
+beams coming down each are not combined, the phase of each beam can be measured 
+and recorded. Therefore correlations in the frequency noise can be calculated 
+and subtracted by algebraically combining phase measurements from different 
+craft delayed by the multiples of the distance between the spacecraft. The 
+accuracy of this is set by the phase measurement accuracy, which allows 
+frequency noise subtraction to below the required level. A simple TDI scheme, 
+for a much simplified constellation, was first based in the frequency domain 
+\cite{Giampieri}, but due to complexities in taking into account changing arm 
+lengths and more complex interferometric scheme subsequent implementations have 
+been in the time domain. A mathematical overview of the TDI scheme, along with 
+moving spacecraft and unequal arm lengths, can be found in \cite{Tinto:2005}. 
 
 There are many other issues associated with the laser interferometry for LISA
 which are not dealt with here and the interested reader should refer
-to~\cite{Houghetal} for a discussion of some of these.
+to~\cite{Houghetal, Jennrich:2009} for a discussion of some of these. There are 
+also many issues regarding keeping the test mass drag free, such as the 
+capacitive sensing of the mass position, the $\mu$Newton thrusters for 
+positioning the spacecraft around the mass, and ways of de-charging the test 
+mass, which are again discussing in \cite{Jennrich:2009} and references therein.
 
 For LISA the baseline mission design was finalised in 2005. An industrial 
 contract was awarded to Astrium GmbH for the LISA Mission Formulation study 
 \cite{Johann:2008}. Within the current ESA Science Programme LISA is in the 
 Cosmic Vision 2015-2025 Programme, with an earliest possible launch window of 
-2018. In 2007 the National Research Council report on the NASA Beyond Einstein 
-Program (soon to become the Physics of the Cosmos Program) gave LISA the highest
-scientific ranking. Recent technical reports for LISA can be found at 
+2018, although a launch after 2020 seems likely. In 2007 the National Research 
+Council report on the NASA Beyond Einstein Program (soon to become the Physics 
+of the Cosmos Program) gave LISA the highest scientific ranking. Recent 
+technical reports for LISA can be found at 
 \cite{LISATechReports}.
 
 Several of the key technologies for LISA are being testing on the LISA 
