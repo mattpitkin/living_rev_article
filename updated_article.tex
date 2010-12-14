@@ -1258,17 +1258,16 @@ the proceedings of the Amaldi meetings, GWDAW (Gravitational Wave Data Analysis
 Workshops), and GWADW (Gravitational Wave Advanced Detectors Workshops) -- see 
 \cite{confs} for a list of past conferences.
 
-For the first and second generation of detector much effort has gone into estimating
-the expected number of sources that might be observable. In particular, for what are
+For the first and second generations of detector much effort has gone into estimating
+the expected number of sources that might be observable given their design
+sensitivities. In particular, for what are
 though to be the strongest sources: the coalescence of binary neutron stars or black 
 holes (see \S\ref{sec:cbc} for current rates as constrained by observations). These 
 estimates, based on observation and simulation, are summarised in \cite{Abadie:2010e}
 and suggest initial detectors might expect to see 0.02, 0.004 and 0.007 events per 
 year for binary neutron star, black hole-neutron star, and binary black hole systems
 respectively (although there is a wide range covering orders of magnitude in these
-estimates). Second generation detectors (see \S\ref{subsection:aligo}), which can observe approximately 
-1000 time more volume than the initial detectors might expect to see 40, 10, and 20
-per year for the same sources\footnote{In terms of event rates the current best 
+estimates)\footnote{In terms of event rates the current best 
 estimates for binary neutron
 star merger rates, based on the known population of binary neutron star systems,
 gives a 95\% confidence interval between 1--1000$\times10^{-6}$ per year per 
@@ -1288,7 +1287,10 @@ respectively \cite{Abadie:2010e, OShaughnessy:2005, OShaughnessy:2008, Abbott:20
 As an example of how to convert from rates to event numbers, cumulative blue light 
 luminosities with respect to distance from the Earth in
 Mpcs, and the horizon distances of the LIGO detectors from S2 through to S4,
-can be seen in Figure 3 of \cite{Abbott:2008a}.}. With such rates a great deal of astrophysics could be
+can be seen in Figure 3 of \cite{Abbott:2008a}.}. Second generation detectors 
+(see \S\ref{subsection:aligo}), which can observe approximately 
+1000 time more volume than the initial detectors might expect to see 40, 10, and 20
+per year for the same sources. With such rates a great deal of astrophysics could be
 possible (see \cite{Sathyaprakash:2009} for examples).
 
 \subsection{Science Runs}\label{subsection:runs}
@@ -2118,12 +2120,18 @@ as described in \cite{Allen:1999}.
 
 In S1 the most sensitive detector pair for this correlation was H2-L1 (the
 H1-H2 pair are significantly hampered by local environmental correlations) and
-they gave a 90\% confidence upper limit of $\Omega_{\rm gw} < 44\pm9$ within
+they gave a 90\% confidence upper limit of $\Omega_{\rm gw} < 
+44\pm9$\footnote{The result published in \cite{Abbott:2004e} give an upper limit 
+value of $\Omega_{\rm gw} < 23$, but this is for a Hubble constant of 
+100\,km\,s$^{-1}$\,Mpc$^{-1}$, so for consistency with later results it has been
+converted to use a Hubble constant of 72\,km\,s$^{-1}$\,Mpc$^{-1}$ as in 
+\cite{Abbott:2005h}.} within
 the 40-314~Hz band, where the upper limit is in units of closure density of the
 universe and for a Hubble constant in units of 72\,km\,s$^{-1}$\,Mpc$^{-1}$
 \cite{Abbott:2004e}. This limit was several times better than previous direct
-detector limits, but still well above the concordance cosmology value of the
-{\it total} energy density of the universe of $\Omega_0\approx1$.
+detector limits, but still well above the concordance $\Lambda$CDM cosmology 
+value of the {\it total} energy density of the universe of $\Omega_0\approx1$ (see 
+e.g.~\cite{Jarosik:2010}).
 
 No published stochastic background search was performed on S2 data, but S3 data
 was searched and gave an upper limit that improved on the S1 result by a factor
@@ -2132,7 +2140,7 @@ which 218 hours of data were used \cite{Abbott:2005h}. Upper limits were set for
 three different power law spectra of the gravitational wave background. For a
 flat spectra, as predicted by some inflationary and cosmic string models, a 90\%
 confidence upper limit of $\Omega_{\rm gw}(f) = 8.4\times10^{-4}$ in the
-69--156~Hz range was set (for a Hubble constant of
+69--156~Hz range was set (again for a Hubble constant of
 72\,km\,s$^{-1}$\,Mpc$^{-1}$). This is still about 60 times greater than a
 conservative bound on primordial gravitational waves set by big bang
 nucleosynthesis (BBN). For a quadratic power law, as predicted for a
@@ -2150,7 +2158,8 @@ still several times higher than BBN limits. About 20 days of H1 and L1 S4 data
 was also used to produce an upper limit map on the gravitational wave background
 across the sky as would be appropriate if there was an anisotropic background
 dominated by distinct sources \cite{Abbott:2007f}. This search covered a
-frequency range between 50--1800 Hz and had spectral {\it power} limits ranging
+frequency range between 50--1800 Hz and had spectral {\it power} limits (which
+come from the square of the amplitude $h$) ranging
 from $1.2\times10^{-48} {\rm Hz}^{-1} (100 {\rm Hz}/f)^3$ and $1.2\times10^{-47}
 {\rm Hz}^{-1} (100 {\rm Hz}/f)^3$ for an $f^{-3}$ source power spectrum, and
 limits of $8.5\times10^{-49} {\rm Hz}^{-1}$ and $6.1\times10^{-48} {\rm
@@ -2209,8 +2218,9 @@ technologies from the GEO~600 interferometer such as the use of a signal
 recycling mirror at the output port and monolithic silica suspensions for the
 test masses, rather than the current steel wire slings. Larger test masses will
 be used with an increase from 11 to 40 kg, although the masses will still be
-made from fused silica. The mirror coating is likely to consist of a
-multi-layer silica-tantala substrate. The seismic isolation systems will be
+made from fused silica. The mirror coating is likely to consist of multiple 
+alternating layers of silica and tantala, with the tantala layers doped with 
+titania to reduce the coating thermal noise \cite{Agresti:2006}. The seismic isolation systems will be
 replaced with improved versions offering a seismic cut-off frequency of $\sim10$
 Hz as opposed to the current cut-off of $\sim40$ Hz. As stated for Enhanced LIGO 
 (in \S\ref{sec:ligoruns}) the laser power will be greater than for initial 
@@ -2224,27 +2234,42 @@ from the above URL], also find AdvVirgo curve}).
 AdvVirgo will apply similar upgrades to those for aLIGO and over a similar
 timescale (for details see \cite{AdVwhitepaper} and \cite{AdVdesign}). Plans are
 to add a signal recycling mirror, monolithic suspensions, increased laser power
-to $\sim200$~W, non-Gaussian beams, and improved coatings. The seismic isolation
+to $\sim200$~W, improved coatings a potentially use non-Gaussian beams (see 
+e.g.~\cite{Freise:2010}), although this option is unlikely. The seismic isolation
 system will not be changed. Virgo will shut down to begin these upgrades in July
 2011.
 
 The Large-scale Cryogenic Gravitational-Wave Telescope (LCGT)
 \cite{Miyoki:2005, Ohashi:2008} is a planned Japanese detector to be sited
 underground in the Kamioka mine. The LGCT will consist of two co-located
-detectors with 3~km arms and cryogenically cooled sapphire mirrors and sapphire
-suspensions. This detector is planned to have similar sensitivities to aLIGO
+detectors with 3~km arms, using sapphire mirrors and sapphire
+suspensions. Initially it will operate at room temperature, but will later be
+cooled to cryogenic temperatures. This detector is planned to have similar sensitivities to aLIGO
 and AdvVirgo, with a reach for binary coalescences of about 200~Mpc with SNR of
 10. There currently exists a technology demonstrator called the Cryogenic Laser
 Interferometer Observatory (CLIO) \cite{Yamamoto:2008, CLIOweb}, which has a
 100~m baseline and is also sited in the Kamioka mine. This is to demonstrate the
 very stable conditions (i.e.\ low levels of seismic noise) existing in the mine
 and also the cryogenically cooled sapphire mirrors suspended from aluminium
-wires. In experiments with CLIO at room temperature (i.e. 300~K), using Bolfur
-wire suspensions, it has already been used to produce an astrophysics result by
+wires. In experiments with CLIO at room temperature (i.e. 300~K), using a metallic glass 
+called Bolfur for its wire suspensions, it has already been used to produce an astrophysics result by
 looking for gravitational waves from the Vela pulsar \cite{Akutsu:2008}, giving
 an 99.4\% confidence upper limit of $h = 5.3\times10^{-20}$. Tests with the
-cryogenic system activated and using aluminium suspensions allowed it to be cooled to
+cryogenic system activated and using aluminium suspensions allowed two mirrors to be cooled to
 $\sim14$\,K.
+
+Having a network of comparably sensitive detectors spread widely across the globe 
+is vital gain the fullest astrophysical insight into transient sources. Position
+reconstruction for sources relies on triangulating the location based on time-of-flight
+delays observed between detectors. Therefore have long baselines, and different planes,
+between as many detectors as possible gives the best positional reconstruction -- in 
+\cite{Fairhurst:2010} it is shown that for the 2 US aLIGO sites sky localisation will
+be of order 1000 square degrees, whereas this can be brought down to a few square degrees
+with the inclusion of more sites and detectors. 
+Observation with multiple detectors also provide the best way to give confidence that a
+signal is a real gravitational wave rather than the accidental coincidence of 
+background noise. Finally multiple, differently oriented, detectors will increase the
+ability to reconstruct a transient sources waveform and polarisation. 
 
 \subsubsection{Third generation detectors}
 Currently design studies are under way for a third generation gravitational wave
@@ -2259,10 +2284,11 @@ challenges to be faced in attempting to make this a reality and research is
 currently under way into a variety of these issues.
 
 Investigations into the interferometric configuration have already been studied
-(see \cite{Freise:2008, Hild:2008}), with suggestions including a triple
+(see \cite{Freise:2008, Hild:2008, Hild:2010}), with suggestions including a triple
 interferometer system made up from an equilateral triangle, an underground
 location, and potentially a xylophone configuration (two independent detectors
-covering different frequency ranges).
+covering different frequency ranges i.e. ultimately giving six detectors in 
+total, although constructed over a period of years). 
 
 %This level of sensitivity is expected to be improved on when the longer LIGO
 %and Virgo detectors are upgraded. Indeed plans for an upgraded LIGO, LIGO~2,
@@ -2314,7 +2340,7 @@ masses in these craft using laser interferometry.
 The Laser Interferometer Space Antenna (LISA) (see for example~\cite{LISAsymposium,
 NASAweb, ESAweb}) is a planned joint ESA/NASA mission to observe these low frequency
 gravitational waves, with a sensitive frequency band between 0.1\,mHz and
-0.1\,Hz. It will consists of an array of three drag-free spacecraft at the vertices
+0.1\,Hz. It will consist of an array of three drag-free spacecraft at the vertices
 of an equilateral triangle of length of side $5\times10^6$~km, with the cluster 
 placed in an Earth-like orbit at a distance of 1~AU from the Sun,
 $20^{\circ}$ behind the Earth and inclined at $60^{\circ}$ to the ecliptic. A
@@ -2327,9 +2353,7 @@ Proof masses inside the spacecraft (two in each spacecraft) form the end points
 of three separate, but not independent, interferometers. Each single two-arm 
 Michelson type interferometer is formed from a vertex (actually consisting of
 the proof masses in a `central' spacecraft), and the masses in two remote
-spacecraft as indicated in Fig.~\ref{figure:LISA}. For each interferometer 
-two lasers in the central spacecraft, each pointing along one of the arms,
-are phase locked together so they effectively behave as a single laser. The 
+spacecraft as indicated in Fig.~\ref{figure:LISA}. The 
 three-interferometer configuration provides redundancy against component
 failure, gives better detection probability, and allows the determination of the
 polarisation of the incoming radiation. The spacecraft which house the optical benches
@@ -2390,7 +2414,7 @@ by design the fractional stability of the LISA arms is of order $\delta{}l/L
 difference between the local laser and the received light. As the received light
 is phase locked with the local laser from the craft that sent it it caries a
 replica of the frequency noise of the local laser noise delayed by one round
-trip time $\tau=33$\,s. From this noise can be suppressed at frequencies smaller
+trip time $\tau=33$\,s. Using this fact this noise can be suppressed at frequencies smaller
 than the round trip frequency $f= 1/\tau = 30$\,mHz. This scheme requires no
 additional hardware and can be completely implemented in software, but it will
 still leave frequency noise that is several orders of magnitude above required
@@ -2399,7 +2423,7 @@ step, is time-delay interferometry (TDI). This makes use of the fact that,
 because the beams coming down each arm are not combined, the phase of each beam can
 be measured and recorded. Therefore correlations in the frequency noise can be
 calculated and subtracted by algebraically combining phase measurements from
-different craft delayed by the multiples of the distance between the spacecraft.
+different craft delayed by the multiples of the time delay between the spacecraft.
 The accuracy of this is set by the phase measurement accuracy, which allows
 frequency noise subtraction to below the required level. A simple TDI scheme,
 for a much simplified constellation, was first based in the frequency domain
@@ -2435,7 +2459,7 @@ relevant thruster. Thrust noise as a function of frequency is required to be
 smaller than $0.1\,\mu{\rm N}\,{\rm
 Hz}^{-1/2}\times\sqrt{1+\left(\frac{10\,{\rm m}\,{\rm Hz}}{f}\right)^4}$. Two
 types of system, both of which meet the requirements, will be tested on LISA
-Pathfinder: the US colloid mirco-Newton thruster (CMNT); and the European field
+Pathfinder: the US colloid micro-Newton thruster (CMNT); and the European field
 emission electric propulsion system (FEEP). The CMNT uses small drops of a
 colloid, which it ionises through field emission, accelerates and ejects from
 the thruster. Two designs of FEEP currently exist, one using indium and the
@@ -2453,10 +2477,11 @@ Johann:2008} for a discussion of some of these.
 For LISA the baseline mission design was finalised in 2005. An industrial
 contract was awarded to Astrium GmbH for the LISA Mission Formulation study
 \cite{Johann:2008}. Within the current ESA Science Programme LISA is in the
-Cosmic Vision 2015-2025 Programme, with an earliest possible launch window of
-2018, although a launch after 2020 seems likely. In 2007 the National Research
+Cosmic Vision 2015-2025 Programme, and launch after 2020 seems likely. 
+In 2007 the National Research
 Council report on the NASA Beyond Einstein Program (soon to become the Physics
-of the Cosmos Program) gave LISA the highest scientific ranking. Recent
+of the Cosmos Program) gave LISA the highest scientific ranking, and it has
+been rated very highly in the Astro2010 decadal survey \cite{astro2010}. Recent
 technical reports for LISA can be found at \cite{LISATechReports}.
 
 Several of the key technologies for LISA are being testing on the LISA
@@ -2473,10 +2498,10 @@ truly measuring the relative accelerations of two point particles, but instead
 a more complex systems of multiple Doppler links and extended masses. It is
 designed to test the accuracy of these to within an order of magnitude of that required by
 the full LISA. Other aspects of the mission that will be tested are the
-de-charging of the test masses, the caging and release of the masses following
+discharging of the test masses, the caging and release of the masses following
 launch and the $\mu$Newton thrusters. As much as possible the nominal LISA
-systems and hardware is being used. LISA Pathfinder is currently scheduled for
-launch in mid 2011, after which it will orbit the L1 point, with a 180 day
+systems and hardware are being used. LISA Pathfinder is currently scheduled for
+launch in mid 2013, after which it will orbit the L1 point, with a 180 day
 mission plan.
 
 \subsection{Other missions}
