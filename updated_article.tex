@@ -6,6 +6,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{latexsym}
+\usepackage{color}
 
 \newcommand{\Msun}{\,M$_{\odot}$}
 
@@ -18,28 +19,32 @@
 
 \author{%
 \epubtkAuthorData{Matthew Pitkin}
-        {Department of Physics and Astronomy \\
+        {SUPA \\
+        School of Physics and Astronomy \\
         University of Glasgow \\
         Glasgow G12 8QQ, U.K.}
         {matthew.pitkin@glasgow.ac.uk}
 	{}
 \and
 \epubtkAuthorData{Stuart Reid}
-        {Department of Physics and Astronomy \\
+        {SUPA \\
+        School of Physics and Astronomy \\
         University of Glasgow \\
         Glasgow G12 8QQ, U.K.}
         {stuart.reid.2@glasgow.ac.uk}
     {}
 \and
 \epubtkAuthorData{Sheila Rowan}
-        {Department of Physics and Astronomy \\
+        {SUPA \\
+        School of Physics and Astronomy \\
         University of Glasgow \\
         Glasgow G12 8QQ, U.K.}
         {sheila.rowan@glasgow.ac.uk}
 	{}
 \and
 \epubtkAuthorData{Jim Hough}
-        {Department of Physics and Astronomy \\
+        {SUPA \\
+        School of Physics and Astronomy \\
         University of Glasgow \\
         Glasgow G12 8QQ, U.K.}
         {james.hough@glasgow.ac.uk}
@@ -982,7 +987,7 @@ noise must be satisfied.
 \subsubsection{Laser design}
 \label{subsubsection:laserdesign}
 
->From Equation~(\ref{equation:shot1}) it can be seen that the
+From Equation~(\ref{equation:shot1}) it can be seen that the
 photon-noise limited sensitivity of an interferometer is proportional
 to $P^{-1/2}$ where $P$ is the laser power incident on the
 interferometer, and $\lambda^{1/2}$ where $\lambda$ is the wavelength
@@ -1119,7 +1124,7 @@ reliability, but are likely to become available in the future.
 Prior to the start of the 21$^{\rm st}$ Century there existed several prototype
 laser interferometric detectors, constructed by various research groups around
 the world -- at the Max-Planck-Instit\"ut f\"ur Quantenoptik in
-Garching~\cite{Shoemaker}, at the University of Glasgow~\cite{Robertson}, at
+Garching~\cite{Shoemaker}, at the University of Glasgow~\cite{Robertson}, at the
 California Institute of Technology~\cite{Abramovici}, at the Massachusetts
 Institute of Technology~\cite{Fritschel2}, at the Institute of Space and
 Astronautical Science in Tokyo~\cite{Mizuno} and at the astronomical observatory
@@ -1137,26 +1142,29 @@ Fig.~\ref{figure:Glasgowprototype}.
 \end{figure}}
 
 The sensitivities of some of these detectors reached a level -- better than
-$10^{-18}$ for millisecond pulses -- such that the technology could be
+$10^{-18}$ for millisecond bursts -- such that the technology could be
 considered sufficiently mature to propose the construction of detectors of much
 longer baseline that would be capable of reaching the performance required to
 have a real possibility of detecting gravitational waves.  An international
 network of such long baseline gravitational wave detectors has now been
 constructed and commissioned, and science quality data from these has been
-produced and analysed since 2002 (see \S\ref{subsection:results} and
-\S\ref{subsection:runs} for a review of recent science data runs and results.)
+produced and analysed since 2002 (see \S\ref{subsection:runs} and
+\S\ref{subsection:results} for a review of recent science data runs and results).
 
 The American LIGO project \cite{LIGOweb} comprises two detector
 systems with arms of 4~km length, one in Hanford, Washington State, and one in
-Livingston, Louisiana (also known as the LHO 4k and LLO 4k, or H1 and L1
-respectively.) One half length, 2~km, interferometer was also contained inside
-the same evacuated enclosure at Hanford (also known as the LHO 2k, or H2),
-although this has now been decommissioned. The
+Livingston, Louisiana (also known as the LIGO Hanford Observatory 4k [LHO 4k] 
+and LIGO Livingston Observatory 4k [LLO 4k], or H1 and L1
+respectively). One half length, 2~km, interferometer was also contained inside
+the same evacuated enclosure at Hanford (also known as the LHO 2k, or H2). The
 design goal of the 4~km interferometers was to have a peak strain sensitivity
 between 100--200~Hz of $\sim 3\times10^{-23}\,{\rm Hz}^{-1/2}$ \cite{LIGOSRD}
-(see Fig.~\ref{figure:LIGOstrains}.) A birds-eye view of the Hanford site
+(see Fig.~\ref{figure:LIGOstrains}), which was achieved during the fifth 
+science run (\S\ref{subsection:runs}). A birds-eye view of the Hanford site
 showing the central building and the directions of the two arms is shown in
-Fig.~\ref{figure:LIGOsite}.
+Fig.~\ref{figure:LIGOsite}. In October 2010 the LIGO detectors shut down and
+decommissioning began in preparation for the installation of a more sensitive 
+instrument known as Advanced LIGO (see \S\ref{subsection:aligo}).
 
 \epubtkImage{}{%
 \begin{figure}[hptb]
@@ -1166,12 +1174,12 @@ Fig.~\ref{figure:LIGOsite}.
   \label{figure:LIGOsite}
 \end{figure}}
 
-The French/Italian Virgo project \cite{Virgoweb} comprises a single of 3~km arm
+The French/Italian Virgo project \cite{Virgoweb} comprises a single 3~km arm
 length detector at Cascina near Pisa. As mentioned earlier it is designed to
 have better performance down to 10~Hz than the other detectors.
 
 The TAMA~300 detector \cite{TAMAweb}, which has arms of length 300~m, at the
-Tokyo Astronomical Observatory was the first of the beyond-prototype detectors
+Tokyo Astronomical Observatory was the first of the ``beyond-prototype'' detectors
 to become operational. This detector is built mainly underground and partly has
 the aim of adding to the gravitational wave detector network for sensitivity to
 events within the local group of galaxies, but is primarily a test bed for
@@ -1184,9 +1192,10 @@ arms of the detectors and use standard wire sling techniques for suspending the
 test masses. The German/British detector, GEO~600 \cite{GEOweb}, built near
 Hannover, Germany, is somewhat different. It makes use of a four pass delay line
 system with advanced optical signal enhancement techniques, utilises very low
-loss fused silica suspensions for the test masses, and was designed to have a
+loss fused silica suspensions for the test masses, and despite its smaller size 
+was designed to have a
 sensitivity at frequencies above a few hundred Hz comparable to the first phases
-of Virgo and LIGO when they are in initial operation. It uses both power
+of Virgo and LIGO during their initial operation. It uses both power
 recycling and tunable signal recycling, often referred to together as dual
 recycling.
 
@@ -1195,41 +1204,104 @@ analyses are required. In the summer of 2001 the LIGO and GEO~600 teams signed a
 Memorandum of Understanding (MoU), under the auspices of the LIGO Scientific
 Collaboration (LSC) \cite{LSCweb}, allowing complete data sharing between the
 two groups. Part of this agreement has been to ensure that both the LIGO and
-GEO~600 have taken data in coincidence (see below.) Coincident data taking,
+GEO~600 have taken data in coincidence (see below). Coincident data taking,
 and joint analysis, has also occurred between the TAMA~300 project and the LSC
-detectors. The Virgo collaboration have also signed a MoU with the LSC, which
+detectors. The Virgo collaboration also signed a MoU with the LSC, which 
 has allowed data sharing since May 2006.
 
-The operation and commissioning of these detectors in a frequently evolving
-process, and the current state of this review only developments until mid-2009.
+The operation and commissioning of these detectors is a continually evolving 
+process, and the current state of this review only covers developments until late-2010.
 For the most up-to-date information on detectors readers are advised to consult
 the proceedings of the Amaldi meetings, GWDAW (Gravitational Wave Data Analysis
-Workshops), GWADW (Gravitational Wave Advanced Detectors Workshops).
+Workshops), and GWADW (Gravitational Wave Advanced Detectors Workshops) -- see 
+\cite{confs} for a list of past conferences.
+
+For the first and second generations of detector much effort has gone into estimating
+the expected number of sources that might be observable given their design
+sensitivities. In particular, for what are
+though to be the strongest sources: the coalescence of binary neutron stars or black 
+holes (see \S\ref{sec:cbc} for current rates as constrained by observations). These 
+estimates, based on observation and simulation, are summarised in \cite{Abadie:2010e}
+and suggest initial detectors might expect to see 0.02, 0.004 and 0.007 events per 
+year for binary neutron star, black hole-neutron star, and binary black hole systems
+respectively (although there is a wide range covering orders of magnitude in these
+estimates)\footnote{In terms of event rates the current best 
+estimates for binary neutron
+star merger rates, based on the known population of binary neutron star systems,
+gives a 95\% confidence interval between 1--1000$\times10^{-6}$ per year per 
+Milky Way Equivalent Galaxy (MWEG), where MWEG is equivalent to a volume that contains a blue
+light luminosity with $L = 9\times10^9L_{\odot}$ (MWEG was used in
+the S1 and S2 LIGO search, but was then changed to the $L_{10}$ unit, where $L_{10}$ is
+given as $10^{10}$ times the blue light luminosity of the sun, although
+there is only a 10\% difference between the two), \cite{Abadie:2010e, 
+Kalogera:2004a, Kalogera:2004b}, with a peak in the distribution
+at $100\times10^{-6}$ per year per MWEG -- or $\approx 0.02$ per year for initial 
+LIGO at design sensitivity. The expected rate
+of binary black hole systems, or black hole-neutron star systems is far harder
+to infer as none have been observed, but estimates can be made on the population
+for a wide variety of models and give a 95\% confidence range of
+0.05--100$\times10^{-6}$ per year per MWEG and 0.01--30$\times10^{-6}$ per year per MWEG
+respectively \cite{Abadie:2010e, OShaughnessy:2005, OShaughnessy:2008, Abbott:2008a}.
+As an example of how to convert from rates to event numbers, cumulative blue light 
+luminosities with respect to distance from the Earth in
+Mpcs, and the horizon distances of the LIGO detectors from S2 through to S4,
+can be seen in Figure 3 of \cite{Abbott:2008a}.}. Second generation detectors 
+(see \S\ref{subsection:aligo}), which can observe approximately 
+1000 time more volume than the initial detectors might expect to see 40, 10, and 20
+per year for the same sources. With such rates a great deal of astrophysics could be
+possible (see \cite{Sathyaprakash:2009} for examples).
 
 \subsection{Science Runs}\label{subsection:runs}
-The first interferometric detector to start regular data taking with sufficient
-sensitivity and stability to detect gravitational waves from the the galactic
-centre was TAMA~300 \cite{Ando:2001}. Over the period between August 1999 to
-January 2004 TAMA had nine data taking periods (denominated DT1--9) over which
-time its typical strain noise sensitivity, in its most sensitive frequency band
-improved from $\sim3\times10^{-19}\,{\rm Hz}^{-1/2}$ to
-$\sim1.5\times10^{-21}\,{\rm Hz}^{-1/2}$ \cite{Akutsu:2006}. A timeline of
-science runs for TAMA~300, and the other interferometric detectors, can be
-seen in Fig.~\ref{figure:runtimes}. TAMA~300 operated in coincidence with the
-LIGO and GEO~600 detectors for two of the science data taking periods.
+Over the last decade the commissioning and improvement of the various gravitational 
+wave detectors has been suspended at various stages to take data for
+astrophysical analysis. These have been times when it was considered that the 
+detectors were sensitive and stable enough (or had made sufficient improvements
+over earlier states) to make astrophysical searches worthwhile. Within the LSC 
+these have been called the {\it Science} (S) runs, for Virgo they have been the 
+{\it Virgo Science Runs} (VSR), and for TAMA~300 they have been the {\it Data 
+Taking} (DT) periods. A time-line of science runs for the various interferometric 
+detectors, can be seen in Fig.~\ref{figure:runtimes}.
 
 \epubtkImage{}{%
 \begin{figure}[hptb]
   \centerline{\includegraphics[scale=0.45]{runtimes}}
-  \caption{\it A timeline of the science runs of the first generation
-interferometric gravitational wave detectors, from their first lock to 2008.}
+  \caption{\it A time-line of the science runs of the first generation
+interferometric gravitational wave detectors, from their first lock to 
+mid-2011.}
   \label{figure:runtimes}
 \end{figure}}
 
-\subsubsection{LIGO}
-The first LIGO detector to achieve lock, i.e.\ with the interferometer locked on
-a dark fringe with light resonating throughout the cavity, was H2 in late 2000.
-By early 2002 all three detectors had achieved lock, and they have since
+A figure of merit for the sensitivity of a detector is to calculate its {\it 
+horizon distance}. This is the maximum 
+range out to which it could see the coalescence of two 1.4\,M$_{\odot}$ neutron 
+stars that are optimally oriented and located (i.e.~with the orbital plane 
+perpendicular to the line-of-sight, and with this plane parallel to the detector
+plane, so that the antenna response is at its maximum) at a signal-to-noise ratio 
+of 8 \cite{Abbott:2005b}. The horizon distance can be converted to a range that is an 
+average over all sky locations and source orientations (i.e.~not the best 
+case scenario) by dividing it by 2.26 \cite{Sutton:2003}) -- we shall use this angle 
+averaged range throughout the rest of this review.
+
+\subsubsection{TAMA~300}
+The first interferometric detector to start regular data taking with sufficient
+sensitivity and stability to enable it to potentially detect gravitational waves from the the galactic
+centre was TAMA~300 \cite{Ando:2001}. Over the period between August 1999 to
+January 2004 TAMA had nine data taking periods (denominated DT1--9) over which
+time its typical strain noise sensitivity, in its most sensitive frequency band
+improved from $\sim3\times10^{-19}\,{\rm Hz}^{-1/2}$ to
+$\sim1.5\times10^{-21}\,{\rm Hz}^{-1/2}$ \cite{Akutsu:2006}.  TAMA~300 operated 
+in coincidence with the LIGO and GEO~600 detectors for two of the science data 
+taking periods. More recently focus has shifted to the Cryogenic Laser 
+Interferometer Observatory (CLIO) prototype detector \cite{Yamamoto:2008, 
+CLIOweb} designed to test technologies for a future {\it second generation} Japanese detector
+called the Large-scale Cryogenic Gravitational-Wave Telescope (LCGT) 
+(see \S\ref{subsection:aligo}).
+
+\subsubsection{LIGO}\label{sec:ligoruns}
+The first LIGO detector to achieve lock (meaning having the interferometer stably 
+held on a dark fringe of the interference pattern, with light resonating throughout 
+the cavity) was H2 in late 2000.
+By early 2002 all three detectors had achieved lock and have since
 undergone many periods of commissioning and science data taking. Over the period
 between mid-2001 to mid 2002 the commissioning process improved the detectors'
 peak sensitivities by several orders of magnitude, with L1 going from
@@ -1239,46 +1311,43 @@ stability, to allow a science data taking run. This was potentially sensitive to
 local galactic burst events. From 23 August to 9 September 2002 the three LIGO
 detectors, along with GEO~600 (and, for some time, TAMA~300), undertook their
 first coincident science run, denoted S1 (see \cite{Abbott:2004a} for the state
-of the LIGO and GEO~600 detectors at the time of S1.) At this time the most
-sensitive detector was L1 with a peak sensitivity at at around 300~Hz of
+of the LIGO and GEO~600 detectors at the time of S1). At this time the most
+sensitive detector was L1 with a peak sensitivity at around 300~Hz of
 $2-3\times10^{-21}\,{\rm Hz}^{-1/2}$. The best strain amplitude sensitivity
 curve for S1 (and the subsequent LIGO science runs) can be seen in
 Fig.~\ref{figure:LIGOstrains}. The amount of time over the run that the
 detectors were said to be in science mode, i.e. stable and with the
 interferometer locked, called their duty cycle, or duty factor, was 42\% for L1,
-58\% for H1 and 73\% for H2. A figure of merit for the sensitivity of the
-detectors is to calculate the maximum range out to which they could see the
-inspiral of two optimally oriented and located 1.4\,M$_{\odot}$ neutron stars,
-at a signal-to-noise ratio of 8 \cite{Abbott:2005b} (also called their horizon
-distance.) For the most sensitive detector L1 the greatest range was typically
-0.18\,Mpc (to convert this to a range averaged over all sky locations and
-orientations divide by 2.26 \cite{Sutton:2003}.)
+58\% for H1 and 73\% for H2. . For the most sensitive detector, L1, the 
+inspiral range was typically 0.08\,Mpc.
 
 % LIGO S1 through S5 best strain sensitivities
 \epubtkImage{}{%
 \begin{figure}[hptb]
   \centerline{\includegraphics[scale=0.45]{LIGOSrunASDs}}
   \caption{\it The best strain sensitivities from the LIGO science runs S1
-through S5 \cite{LIGOcurves}. Also shown is the LIGO 4~km design sensitivity.}
+through S6 \cite{LIGOcurves}. The S6 curve is 
+preliminary and based on h(t) data that has not been completely reviewed
+and may be subject to change. Also shown is the LIGO 4~km design sensitivity.}
   \label{figure:LIGOstrains}
 \end{figure}}
 
 For the second science run (S2), from 14 February to 14 April 2003, the noise
 floor was considerably improved over S1 by several upgrades including:
-improving, and stabilising, the optical levers used to measure the mirror
+improving and stabilising the optical levers used to measure the mirror
 orientation to reduce the low frequency ($\lesssim$50~Hz) noise; replacing the
-coil drivers, which are used as actuators to control the position and
+coil drivers that are used as actuators to control the position and
 orientation of suspended mirrors, to improve the mid-frequency
 ($\sim$50--200~Hz) noise floor; and increasing the laser power in the
 interferometer to reduce shot noise and improve the high frequency
 ($\gtrsim$200~Hz) sensitivity (see \S{}IIA of \cite{Abbott:2005a} for a more
-thorough description of the detector improvements made for S2.) These changes
+thorough description of the detector improvements made for S2). These changes
 improved the sensitivities by about an order of magnitude across the frequency
 band with a best strain, for L1, of $\sim3\times10^{-22}\,{\rm Hz}^{-1/2}$
 between 200--300~Hz. The duty factor during S2 was 74\% for H1, 58\% for H2 and
 38\% for L1, with a triple coincidence time when all three detectors were in
-lock of 22\% of the run. The average inspiral horizon distances during the run
-were 2.0, 0.9 and 0.6\,Mpc for L1, H1 and H2 respectively. This run was also
+lock of 22\% of the run. The average inspiral ranges during the run
+were approximately 0.9, 0.4 and 0.3\,Mpc for L1, H1 and H2 respectively. This run was also
 operated in coincidence with the TAMA~300 DT8 run.
 
 For the the third science run (S3), between 31 October 2003 to 9 January 2004,
@@ -1295,29 +1364,49 @@ improvements in detector sensitivity across a wide frequency band, but did make
 large improvements for frequencies $\lesssim 70$~Hz. Between S3 and S4 a better
 seismic isolation system, which actively measured and countered for ground
 motion, was installed in L1, greatly reducing the amount of time
-it was thrown out of lock. Improvements to H1 meant that the laser power
-could be increased to its full design power. The duty factors were 80\% for H1,
+it was thrown out of lock. For H1 the laser power was able to be increased to 
+its full design power of 10~W \cite{Abbott:2007b}. The duty factors were 80\% for H1,
 81\% for H2 and 74\% for L1, with a 56\% triple coincidence time. The most
-sensitive detector, H1, had a horizon distance of 16.1\,Mpc.
+sensitive detector, H1, had an inspiral range of 7.1\,Mpc.
 
 By mid-to-late 2005 the detectors had equalled their design sensitivities over
 most of the frequency band and were also maintaining good stability and high
 duty factors. It was decided to perform a long science run with the aim of
 collecting one years worth of triple coincident data, with an angle averaged
-inspiral range of equal to, or greater then, 10\,Mpc for L1 and H1, and 5\,Mpc
+inspiral range of equal to, or greater than, 10\,Mpc for L1 and H1, and 5\,Mpc
 or better for H2. This run, S5, spanned from 4 November 2005 (L1 started
 slightly later on 14 November) until 1 October 2007, and the performance of the
 detectors during it is summarised in \cite{LIGOS5}. One year of triple
 coincidence was achieved on 21 September 2007, with a total triple coincidence
-duty factor of 52.5\% for the whole run. The average horizon distance over S5
-was $\sim$34\,Mpc for H1 and L1, and $\sim18$\,Mpc for H2.
+duty factor of 52.5\% for the whole run. The average insprial range over S5
+was $\sim15$\,Mpc for H1 and L1, and $\sim8$\,Mpc for H2.
 
 After the end of S5 the LIGO H2 detector and GEO~600 were kept operational
 while possible in an evening and weekend mode called Astrowatch. This
 observing mode continued until early 2009, after which H2 was decommissioned.
 During this time commissioning of some upgrades to the 4~km LIGO detectors took
-place for the current sixth science run (S6). These upgrades are described
-briefly in \S\ref{subsection:EnLIGO}.
+place for the sixth and final initial LIGO science run (S6) - some of which are
+summarised in \cite{Whitcomb:2008}. The aim of these upgrades, called Enhanced 
+LIGO \cite{EnhancedLIGO}, was to try and  increase sensitivity by a factor of two. 
+Enhanced LIGO involved the direct implementation of technologies and techniques 
+designed for the later upgrade to Advanced LIGO (see \S\ref{subsection:aligo}) 
+such as, most notably, higher powered lasers, a DC readout
+scheme, the addition of output mode cleaners and the movement of some hardware
+into the vacuum system. The lasers, supplied by the Albert Einstein Institute
+and manufactured by Laser Zentrum Hannover, give a maximum power of $\approx30$~W, 
+which is around 3 times the initial LIGO power. The upgrade to higher power required that
+several of the optical components needed to be replaced. These upgrades were only
+carried out on the 4km H1 and L1 detectors due to the H2 detector being
+left in Astrowatch mode during the commissioning period. The upgrades were able 
+to produce 1.5-2 times sensitivity increases at frequencies above $\approx 200$~Hz, 
+but generally at lower frequencies various sources of noise meant sensitivity 
+increases were not possible. S6 took place from July 2009 until 20 October 
+2010, at which point decommissioning started for the full upgrade to Advanced LIGO. 
+Typically the detectors ran with laser power at $\approx10$~W during the day (at
+higher power the detector was less stable and the higher level of anthropogenic 
+noise during the day meant that achieving and maintaining lock required lower
+power) and $\approx 20$~W at night, leading to inspiral ranges from 
+$\approx 10-20$\,Mpc.
 
 \subsubsection{GEO~600}
 GEO~600 achieved first lock as a power-recycled Michelson (with no signal
@@ -1328,7 +1417,7 @@ splitter and inboard mirrors), rearrangement of the optical bench to reduce
 scattered light and implementation of an automatic alignment system. For the S1
 run, carried out in coincidence with LIGO (and, in part, TAMA~300), the detector
 was kept in this configuration (see \cite{Abbott:2004a} for the status of the
-detector during S1.) It had a very high duty factor of $\sim98\%$, although
+detector during S1). It had a very high duty factor of $\sim98\%$, although
 it's strain sensitivity was $\sim2$ orders of magnitude lower than the LIGO
 instruments. The auto-alignment system in GEO~600 has since meant that it has
 been able to operate for long periods without manual intervention to regain
@@ -1347,11 +1436,11 @@ the detector when tuned to 550~Hz -- the operating position for the S5 run.}
 Following S1 the signal recycling mirror was installed and in late 2003 the
 first lock of the fully dual-recycled system was achieved (see
 \cite{Smith:2004, Willke:2004, Grote:2005} for information on the commissioning
-of GEO~600 as a dual-recycled detector.) Other upgrades included the
+of GEO~600 as a dual-recycled detector). Other upgrades included the
 installation of the final mirrors, suspended as triple pendulums, and with
 monolithic final stages. Once installed it was found that there was a radius of
-curvature mismatch with some of the mirrors, which has to be compensated for by
-carefully heating the mirrors. Due to this commissioning effort GEO~600 did not
+curvature mismatch with one of the mirrors, which had to be compensated for by
+carefully heating the mirror. Due to this commissioning effort GEO~600 did not
 participate in the S2 run. Very soon after the implementation of dual-recycling
 GEO~600 took part in the S3 run. This occurred over two time intervals
 from 5--11 November 2003, dubbed S3I, and from 30 December 2003 to 13 January
@@ -1368,24 +1457,41 @@ had an increased duty factor of $\sim$99\%.
 GEO~600 operated during the whole of S4 (22 February to 24 March 2004), in
 coincidence with LIGO, with a $\sim$97\% duty factor. It used the same optical
 configuration as S3, but had sensitivity improvements from a few times to up
-to over an order of magnitude a over the S3 values \cite{Hild:2006a}.
+to over an order of magnitude over the S3 values \cite{Hild:2006a}.
 
 The main changes to the detector after S4 were to shift the resonance condition
 of the signal recycling cavity to a lower frequency, 350~Hz, allowing better
 sensitivity in the few hundred Hz regime, and increasing the circulating laser
 power, with an input power of 10\,W. The pre-S5 peak sensitivity was
 $\sim4\times10^{-22}\,{\rm Hz}^{-1/2}$ at around 400~Hz, with an inspiral
-horizon range of 1.4\,Mpc \cite{Hild:2006b}. GEO~600 did not join S5 at the
+range of 0.6\,Mpc \cite{Hild:2006b}. GEO~600 did not join S5 at the
 start of the LIGO run, but from 21 January 2006 was in a night and weekend data
 taking mode whilst noise hunting studies and commissioning were conducted. For
 S5 the signal recycling cavity was re-tuned up to 550~Hz. It went into full time
 data taking from 1 May to 16 October 2006, with an instrumental duty factor of
 94\%. The average peak sensitivity during S5 was better than
 $3\times10^{-22}\,{\rm Hz}^{-1/2}$ (see \cite{Willke:2007} for a summary of
-GEO~600 during S5.) After this it was deemed more valuable for GEO~600 to
+GEO~600 during S5). After this it was deemed more valuable for GEO~600 to
 continue more noise hunting and commissioning work, to give as good a
 sensitivity as possible for when the LIGO detectors went offline for upgrading.
-It did however continue operating in night and weekend mode.
+It did however continue operating in night and weekend mode. 
+
+GEO~600  continued operating in Astrowatch mode between November 2007 and July 
+2009 after which upgrades began. The plans for the GEO~600 detector are to 
+continue to use it as a test-bed for more novel interferometric techniques whilst 
+focusing on increasing in sensitivity at higher frequencies (greater than a 
+few hundred Hz). This project is called
+GEO-HF \cite{Willke:2006}. The upgrading towards GEO-HF has been taking
+place since summer 2009 \cite{Grote:2010}. The main upgrades started during 2009 
+were to change the read-out scheme from an RF read-out to a DC read-out system 
+\cite{Hild:2008}, 
+install an output mode cleaner, place the read-out system in vacuum, injecting 
+squeezed light \cite{Vahlbruch:2008, Chelkowski:2007} into the output port, and 
+finally increasing the input laser power to 35~W. Running the interferometer
+with squeezed light will be the first demonstration of a full-scale gravitational
+wave detector operating beyond the standard quantum limit. GEO-HF participated in 
+S6 in an overnight and weekend mode, alongside a commissioning schedule, and is 
+continuing in this mode following the end of S6.
 
 \subsubsection{Virgo}
 In summer 2002 Virgo completed the commissioning of the central area
@@ -1399,7 +1505,7 @@ sensitivity improvements, with a peak sensitivity of $6\times10^{-22}\,{\rm
 Hz}^{-1/2}$ at 300~Hz, and an inspiral range of over 1\,Mpc. In late 2005
 several major upgrades brought Virgo to its final configuration. See
 \cite{Acernese:2004, Acernese:2005, Acernese:2006, Acernese:2007} for more
-detailed information of the commissioning of the detector.
+detailed information on the commissioning of the detector.
 
 Virgo joined coincident observations with the LIGO and GEO~600 S5 run with
 10 weekend science runs (WSRs) starting in late 2006 until March 2007. Over this
@@ -1416,17 +1522,28 @@ Fig~\ref{figure:Virgostrains}.
 \begin{figure}[hptb]
   \centerline{\includegraphics[scale=0.45]{VirgoSrunASDs}}
   \caption{\it The best strain sensitivities from the Virgo weekend and full
-time science runs WSR1, WSR10 and VSR1 \cite{Virgocurves} - {\textbf must check
- that we can use these curves as they're actually in a password protected
-area}.}
+time science runs WSR1, WSR10, VSR1 and VSR2 \cite{Virgocurves, VSR2paper}.}
   \label{figure:Virgostrains}
 \end{figure}}
+
+At the same time as commissioning for Enhanced LIGO was taking place there
+was also a similar effort to upgrade the Virgo detector, called Virgo+.
+The main upgrade was to the lasers to increase their power from 10 to 25~W at
+the input mode cleaner, with upgrades also to the thermal compensation system
+on the mirrors, the control electronics, mode cleaners and injection optics
+\cite{Acernese:2008b, AdVwhitepaper}. Virgo+ started taking data with
+Enhanced LIGO for Virgo Science Run 2 (VSR2) and sensitivities of Virgo+ close to
+the initial Virgo design sensitivity were reached. VSR2 finished on 8 January 2010
+to allow for further commissioning and noise hunting. This has since been followed
+by VSR3, which began on 11 August 2010 and is expected to finish at the start of
+July 2011. A further Virgo+ run, VSR4, is expected to follow this and last for
+about 6 months from mid-2011. Following this the upgrades to Advanced Virgo will begin.
 
 \subsection{Astrophysics Results}\label{subsection:results}
 Prior to the advent of the large scale interferometric detectors there had
 been some limited effort to produce astrophysical results with the prototype
 interferometers. The Caltech 40~m detector was used to search for, and set an
-upper limit on, the gravitational wave emission from pulsar J1939+2134
+upper limit on, the gravitational wave emission from pulsar PSR\,J1939+2134
 \cite{Hereld:1984}, and on the rate of neutron star binary
 inspirals in our galaxy, using coincident observations with the University of
 Glasgow prototype \cite{Smith:1988} and, more recently, on its own
@@ -1442,8 +1559,9 @@ sensitivities pushing upper limits on source populations and strengths towards
 astrophysically interesting areas.
 
 The recent analysis efforts have generally been split into four broad areas
-depending on the expected signal type: unmodelled transients e.g. supernova;
-modelled transients e.g. inspirals and ring-downs; continuous sources;
+depending on the expected signal type: unmodelled transients or bursts e.g. supernova;
+modelled transients e.g. inspirals and ring-downs (or more specifically compact
+binary coalescences, CBC); continuous sources;
 stochastic sources. Within each area a variety of different sources could
 exist and a variety of analysis techniques have been developed to search for
 them. Some electromagnetic sources, such as radio pulsars and $\gamma$-ray
@@ -1451,17 +1569,17 @@ bursts, are also used to enhance searches. A good review of the data analysis
 methods used in current searches, and the astrophysical consequences of some of
 the results described below, can be found in \cite{Sathyaprakash:2009}.
 
-Here we will briefly summarise the main astrophysics results from the data
-taking runs. We will mainly focus on those produced by the LIGO Scientific
-Collaboration \cite{LSCweb} detectors LIGO and GEO~600 from the S1 run until the
-S5 run. At the time of writing not all of the data from the S5 run had been
+Here we will briefly summarise the main astrophysics results from the science 
+runs. We will mainly focus on those produced by the LIGO Scientific
+Collaboration \cite{LSCweb} detectors LIGO and GEO~600 from S1 to the S5 run. 
+At the time of writing not all of the data from the S6 run had been
 fully analysed, with more results expected over the next year. Reviews of some
 early S5, and previous science run, results can also be found in
-\cite{Papa:2008, Fairhurst:2009}. In none of the searches so far has significant
+\cite{Papa:2008, Fairhurst:2009}. In none of the searches so far has convincing
 evidence for a gravitational wave signal been seen.
 
 \subsubsection{Unmodelled bursts}\label{subsubsection:unmodelled}
-Searches for unmodelled bursts, e.g. from supernova core-collapse, are based on
+Searches for unmodelled bursts, e.g.~from supernova core-collapse, are based on
 looking for short duration periods of excess power in the detectors. Transients
 are common features in the data, so to veto these events from true
 gravitational wave signals they must be coincident in time, and to some extent
@@ -1472,17 +1590,17 @@ Searle:2008, McNabb:2004, Cadonati:2004, Chatterji:2004, Chatterji:2006}. These
 algorithms will produce {\it triggers}, which are periods of excess power that
 cross a predetermined signal-to-noise ratio threshold (determined by tuning the
 algorithms on a section of {\it playground} data, so that the output produces a
-desired false alarm rate). The number of trigger are then compared to a
-background rate. You are not able to turn off, or shield the detectors from real
-signals, so the background rate has to be approximated by time shifting one
-detector's data stream with respect the the others. In this way you should only
-get triggers left due to random coincidences in detector noise and there should
+desired false alarm rate). The number of triggers are then compared to a
+background rate. Real signals cannot be turned off, and detectors cannot be 
+shielded from them, so the background rate has to be approximated by time shifting one
+detector's data stream with respect the the others. Time shifts should only
+leave triggers due to random coincidences in detector noise and there should
 be no contribution from real signals. Once a background is calculated the
 statistical significance of the foreground rate can be compared to it. To assess
-the sensitivity of these searches hardware (the interferometer mirrors are
+the sensitivity of these searches, hardware (the interferometer mirrors are
 physically moved via the control system) and software signals are injected into
-the data stream at various strengths and the efficiency of the algorithms to
-detect them is measured. A good description of some of these techniques can be
+the data stream at various strengths and the efficiency of the algorithms at
+detecting them is measured. A good description of some of these techniques can be
 found in \cite{Abbott:2004b} and \cite{Abbott:2006a}.
 
 Data from the LIGO S1 run was searched for gravitational wave bursts of between
@@ -1492,8 +1610,8 @@ plausible candidate event was found, but a 90\% confidence upper limit on the
 event rate of 1.6 events per day was set. The search was typically
 sensitive, at a $\gtrsim50\%$ detection efficiency, to bursts with amplitudes of
 $h_{\rm rss}\sim10^{-19}-10^{-17}\,{\rm Hz}^{-1/2}$ (defined in terms of $h_{\rm
-rss} \equiv \sqrt{\int|h|^2{\rm d}t}$, which is the root-sum-squared amplitude
-spectral density.) Due, in part, to its far lower sensitivity GEO~600 data was
+rss} \equiv \sqrt{\int|h|^2{\rm d}t}$, which is the root-sum-squared strain amplitude
+spectral density). Due, in part, to its lower sensitivity GEO~600 data was
 not used in this analysis. The S2 data's improved sensitivity, and advances in
 the analysis techniques, allowed a sensitivity to signals (in the frequency
 range 100--1100~Hz) in the amplitude range $h_{\rm
@@ -1505,13 +1623,7 @@ no signal was seen, but a 90\% upper limit of 0.26 events per day was set for
 strong bursts. In the frequency range 700--2000~Hz TAMA~300 data was also used
 in the search giving amplitudes sensitivities of $h_{\rm
 rss}\sim1-3\times10^{-19}\,{\rm Hz}^{-1/2}$ and decreasing the rate upper limit
-to 0.12 events per day \cite{Abbott:2005c}. A particularly bright $\gamma$-ray
-burst event (GRB030329) that occurred during the run was also specifically
-targeted using data from H1 and H2. The search looked for a signals with
-duration less than $\sim 150$~ms and in the frequency range 80--2048~Hz
-\cite{Abbott:2005d}. This produced a best strain upper limit for an unpolarised
-signal around the most sensitive region at  $\sim250$~Hz of $h_{\rm
-rss}=6\times10^{-21}\,{\rm Hz}^{-1/2}$.
+to 0.12 events per day \cite{Abbott:2005c}.
 
 The S3 run produced two searches for burst sources. One used the 8 days of
 triple coincidence data from the three LIGO detectors to search for sub-second
@@ -1525,12 +1637,12 @@ search looked for short bursts of less than 20~ms within the 850--950~Hz band
 to the LIGO-only S2 search and produced a 90\% confidence rate upper limit of
 0.52 events/day.
 
-For S4 15.5 days of LIGO data were searched for short duration ($<< 1$~s) bursts
+For S4 15.5 days of LIGO data were searched for sub-second bursts
 in the frequency range 64--1600~Hz \cite{Abbott:2007b}. This was sensitive to
 signals with $h_{\rm rss}\lesssim10^{-20}$ and set a 90\% confidence rate
 upper limit of 0.15 per day. The search results are also cast as astrophysical
 limits on source ranges and energetics. These show that there would be a 50\%
-detection efficiency to signals of sin-Gaussian nature (at the most sensitive
+detection efficiency to signals of sine-Gaussian nature (at the most sensitive 
 frequency of 153~Hz and quality factor $Q=8.9$) at a distance of 10~kpc for an
 energy of $10^{-7}$\,M$_{\odot}c^2$, and would be sensitive to signals out to
 the Virgo cluster ($\sim16$\,Mpc) for an energy release of
@@ -1539,112 +1651,33 @@ burst searches. There was also a burst search combining S4 GEO~600 and LIGO data
 for the first time. This searched data between 768--2048~Hz where the
 sensitivities were most comparable and used 257 hours of quadruple coincidence
 between the detectors and saw no gravitational wave events \cite{Abbott:2008b}.
-There were two burst searches targeting specific sources. The first target was
-the hyperflare from the Soft $\gamma$-ray Repeater SGR 1806$-$20 (SGRs are
-thought to be ``magnetars'', neutron stars with extremely large magnetic fields
-of order $10^{15}$ Gauss) on the 27$^{\rm th}$ December 2004 \cite{Hurley:2005}
-(this actually occurred before S4 in a period when only the H1 detector was
-operating). The search looked for signals at frequencies corresponding to short
-duration quasi-periodic oscillations (QPOs) observed in the X-ray light curve
-following the flare \cite{Abbott:2007c}. The most sensitive 90\% upper limit was
-for the 92.5~Hz QPO at $h_{\rm rss} = 4.5\times10^{-22}$\,Hz$^{-1/2}$, which
-corresponds to an energy emission limit of $4.3\times10^{-8}$M$_{\odot}c^2$ (of
-the same order as the total electromagnetic emission assuming isotropy.) The
-other search used LIGO data from S2, S3 and S4 to look for signals associated
-with 39 short duration $\gamma$-ray bursts (GRBs) that occurred in coincidence
-with these runs \cite{Abbott:2008c}. The GRB triggers were provided by IPN,
-Konus-Wind, HETE-2, INTEGRAL and Swift as distributed by the GRB Coordinate
-Network \cite{GCN}. The search looked in a 180 second window around the burst
-peak time (120 seconds before and 60 seconds after) and for all had at least
-double coincidence between detectors. No signal coincident with a GRB was
-observed and the sensitivities were not enough to give any meaningful
-astrophysical constraints, although simulations suggest that for S4, as before,
-it would have been sensitive to sine-Gaussian signals out to tens of Mpc for an
-energy release of order a solar mass.
-
-The first search of Virgo data in coincidence with a GRB was performed on data
-from a commissioning run September 2005. The long duration GRB 050915a observed
-by Swift on 15 September 2005 and Virgo data was used to search for an
-unmodelled burst in a window of 180 seconds around (120 s before and 60 s after)
-the GRB peak time \cite{Acernese:2008a}. The search produced a strain upper
-limit of order $10^{-20}$ in the frequency range 200--1500 Hz, but was mainly
-used as a test-bed for setting up the methodology for future searches, including
-coincidence analysis with LIGO.
 
 For the analysis on the first year of S5 data the frequency range for the
-all-sky burst search for was split; a low frequency search covered the most
-senstive region between 60--2000\,Hz \cite{Abbott:2009h}; and a high frequency
+all-sky burst search was split -- a low frequency search covered the most
+sensitive region between 60--2000\,Hz \cite{Abbott:2009h}, and a high frequency
 search covering 1--6\,kHz (this being the first time an
 untriggered burst search looked at frequencies above 3\,kHz)
 \cite{Abbott:2009i}. The high frequency search
 set a 90\% upper limit on the rate of 5.4 events per year for strong events. The
 low frequency search analysed more data than the high frequency and set an
-event rate limit of 3.6 events per year.
+event rate limit of 3.6 events per year. The second year of S5 LIGO data was
+analysed with GEO~600 and Virgo VSR1 data \cite{Abadie:2010d} to search for 
+bursts over the whole 50--6000~Hz band. Combining this with the earlier S5 
+searches gave $h_{\rm rss}$ upper limits for a variety of simulated waveforms 
+of $6\times10^{-22}\,{\rm Hz}^{-1/2}$ to $2\times10^{-20}\,{\rm Hz}^{-1/2}$, and a
+90\% confidence event rate for signals between 64--2048~Hz of less than two 
+per year.
 
-Data from the S5 run has been used to search for signals associated with
-$\gamma$-ray emitting objects. One search looked specifically for emission from
-a $\gamma$-ray burst (GRB 070201) \cite{Golenetskii:2007a, Golenetskii:2007b}
-that was potentially associated with the being in the nearby Andromeda galaxy
-(M31). The data around the time of this burst was used to look for an
-unmodelled burst and an inspiral signal as might be expected from a short GRB.
-The analysis saw no gravitational wave event associated with the GRB, but does
-rules out the event being a binary neutron star inspiral located in M31 with a
-99\% confidence \cite{Abbott:2008g}. Again assuming a binary neutron star
-inspiral, but located outside M31, then the analysis sets a 90\% confidence
-limit that the source distance must be greater than 3.5\,Mpc. Assuming a signal
-again located in M31 the unmodelled burst search set an upper limit the energy
-emitted via gravitational waves of $4.4\times10^{-4}\,M_{\odot}$c$^2$. This
-does not rule out the source being an SGR hyper-flare in M31. Searches for 137
-GRBs (both short and long GRBs) that were observed, mainly with the Swift
-satellite, during S5 and VSR1 have been performed \cite{Abbott:2009d}. No
-evidence for a gravitational wave signal coincident with these events was seen,
-but the observations were used to set lower limits on the distance to each GRB.
-Typical limits, assuming isotropic emission, were $D\sim15\,{\rm Mpc}(E^{\rm
-iso}_{\rm GW}/0.01\,M_{\odot}c^2)^{1/2}$.
-
-Another search has been to look for gravitational waves associated with flares
-from known SGRs. During the first year of S5 there were 191 (including the
-December 2004 SGR 1806$-$20 event) observed flares from SGRs 1806$-$20 and
-1900+14 for which at least one LIGO detector was online \cite{Abbott:2008h}. The
-data within 4 seconds of each event was searched for ring-down signals in the
-frequency range 1--3\,kHz and with decay times 100--400 ms as might be expected
-from $f$-mode oscillations in a neutron star. It was also search for unmodelled
-burst in the 100--1000 Hz range. No gravitational bursts were seen from any of
-the events. The lowest 90\% upper limit on the gravitational wave energy from
-the ring-down search was $E_{\rm GW}^{90\%} = 2.4\times10^{48}$ erg for an SGR
-1806$-$20 burst on 24 August 2006. The lowest 90\% upper limit on the unmodelled
-search was $E_{\rm GW}^{90\%} = 2.9\times10^{45}$ erg for an SGR 1806$-$20
-burst on 21 July 2006. The smallest limits on the ratio of energy emitted via
-gravitational waves to that emitted in the electromagnetic spectrum were of
-order tens, which are into a theoretically allowed range. One of these flares,
-on 29 March 2006, was actually a ``storm'' of many flares from SGR\,1900+14.
-For this event a more sensitive search has been performed by stacking data
-around the time of each flare \cite{Abbott:2009c}. Waveform dependent upper
-limits of the gravitational wave energy emitted were set between
-$2\times10^{45}$\,erg and $6\times10^{50}$\,erg, which are an order of magnitude
-lower than previous upper limit for this storm and overlap with the range of
-electromagnetic energies emitted in SGR giant flares.
-
-\subsubsection{Modelled bursts}
+\subsubsection{Modelled bursts - compact binary coalescence}\label{sec:cbc}
 Modelled bursts generally mean the inspiral and coalescence stage of binaries
 consisting of compact objects e.g. neutron stars and black holes. The signals
 are generally well approximated by post-Newtonian expansions of the Einstein
-equation, which give the phase evolution of the orbit. More recently signal
+equation, which give the amplitude and phase evolution of the orbit. More recently signal
 models have started to include numerical relativity simulations of the
-merger stage \cite{Aylott:2009}. The current best estimates for binary neutron
-star merger rates, based on the known population of binary neutron star systems,
-gives a 95\% confidence range between 10--170$\times10^{-6}$ per year per
-$L_{10}$ \cite{Kalogera:2004a, Kalogera:2004b}, with a peak in the distribution
-at $50\times10^{-6}$ per year per $L_{10}$, where $L_{10}$ is a normalising unit
-given as $10^{10}$ times the blue light luminosity of the sun. The expected rate
-of binary black hole systems, or black hole-neutron star systems is far harder
-to infer as none have been observed, but estimates can be made on the population
-for a wide variety of models and give a 95\% confidence range of
-0.1--15$\times10^{-6}$ per year per $L_{10}$ and 0.15--10$\times10^{-6}$
-respectively \cite{OShaughnessy:2005, OShaughnessy:2008, Abbott:2008a}.
-Cumulative blue light luminosities with respect to distance from the Earth in
-Mpcs, and the horizon distances of the LIGO detectors from S2 through to S4
-can be seen in Figure 3 of \cite{Abbott:2008a}.
+merger stage \cite{Aylott:2009}. As mentioned in \S\ref{section:construction} 
+the best estimate of the number of signals observable with initial LIGO at design sensitivity 
+(i.e.~during S5) would be 0.02 per year (based on an event rate of 
+$1\times10^{-6}$ per year per MWEG). 
 
 The majority of inspiral searches make use of matched filtering in which a
 template bank of signal models is built \cite{Owen:1996, Owen:1999}, with a
@@ -1660,12 +1693,7 @@ The first search for an inspiral signal with data from the LIGO S1 run looked
 for compact object coalescences with component masses between 1--3\,M$_{\odot}$
 and was sensitive to such sources within the Milky Way and Magellanic Clouds
 \cite{Abbott:2004c}. It gave a 90\% confidence level upper limit on the rate of
-170 per year per Milky Way equivalent galaxy (MWEG), where the number of MWEG is
-a convenient normalisation given by the effective number of galaxies of blue
-light luminosity with $L = 9\times10^9L_{\odot}$ within the range of the
-detectors for a given search efficiency (this unit of normalisation was used in
-the S1 and S2 LIGO search, but was then changed to the $L_{10}$ unit, although
-there is only a 10\% difference between the two.)
+170 per year per MWEG.
 
 For the S2 LIGO analysis the search was split into 3 areas covering neutron star
 binaries, black hole binaries and primordial black hole binaries in the galactic
@@ -1679,10 +1707,10 @@ neutron star search \cite{Abbott:2006a}. This search had a 90\% detection
 efficiency for sources out to 1\,Mpc and set a 90\% rate upper limit of 38 per
 year per MWEG. The third search looked for low mass (0.2--1\,M$_{\odot}$)
 primordial black hole binaries in a 50\,kpc radius halo surrounding the Milky
-Way \cite{Abbott:2005e}. This place a 90\% confidence rate upper limit of 63
+Way \cite{Abbott:2005e}. This placed a 90\% confidence rate upper limit of 63
 events per year per Milky Way halo. The S2 search was performed in coincidence
-with TAMA~300s DT8 period and an inspiral search for neutron star binaries was
-performed on data when TAMA~300 and at least on of the LIGO sites was
+with the TAMA~300 DT8 period and an inspiral search for neutron star binaries was
+performed on data when TAMA~300 and at least one of the LIGO sites was
 operational. This gave a total of 584 hours of data for the analysis, which set
 a 90\% rate upper limit of 49 per year per MWEG, although this search was only
 sensitive to sources within the majority of the Milky Way \cite{Abbott:2006b}.
@@ -1707,7 +1735,7 @@ limits were set at 4.9 per year per $L_{10}$ for primordial black holes, 1.2 per
 year per $L_{10}$ for binary neutron stars, and 0.5 per year per $L_{10}$ for
 binary black holes. S4 data has also been used to search for ring-downs from
 perturbed black holes, for example following binary black hole coalescence
-\cite{Abbott:2009g}. The search was senstive to ring-downs from
+\cite{Abbott:2009g}. The search was sensitive to ring-downs from
 10--500\,M$_{\odot}$ black holes out to a maximum range of 300\,Mpc, and
 produced a best 90\% confidence upper limit on the rate of ring-downs to be
 $1.6\times10^{-3}$ per year per $L_{10}$ for the mass range
@@ -1720,22 +1748,157 @@ constrain the rate and parameter space (string tension, reconnection
 probability, and loop sizes), but was not able to beat limits set by Big Bang
 nucleosynthesis.
 
-Data from the first \cite{Abbott:2009e} and second year fo S5 (prior to Virgo
-joining with VSR1) \cite{Abbott:2009f} have been search for low-mass binary
-coalescenses with total masses in the range 2--35\,M$_{\odot}$. The second
-year search results has produced the more stringent upper limits with 90\%
-confidence upper limit rates for binary neutron star, binary black hole and
+Data from the first \cite{Abbott:2009e} and second year of S5 (prior to Virgo
+joining with VSR1) \cite{Abbott:2009f} have been searched for low-mass binary
+coalescences with total masses in the range 2--35\,M$_{\odot}$. The second
+year search results have produced the more stringent upper limits with 90\%
+confidence rates for binary neutron star, binary black hole and
 neutron star--black hole systems respectively of $1.4\times10^{-2}$,
-$7.3\times10^{-4}$ and $3.6\times10^{-3}$ per year per $L_{10}$.
+$7.3\times10^{-4}$ and $3.6\times10^{-3}$ per year per $L_{10}$. Five months of
+overlapping S5 and VSR1 data were also searched for the same range of signals 
+\cite{Abadie:2010f} giving 90\% confidence upper rates of $8.7\times10^{-3}$ per year per $L_{10}$, 
+$2.2\times10^{-3}$ per year per $L_{10}$, and $4.4\times10^{-4}$ per year per $L_{10}$.
+
+\subsubsection{Externally triggered burst searches}
+Many gravitational wave burst sources will be associated with 
+electromagnetic (or neutrino) counterparts, for example short $\gamma$-ray 
+bursts (GRBs) are potentially caused by black hole and neutron star coalescences.
+Joint observation of a source as both a gravitational wave and electromagnetic
+event also greatly increases the confidence in a detection. Therefore many 
+searches have been performed to look for bursts coincident (temporally and 
+spatially) with external electromagnetic triggers, such as GRBs observed by 
+Swift for example. These searches have
+used both excess power and modelled matched filter methods to look for signals.
+
+During S2 a particularly bright $\gamma$-ray burst event (GRB~030329) occurred 
+and was specifically targeted using data from H1 and H2. The search looked for a 
+signals with duration less than $\sim 150$~ms and in the frequency range 80--2048~Hz
+\cite{Abbott:2005d}. This produced a best strain upper limit for an unpolarised
+signal around the most sensitive region at  $\sim250$~Hz of $h_{\rm
+rss}=6\times10^{-21}\,{\rm Hz}^{-1/2}$.
+
+For S4 there were two burst searches targeting specific sources. The first target was
+the hyperflare from the Soft $\gamma$-ray Repeater SGR 1806$-$20 (SGRs are
+thought to be ``magnetars'', neutron stars with extremely large magnetic fields
+of order $10^{15}$ Gauss) on the 27$^{\rm th}$ December 2004 \cite{Hurley:2005}
+(this actually occurred before S4 in a period when only the H1 detector was
+operating). The search looked for signals at frequencies corresponding to short
+duration quasi-periodic oscillations (QPOs) observed in the X-ray light curve
+following the flare \cite{Abbott:2007c}. The most sensitive 90\% upper limit was
+for the 92.5~Hz QPO at $h_{\rm rss} = 4.5\times10^{-22}$\,Hz$^{-1/2}$, which
+corresponds to an energy emission limit of $4.3\times10^{-8}$M$_{\odot}c^2$ (of
+the same order as the total electromagnetic emission assuming isotropy). The
+other search used LIGO data from S2, S3 and S4 to look for signals associated
+with 39 short duration $\gamma$-ray bursts (GRBs) that occurred in coincidence
+with these runs \cite{Abbott:2008c}. The GRB triggers were provided by IPN,
+Konus-Wind, HETE-2, INTEGRAL and Swift as distributed by the GRB Coordinate
+Network \cite{GCN}. The search looked in a 180 second window around the burst
+peak time (120 seconds before and 60 seconds after) and for each burst there were
+at least two detectors contributing data. No signal coincident with a GRB was
+observed and the sensitivities were not enough to give any meaningful
+astrophysical constraints, although simulations suggest that for S4, as in the general burst search,
+it would have been sensitive to sine-Gaussian signals out to tens of Mpc for an
+energy release of order a solar mass.
+
+The first search of Virgo data in coincidence with a GRB was performed on data
+from a commissioning run in September 2005. The long duration GRB~050915a was observed
+by Swift on 15 September 2005 and Virgo data was used to search for an 
+unmodelled burst in a window of 180 seconds around (120 s before and 60 s after)
+the GRB peak time \cite{Acernese:2008a}. The search produced a strain upper
+limit of order $10^{-20}$ in the frequency range 200--1500 Hz, but was mainly
+used as a test-bed for setting up the methodology for future searches, including
+coincidence analysis with LIGO.
+
+Data from the S5 run has been used to search for signals associated with even more
+$\gamma$-ray bursts. One search looked specifically for emission from
+GRB~070201 \cite{Golenetskii:2007a, Golenetskii:2007b}, which
+was potentially associated with originating in the nearby Andromeda galaxy
+(M31). The data around the time of this burst was used to look for an
+unmodelled burst and an inspiral signal as might be expected from a short GRB.
+The analysis saw no gravitational wave event associated with the GRB, but
+ruled out the event being a binary neutron star inspiral located in M31 with a
+99\% confidence \cite{Abbott:2008g}. Again assuming a binary neutron star
+inspiral, but located outside M31, the analysis set a 90\% confidence
+limit that the source must be at a distance greater than 3.5\,Mpc. 
+Assuming a signal again located in M31 the unmodelled burst search set an upper 
+limit on the energy
+emitted via gravitational waves of $4.4\times10^{-4}\,M_{\odot}$c$^2$, which was 
+well within the allowable range for this being an SGR hyper-flare in M31. Searches for 137
+GRBs (both short and long GRBs) that were observed, mainly with the Swift
+satellite, during S5 and VSR1 have been performed again using unmodelled 
+burst methods \cite{Abbott:2009d} and for (22 short bursts) inspiral 
+signals \cite{Abadie:2010b}. No evidence for a gravitational wave signal 
+coincident with these events was seen.
+The unmodelled burst observations were used to set lower limits on the 
+distance to each GRB, with typical limits, assuming isotropic emission, 
+at $D\sim15\,{\rm Mpc}(E^{\rm iso}_{\rm GW}/0.01\,M_{\odot}c^2)^{1/2}$. The 
+inspiral search, which was sensitive to CBCs with total system masses between
+$2\,M_{\odot}$ and $40\,M_{\odot}$, was able to exclude with 90\% confidence 
+any bursts being neutron star-black hole mergers within 6.7~Mpc, although the
+peak distance distribution of GRBs is well beyond this.
+
+Another search has been to look for gravitational waves associated with flares
+from known SGRs and anomalous X-ray pulsars (AXPs), both of which are thought to
+be {\it magnetars}. During the first year of 
+S5 there were 191 (including the
+December 2004 SGR 1806$-$20 event) observed flares from SGRs 1806$-$20 and
+1900+14 for which at least one LIGO detector was online \cite{Abbott:2008h}, and 1279 flare events if
+extending that to six known galactic magnetars and including all S5 and post-S5 Astrowatch 
+data including Virgo and GEO~600 \cite{Abadie:2010c}. The
+data around each event was searched for ring-down signals in the
+frequency range 1--3\,kHz and with decay times 100--400 ms as might be expected
+from $f$-mode oscillations in a neutron star. It was also searched for unmodelled
+bursts in the 100--1000 Hz range. No gravitational bursts were seen from any of
+the events. For the earlier search \cite{Abbott:2008h} the lowest 90\% upper 
+limit on the gravitational wave energy from
+the ring-down search was $E_{\rm GW}^{90\%} = 2.4\times10^{48}$ erg for an SGR
+1806$-$20 burst on 24 August 2006. The lowest 90\% upper limit on the unmodelled
+search was $E_{\rm GW}^{90\%} = 2.9\times10^{45}$ erg for an SGR 1806$-$20
+burst on 21 July 2006. The smallest limits on the ratio of energy emitted via
+gravitational waves to that emitted in the electromagnetic spectrum were of
+order 10--100, which are into a theoretically allowed range. The latter search
+\cite{Abadie:2010c} gave the lowest gravitational wave emission energy upper 
+limits for white noise bursts in the detector sensitive band, 
+and for $f$-mode ring-downs (at 1090 Hz), of $3.0\times10^{44}$~erg and $1.4\times10^{47}$~erg 
+respectively, assuming a distance of 1~kpc. The $f$-mode energy limits approach the
+range seen emitted electromagnetically during giant flares.
+One of these flares, on 29 March 2006, was actually a ``storm'' of many flares 
+from SGR\,1900+14. For this event a more sensitive search has been performed by stacking data
+around the time of each flare \cite{Abbott:2009c}. Waveform dependent upper
+limits of the gravitational wave energy emitted were set between
+$2\times10^{45}$\,erg and $6\times10^{50}$\,erg, which are an order of magnitude
+lower than the previous upper limit for this storm (included in the search 
+of \cite{Abbott:2008h}) and overlap with the range of
+electromagnetic energies emitted in SGR giant flares. 
+
+Another possible source of gravitational waves associated with an  
+electromagnetically observed phenomenon are pulsar glitches. During these it is
+possible that various gravitational wave emitting vibrational modes of the
+pulsar may be excited. A search has been performed for fundamental modes ($f$-modes) 
+in S5 data following a glitch observed in the timing of the Vela pulsar 
+in August 2006  \cite{Abadie:2010a}. Over the search frequency range of 
+1--3~kHz this provided upper limits on the peak strain of $0.6-1.4\times10^{-20}$
+depending on the spherical harmonic that was excited.
+
+Already efforts are under way to invert this process of searching gravitational 
+wave data for external triggers, and instead supplying gravitational wave burst 
+triggers for electromagnetic follow-up. This is being investigated across the
+range of the electromagnetic spectrum from radio \cite{Predoi:2010}, through
+optical (e.g. \cite{Kanner:2008, Coward:2010}) and X-ray/$\gamma$-ray, and even 
+looking for coincidence with neutrino detectors \cite{Aso:2008, Pradier:2010, 
+Chassande:2010}. Having so-called {\it multi-messenger} observations can have a
+large impact on the amount of astrophysical information that can be learnt about an 
+event \cite{Phinney:2009}.
 
 \subsubsection{Continuous sources}
-Searches for continuous waves mainly focus on rapidly spinning neutron stars as
+Searches for continuous waves focus on rapidly spinning neutron stars as
 sources. There are fully targeted searches, which look for gravitational waves
 from known radio pulsars in which the position and spin evolution of the objects
 are precisely known. There are semi-targeted searches which look at potential
-sources in which some, but not all the source signal parameters are known, for
+sources in which some, but not all, the source signal parameters are known, for
 example neutron stars in X-ray binary systems, or sources in supernova remnants
-where no pulses are seen. Finally there are all-sky broadband searches in which
+where no pulses are seen, which have known position, but unknown frequency. 
+Finally there are all-sky broadband searches in which
 none of the signal parameters are known. The targeted searches tend to be most
 sensitive as they are able to perform coherent integration over long stretches
 of data with relatively low computational overheads, and have a much smaller
@@ -1743,27 +1906,29 @@ parameter space leading to fewer statistical outliers. Due to various neutron
 star population statistics, creation rates and energetics arguments there is an
 estimate that the amplitude of the strongest gravitational wave pulsar observed
 at Earth will be $h_0 \lesssim 4\times10^{-24}$ \cite{Abbott:2007a} (a more
-thorough discussion of this argument can be found in \cite{Knispel:2008}.)
+thorough discussion of this argument can be found in \cite{Knispel:2008}), 
+although this does not rule out stronger sources.
 
 The various search techniques used to produce these results all look for
 statistically significant excess power in narrow frequency bins that have been
 Doppler demodulated to take into account the signals shifting frequency
 caused by the Earth's orbital motion with respect to the source (or also
-including the modulations to the signal caused by the sources own motion, such
-as for a pulsar in a binary system). The statistical significance of a measured
+including the modulations to the signal caused by the sources own motion 
+relative to the Earth, such as for a pulsar in a binary system). The statistical 
+significance of a measured
 level of excess power is compared to what would be expected from data that
 consisted of Gaussian noise alone. A selection of the searches are summarised
-here \cite{Prix:2006}, but for more detailed descriptions of the various methods
+in \cite{Prix:2006}, but for more detailed descriptions of the various methods
 see \cite{Brady:2000, Krishnan:2004, Jaranowski:1998, Abbott:2008e,
 Abbott:2007a, Dupuis:2005}.
 
 In S1 a fully coherent targeted search for gravitational waves from the then
 fastest millisecond pulsar J1939+2134 was performed \cite{Abbott:2004d}. This
-analysis and the subsequent LIGO known pulsar searches assume that the star is
+analysis and the subsequent LSC known pulsar searches assume that the star is
 triaxial and emitting gravitational waves at exactly twice its rotation
 frequency. All the data from LIGO and GEO~600 was analysed and no evidence of a
 signal was seen. A 95\% degree-of-belief upper limit on the gravitational wave
-strain amplitude was set using data from the most sensitive detector L1 giving a
+strain amplitude was set using data from the most sensitive detector, L1, giving a
 value of $1.4\times10^{-22}$. This result was also interpreted as an ellipticity
 of the star given a canonical moment of inertia of $10^{38}$\,kg\,m$^2$ at
 $\epsilon = 2.9\times10^{-4}$, however this was still of order 100\,000 times
@@ -1774,21 +1939,21 @@ so-called ``spin-down limit''.
 In S2 the number of known pulsar sources searched for with LIGO data increased
 from 1 to 28, although all of these were isolated pulsars (i.e. not in binary
 systems, although potentially still associated with supernova remnants or
-globular clusters.) This search used pulsar timing data supplied by Andrew Lyne
+globular clusters). This search used pulsar timing data supplied by Andrew Lyne
 and Michael Kramer from Jodrell Bank Observatory to precisely reconstruct the
 phase of the gravitational wave signal over the period of the run. The lowest
 95\% upper limit on gravitational waves amplitude was $1.7\times10^{-24}$ for
 PSR\,J1910$-$5959D, and the smallest upper limit on ellipticity (again assuming
 the canonical moment of inertia) was $4.5\times10^{-6}$ for the relatively close
 pulsar PSR\,J2124$-$3358 \cite{Abbott:2005f}, at a distance of 0.25\,kpc. The
-pulsar closest to its inferred spin-down limit was that Crab pulsar
+pulsar closest to its inferred spin-down limit was the Crab pulsar
 (PSR\,J0534+2200) with an upper limit 30 times greater than that from spin-down.
-S2 also saw the use of two different all-sky wide frequency band searches which
-focused on isolated sources, but did include a search for gravitational waves
-from the low mass X-ray binary Scorpius X1 (Sco-X1). The first used a
+S2 also saw the use of two different all-sky wide frequency band searches that
+focused on isolated sources, but also including a search for gravitational waves
+from the low mass X-ray binary Scorpius X1 (Sco-X1). The first search used a
 semi-coherent technique to search $\sim60$~days of S2 data in the frequency band
 between 200--400~Hz and with signal spin-downs between
-$-1.1\times10^{-9}$--0\,Hz\,s$^{-1}$ \cite{Abbott:2005g}. This gave a lowest
+$-1.1\times10^{-9}$ and 0\,Hz\,s$^{-1}$ \cite{Abbott:2005g}. This gave a lowest
 gravitational wave strain 95\% upper limit of $4.4\times10^{-23}$ for the L1
 detector at around 200~Hz. The other all-sky search was fully coherent and as
 such was computationally limited to only use a few hours of the most sensitive
@@ -1802,7 +1967,7 @@ semi-major axis and the orbital phase reference time. The frequency ranges of
 this search relied on estimates of the spin-frequency from quasi-periodic
 oscillations in the X-rays from the source and covered two 20~Hz bands from
 464--484~Hz and 604--624~Hz (it should be noted that it is now thought that
-these estimates of the spin-frequency are now considered to be unreliable.) In
+these estimates of the spin-frequency are unreliable). In
 these two ranges upper limits of $1.7\times10^{-22}$ and $1.3\times10^{-21}$
 were found respectively.
 
@@ -1811,12 +1976,12 @@ wide-band isolated pulsar search using the distributed computing project
 Einstein@home \cite{eath}. The project is built upon the Berkeley Open
 Infrastructure for Network Computing \cite{BOINC} and allows the computational
 workload to be distributed among many computers generally contributed by the
-general public who sign up to the project. This used the most sensitive 600
-hours of data from the H1 and cut it into 60 10 hours stretches on each of which
+general public who sign up to the project. This used the most sensitive 600 
+hours of data from H1 and cut it into 60 ten hour stretches on each of which
 a coherent search could be performed. The data was farmed out to computers owned
 by participants in the project and ran as a background process or screen saver.
 The search band spanned the range from 50--1500.5~Hz. The search saw no
-plausible gravitational wave candidates and result is described at
+plausible gravitational wave candidates and the result is described at
 \cite{eathS3}, but it was not used to produce an upper limit.
 
 In the known pulsar search the number of sources searched for using the combined
@@ -1826,11 +1991,11 @@ analysis results were improved by about an order of magnitude. The lowest 95\%
 upper limit on gravitational waves amplitude was $2.6\times10^{-25}$ for
 PSR\,J1603$-$7202, and the smallest ellipticity was again for PSR\,J2124$-$3358
 at just less than $10^{-6}$ \cite{Abbott:2007d}. The upper limit for the Crab
-pulsar was found to be only 2.2 times above that from the fiducial spin-down
+pulsar was found to be only 2.2 times above that from the spin-down
 limit. Three different, but related, semi-coherent all-sky continuous
 wave searches were performed on S4 LIGO data, looking for isolated neutron stars
 in the frequency range from 50--1000~Hz and the spin-down range from
-$-1\times10^{-8}$--0\,Hz\,s$^{-1}$ \cite{Abbott:2008e}. The best 95\% upper
+$-1\times10^{-8}$ to 0\,Hz\,s$^{-1}$ \cite{Abbott:2008e}. The best 95\% upper
 limit based on an isotropically distributed, randomly oriented, population of
 neutron stars was $4.3\times10^{-24}$ near 140~Hz. This is approaching the
 amplitude of the strongest potential signal discussed above. For one of the
@@ -1843,8 +2008,10 @@ to search the most sensitive data from S4, which consisted of 300 hours of H1
 data and 210 hours of L1 data. The search performed a coherent analysis on 30
 hour stretches of this data and covered the frequency range between
 50--1500~Hz \cite{Abbott:2008f}. The range of spin-downs $\dot{f}$ was chosen
-by using a minimum spin-down ago $\tau$ and having $-f/\tau < \dot{f} <
-0.1f/\tau$, with $\tau = 1000$ years for signals below 300~Hz and $\tau =
+by using a minimum spin-down age $\tau$ and having $-f/\tau < \dot{f} <
+0.1f/\tau$ (small spin-ups are allowed as some pulsars in globular clusters
+exhibit this due to their Doppler motions within the clusters), 
+with $\tau = 1000$ years for signals below 300~Hz and $\tau = 
 10\,000$ years above 300~Hz. Approximately 6000 years of computational time
 spread over about 100\,000 computers were required to perform the analysis. No
 plausible gravitational wave candidates were found, although the results suggest
@@ -1852,14 +2019,14 @@ that 90\% of sources with strain amplitudes greater than $10^{-23}$ would have
 been detected by the search. A search designed to produce a sky map of the
 stochastic background was also used to search for gravitational waves from
 Sco-X1 using a method of cross-correlating H1 and L1 data \cite{Abbott:2007f}.
-This produce a 90\% root mean squared upper limit on gravitational wave strain
+This produced a 90\% root mean squared upper limit on gravitational wave strain
 of $h = 3.4\times10^{-24}(f/200 {\rm Hz})$ for frequencies greater than 200 Hz.
 
 The first 8 months of S5 have been used to perform an all-sky search for
 periodic gravitational waves. This search used a semi-coherent method to look
 in the frequency range 50--1100 Hz and spin-down range $-5\times10^{-9}$--0
-Hz\,s$^2$ and used data from the H1 and L1 detectors \cite{Abbott:2008i}. This
-search obtained 95\% strain upper limits of less than $10^{-24}$ over a
+Hz\,s$^2$ and used data from the H1 and L1 detectors \cite{Abbott:2008i}. It 
+obtained 95\% strain upper limits of less than $10^{-24}$ over a
 frequency band of 200 Hz. The search would have been sensitive to a neutron star
 with equatorial ellipticity greater than $10^{-6}$ within around 500 pc.
 Einstein@home \cite{eath} has been used to search for periodic waves between
@@ -1872,50 +2039,74 @@ gravitational waves from the Crab pulsar \cite{Abbott:2008j}. In this search two
 methods were used: the first followed the method of the targeted search and
 assumed that the gravitational waves are phase locked to the electromagnetic
 pulses; the second allowed for some mechanism which would cause a small mismatch
-between the two phases. Two 95\% upper limits were set, one using uniform priors
-on the gravitational wave parameters and the other using astrophysically
-motivated priors on the pulsar orientation angle and polarisation angle. With
+between the two phases. Two 95\% upper limits were set, one using astrophysically
+constraints on the pulsar orientation angle and polarisation angle \cite{Ng:2008} 
+and the other applying not such constraints. With
 the first method these 95\% upper limits were $3.4\times10^{-25}$ and
 $2.7\times10^{-25}$ respectively, which correspond to ellipticities of
-$1.8\times10^{-4}$ and $1.8\times10^{-4}$ (assuming the canonical moment of
+$1.8\times10^{-4}$ and $1.4\times10^{-4}$ (assuming the canonical moment of
 inertia). These beat the Crab pulsar's spin-down limit by 4 to 5 times and can
 be translated into the amount of the available spin-down power that is
-emitted via gravitational waves. The lower of these limits shows less than 4\%
+emitted via gravitational waves, with the lower of these limits showing that less than 4\%
 of power is going into gravitational waves. For the second search the uniform
 and restricted prior gave results upper limits of $1.7\times10^{-24}$ and
-$1.2\times10^{-24}$ respectively.
+$1.2\times10^{-24}$ respectively. The whole of S5 was used to search for
+emission from 116 known pulsars \cite{Abbott:2010a}. During this search the
+Crab limit was further brought down to be less than a factor of 7 below the 
+spin-down limit, and the spin-down limit is reached for one other pulsar 
+PSR\,J0537$-$6910. Of the other pulsars the best (lowest) upper limit on 
+gravitational wave amplitude was $2.3\times10^{-26}$ for PSR\,J1603$-$7202 and 
+our best (lowest) limit on the inferred pulsar ellipticity is $7.0\times10^{-8}$ 
+for PSR\,J2124$-$3358.
+
+A semi-targeted search was performed with 12 days of S5 data, although this time
+searching for a source with a known position in the Cassiopeia A (Cas A) 
+supernova remnant, but for which there is no known frequency. The search \cite{Abadie:2010g} looked
+in the frequency band between 100--300~Hz and covered a wide range of first and 
+second frequency derivatives and no signal was seen, but it gave 95\% amplitude 
+and ellipticity upper limits over the 
+band of $(0.7-1.2)\times10^{-24}$ and $(0.4-4)\times10^{-4}$ respectively. These results
+beat indirect limits on the emission based on energy conservation arguments 
+(similar, but not the same as the spin-down limits) and were also the first results to be cast
+as limits on the $r$-mode amplitude \cite{Owen:2010}.
 
 \subsubsection{Stochastic sources}
-A cosmological, or astrophysical, background of gravitational waves that would
-show up as a coherent stochastic noise source between detectors is also searched
-for. This is done by performing a cross-correlation of data from two detectors
+Searches are conducted for a cosmological, or astrophysical, background of gravitational 
+waves that would show up as a coherent stochastic noise source between detectors. 
+This is done by performing a cross-correlation of data from two detectors
 as described in \cite{Allen:1999}.
 
 In S1 the most sensitive detector pair for this correlation was H2-L1 (the
 H1-H2 pair are significantly hampered by local environmental correlations) and
-they gave a 90\% confidence upper limit of $\Omega_0h^2_{100} < 23\pm4.6$ within
+they gave a 90\% confidence upper limit of $\Omega_{\rm gw} < 
+44\pm9$\footnote{The result published in \cite{Abbott:2004e} give an upper limit 
+value of $\Omega_{\rm gw} < 23$, but this is for a Hubble constant of 
+100\,km\,s$^{-1}$\,Mpc$^{-1}$, so for consistency with later results it has been
+converted to use a Hubble constant of 72\,km\,s$^{-1}$\,Mpc$^{-1}$ as in 
+\cite{Abbott:2005h}.} within
 the 40-314~Hz band, where the upper limit is in units of closure density of the
-universe for a Hubble constant in units of 100\,km\,s$^{-1}$\,Mpc$^{-1}$
+universe and for a Hubble constant in units of 72\,km\,s$^{-1}$\,Mpc$^{-1}$
 \cite{Abbott:2004e}. This limit was several times better than previous direct
-detector limits, but still well above the concordance cosmology value of the
-{\it total} closure density of the universe of $\Omega_0=1$.
+detector limits, but still well above the concordance $\Lambda$CDM cosmology 
+value of the {\it total} energy density of the universe of $\Omega_0\approx1$ (see 
+e.g.~\cite{Jarosik:2010}).
 
 No published stochastic background search was performed on S2 data, but S3 data
 was searched and gave an upper limit that improved on the S1 result by a factor
-of $\sim10^5$. The most sensitive detector pair for this search was H1--L1 for
+of $\sim10^5$. The most sensitive detector pair for this search was H1-L1 for
 which 218 hours of data were used \cite{Abbott:2005h}. Upper limits were set for
 three different power law spectra of the gravitational wave background. For a
 flat spectra, as predicted by some inflationary and cosmic string models, a 90\%
 confidence upper limit of $\Omega_{\rm gw}(f) = 8.4\times10^{-4}$ in the
-69--156~Hz range was set (for a Hubble constant of
-72\,km\,s$^{-1}$\,Mpc$^{-1}$.) This is still about 60 times greater than a
+69--156~Hz range was set (again for a Hubble constant of
+72\,km\,s$^{-1}$\,Mpc$^{-1}$). This is still about 60 times greater than a
 conservative bound on primordial gravitational waves set by big bang
 nucleosynthesis (BBN). For a quadratic power law, as predicted for a
 superposition of rotating neutron star signals, an upper limit of $\Omega_{\rm
 gw}(f) = 9.4\times10^{-4}(f/100\,{\rm Hz})^2$ was set in the range 73--244~Hz,
 and for a cubic power law, from some pre-Big-Bang cosmology models, an upper
 limit of $\Omega_{\rm gw}(f) = 8.1\times10^{-4}(f/100\,{\rm Hz})^3$ in the range
-76--329~Hz was given.
+76--329~Hz was produced.
 
 For S4 $\sim354$ hours of H1--L1 data and $\sim333$ hours of H2--L1 data were
 used to set a 90\% upper limit of $\Omega_{\rm gw}(f) < 6.5\times10^{-5}$ on
@@ -1925,7 +2116,8 @@ still several times higher than BBN limits. About 20 days of H1 and L1 S4 data
 was also used to produce an upper limit map on the gravitational wave background
 across the sky as would be appropriate if there was an anisotropic background
 dominated by distinct sources \cite{Abbott:2007f}. This search covered a
-frequency range between 50--1800 Hz and had spectral {\it power} limits ranging
+frequency range between 50--1800 Hz and had spectral {\it power} limits (which
+come from the square of the amplitude $h$) ranging
 from $1.2\times10^{-48} {\rm Hz}^{-1} (100 {\rm Hz}/f)^3$ and $1.2\times10^{-47}
 {\rm Hz}^{-1} (100 {\rm Hz}/f)^3$ for an $f^{-3}$ source power spectrum, and
 limits of $8.5\times10^{-49} {\rm Hz}^{-1}$ and $6.1\times10^{-48} {\rm
@@ -1938,7 +2130,7 @@ frequency range 850--950 Hz, several times higher than the LIGO only searches
 \cite{Abbott:2007g}. A 90\% upper limit on the closure density of $\Omega_{\rm
 gw}(f) \leq 1.02$ (for the above Hubble constant) was set, which beat previous
 limits in that frequency range by two orders of magnitude. This limit beats what
-would be achievable with LLO--LHO cross correlation of S4 data in this frequency
+would be achievable with LLO-LHO cross correlation of S4 data in this frequency
 range by a factor of several tens, due to the physical proximity of LLO and
 ALLEGRO.
 
@@ -1957,123 +2149,114 @@ generation detectors, which could provide the premier gravitational wave
 observatories for the first half of the century. A brief summary of the planned
 upgrades to current and future detectors is given below. An overview can be also
 be found here \cite{Whitcomb:2008}. Some of the technologies for these upgrades
-are discussed in \S\ref{section:interferometry}.
+are discussed in earlier in this review (e.g. \S\ref{section:interferometry}).
 
-\subsubsection{Enhanced LIGO, Virgo+ and GEO-HF}\label{subsection:EnLIGO}
-Following the end of the S5 and VSR1 runs for LIGO, GEO 600 and Virgo there
-have been commissioning activities to improve the performance of all the
-detectors. As the LIGO detectors reached their design sensitivities across a
-broad frequency range during S5 plans were made to try and increase sensitivity
-by a factor of two for the following run. This project, called Enhanced LIGO
-\cite{EnhancedLIGO}, is under way and data taking for the sixth science run (S6)
-started in July 2009. Enhanced LIGO involves the direct implementation of
-technologies and techniques designed for the later upgrade to Advanced LIGO
-(AdvLIGO - see below) such as, most notably, higher powered lasers, a DC readout
-scheme, the addition of output mode cleaners and the movement of some hardware
-into the vacuum system. The lasers, supplied by the Albert Einstein Institute
-and manufactured by Laser Zentrum Hannover, will give a power of 30--35 W which
-is around 3 times the current power. The upgrade to higher power requires that
-several of the optical components need to be replaced. These upgrades were only
-carried out on the 4km H1 and L1 detectors due to the H2 detector being
-left in Astrowatch mode during the commissioning period. So far the upgrade have
-not been able to produce as large an increase in sensitivity as hoped over a
-broad band, but further commissioning will take place during the run to improve
-performance. It is expected that Enhanced LIGO will carry out an approximately
-two year science run from July 2009 before being taken off-line for the full
-upgrade to AdvLIGO.
-
-At the same time as commissioning for Enhanced LIGO has been taking place there
-has also been a similar effort to upgrade the Virgo detector, called Virgo+.
-The main upgrade is also to the lasers to increase their power from 10--25~W at
-the input mode cleaner, with upgrades also to the thermal compensation system
-on the mirrors, the control electronics, mode cleaners and injection optics
-\cite{Acernese:2008b, AdVwhitepaper}. Virgo+ has also started taking data with
-Enhanced LIGO for Virgo Science Run 2 (VSR2). Again sensitivities of Virgo+ are
-not a good as hoped, but may improve over the run.
-
-Plans for the GEO~600 detector are to continue to use it as a test-bed for more
-novel interferometric techniques whilst focusing on increasing in sensitivity
-at higher frequencies (greater than a few hundred Hz). This project is called
-GEO-HF \cite{Willke:2006}. The upgrading towards GEO-HF is expected to take
-place in spring 2009 when the Enhanced LIGO detectors start to take data. The
-main upgrades expected to be completed during 2009 are to change the read-out
-scheme from an RF read-out to a DC read-out system \cite{Hild:2008}, install an
-output mode cleaner, place the read-out system in vacuum, injecting squeezed
-light \cite{Vahlbruch:2008, Chelkowski:2007} into the output port, and finally
-increasing the input laser power to 35~W.
-
-\subsubsection{Advanced LIGO, Advanced Virgo and LCGT}
-Advanced LIGO (AdvLIGO) \cite{AdvLIGO, AdvLIGOweb} and Advanced Virgo (AdvVirgo)
-\cite{AdvVirgo, AdvVirgoweb}  are the so-called second generation detectors.
+\subsubsection{Advanced LIGO, Advanced Virgo and LCGT}\label{subsection:aligo}
+Advanced LIGO (aLIGO) \cite{Harry:2010, AdvLIGO, AdvLIGOweb} and Advanced Virgo (AdvVirgo)
+\cite{AdvVirgo, AdvVirgoweb} are the so-called second generation detectors.
 They are planned to have a sensitivity increase over the levels of the initial
 detectors by a factor of 10--15 times. These increased sensitivity levels would
 expand the volume of space observed by the detectors by $\sim1000$ times meaning
 that there is a realistic detection rate of binary neutron star coalescences of
-around 40${\rm yr}^{-1}$ \cite{Kopparapu:2008}. The technological issues
+around 40${\rm yr}^{-1}$ \cite{Abadie:2010e, Kopparapu:2008}. The technological issues
 required to reach these sensitivities, such as choice of test mass and mirror
 coating materials, suspension design, interferometric layout, control and
 readout, would need a separate review article to themselves, but we shall very
 briefly summarise them here.
 
-AdvLIGO will consist of three 4~km detector in the current LIGO vacuum system;
-two at the Hanford site and one at Livingston. It will apply some of the
+Advanced LIGO will consist of three 4~km detector in the current LIGO vacuum system;
+two at the Hanford site\footnote{There is currently a plan that
+has been approved by the LIGO Laboratory and the NSF to potentially construct one of the 
+Hanford detectors at a site in Australia \cite{Marx:2010}, although this is reliant
+on construction and running costs being provided by the Australian government.
+Such an observatory in the southern hemisphere would greatly improve sky localisation
+of any transient sources and enhance electromagnetic follow-up observations (e.g. 
+\cite{Barriga:2010}).} and one at Livingston. It will apply some of the
 technologies from the GEO~600 interferometer such as the use of a signal
 recycling mirror at the output port and monolithic silica suspensions for the
 test masses, rather than the current steel wire slings. Larger test masses will
 be used with an increase from 11 to 40 kg, although the masses will still be
-made from fused silica. The mirror coating is likely to consist of a
-multi-layer silica-tantala substrate. The seismic isolation systems will be
+made from fused silica. The mirror coating is likely to consist of multiple 
+alternating layers of silica and tantala, with the tantala layers doped with 
+titania to reduce the coating thermal noise \cite{Agresti:2006}. The seismic isolation systems will be
 replaced with improved versions offering a seismic cut-off frequency of $\sim10$
-Hz as opposed to the current cut-off of $\sim40$ Hz. As stated for Enhanced LIGO
-the laser power will be greater than for initial LIGO and a DC readout scheme
-will be used. It is expected that the interferometers will be shut down to
-begin the upgrades in 2011, with completion around 2014. ({\bf Add the current
-expected AdvLIGO noise curves from
-http://lhocds.ligo-wa.caltech.edu:8000/advligo/AdvLIGO\_noise\_curves
-[apparently use mode 1b from LIGO document T070247-01, or ZERO\_DET\_high\_P
-from the above URL], also find AdvVirgo curve}).
+Hz as opposed to the current cut-off of $\sim40$ Hz. As stated for Enhanced LIGO 
+(in \S\ref{sec:ligoruns}) the laser power will be greater than for initial 
+LIGO and a DC readout scheme will be used. Initial/Enhanced LIGO was shut down 
+to begin the installation of these upgrades on 20 October 2010. The design
+strain amplitude sensitivity curve for aLIGO (and AdvVirgo and LCGT) is shown
+in Fig~\ref{fig:advcurves}.
 
-AdvVirgo will apply similar upgrades to those for AdvLIGO and over a similar
+% second generation detector design strain sensitivities
+\epubtkImage{}{%
+\begin{figure}[hptb]
+  \centerline{\includegraphics[scale=0.45]{advcurves}}
+  \caption{\it Design sensitivity curves for the Advanced LIGO, Advanced Virgo
+and LCGT second generation detectors. The Advanced LIGO curve comes from 
+\cite{Harry:2010}, the Advanced Virgo curve comes from \cite{aVIRGOweb}, and the
+LCGT curve comes from \cite{Arai:2009}. These curves are based on specific
+configurations of the detectors and are therefore subject to change.}
+  \label{fig:advcurves}
+\end{figure}}
+
+AdvVirgo will apply similar upgrades to those for aLIGO and over a similar
 timescale (for details see \cite{AdVwhitepaper} and \cite{AdVdesign}). Plans are
 to add a signal recycling mirror, monolithic suspensions, increased laser power
-to $\sim200$~W, non-Gaussian beams, and improved coatings. The seismic isolation
-system will not be changed.
+to $\sim200$~W, improved coatings a potentially use non-Gaussian beams (see 
+e.g.~\cite{Freise:2010}), although this option is unlikely. The seismic isolation
+system will not be changed. Virgo will shut down to begin these upgrades in July
+2011.
 
 The Large-scale Cryogenic Gravitational-Wave Telescope (LCGT)
 \cite{Miyoki:2005, Ohashi:2008} is a planned Japanese detector to be sited
 underground in the Kamioka mine. The LGCT will consist of two co-located
-detectors with 3~km arms and cryogenically cooled sapphire mirrors and sapphire
-suspensions. This detector is planned to have similar sensitivities to AdvLIGO
+detectors with 3~km arms, using sapphire mirrors and sapphire
+suspensions. Initially it will operate at room temperature, but will later be
+cooled to cryogenic temperatures. This detector is planned to have similar sensitivities to aLIGO
 and AdvVirgo, with a reach for binary coalescences of about 200~Mpc with SNR of
-10. There currently exists a technology demonstrator called Cryogenic Laser
+10. There currently exists a technology demonstrator called the Cryogenic Laser
 Interferometer Observatory (CLIO) \cite{Yamamoto:2008, CLIOweb}, which has a
 100~m baseline and is also sited in the Kamioka mine. This is to demonstrate the
 very stable conditions (i.e.\ low levels of seismic noise) existing in the mine
 and also the cryogenically cooled sapphire mirrors suspended from aluminium
-wires. In experiments with CLIO at room temperature (i.e. 300~K), using Bolfur
-wire suspensions, it has already been used to produce an astrophysics result by
+wires. In experiments with CLIO at room temperature (i.e. 300~K), using a metallic glass 
+called Bolfur for its wire suspensions, it has already been used to produce an astrophysics result by
 looking for gravitational waves from the Vela pulsar \cite{Akutsu:2008}, giving
 an 99.4\% confidence upper limit of $h = 5.3\times10^{-20}$. Tests with the
-cryogenic system on and using aluminium suspensions allowed it to be cooled to
+cryogenic system activated and using aluminium suspensions allowed two mirrors to be cooled to
 $\sim14$\,K.
 
+Having a network of comparably sensitive detectors spread widely across the globe 
+is vital gain the fullest astrophysical insight into transient sources. Position
+reconstruction for sources relies on triangulating the location based on time-of-flight
+delays observed between detectors. Therefore have long baselines, and different planes,
+between as many detectors as possible gives the best positional reconstruction -- in 
+\cite{Fairhurst:2010} it is shown that for the 2 US aLIGO sites sky localisation will
+be of order 1000 square degrees, whereas this can be brought down to a few square degrees
+with the inclusion of more sites and detectors. 
+Observation with multiple detectors also provide the best way to give confidence that a
+signal is a real gravitational wave rather than the accidental coincidence of 
+background noise. Finally multiple, differently oriented, detectors will increase the
+ability to reconstruct a transient sources waveform and polarisation. 
+
 \subsubsection{Third generation detectors}
-Currently design studies are underway for a third generation gravitational wave
+Currently design studies are under way for a third generation gravitational wave
 observatory called the Einstein Telescope (ET) \cite{ETweb}. This is a European
 Commission funded study with working groups looking into various aspects of the
-design including the site location and characteristics (e.g. underground),
-suspensions technologies, detector topology and geometry (e.g. a equilateral
-triangle configuration), and astrophysical aims. This preliminary plan is to
+design including: the site location and characteristics (e.g. underground),
+suspensions technologies; detector topology and geometry (e.g. a equilateral
+triangle configuration); and astrophysical aims. This preliminary plan is to
 aim for an observatory which improves upon the second generation detectors by
 an order of magnitude over a broad band. There are many technological
 challenges to be faced in attempting to make this a reality and research is
 currently under way into a variety of these issues.
 
 Investigations into the interferometric configuration have already been studied
-(see \cite{Freise:2008, Hild:2008}), with suggestions including a triple
+(see \cite{Freise:2008, Hild:2008, Hild:2010}), with suggestions including a triple
 interferometer system made up from an equilateral triangle, an underground
 location, and potentially a xylophone configuration (two independent detectors
-covering difference frequency ranges.)
+covering different frequency ranges i.e. ultimately giving six detectors in 
+total, although constructed over a period of years). 
 
 %This level of sensitivity is expected to be improved on when the longer LIGO
 %and Virgo detectors are upgraded. Indeed plans for an upgraded LIGO, LIGO~2,
@@ -2118,16 +2301,16 @@ mergers of supermassive black holes in the range $10^3$ to $10^6$\,M$_{\odot}$
 and cosmological stochastic backgrounds, will lie in the frequency region below
 that of ground-based detectors. The most promising way of looking for such
 signals is to fly a laser interferometer in space, i.e.\ to launch a number of
-drag free space craft into orbit and to compare the distances between test
+drag free spacecraft into orbit and to compare the distances between test
 masses in these craft using laser interferometry.
 
 \subsection{LISA}
-LISA -- Laser Interferometer Space Antenna (see for example~\cite{LISAsymposium,
-NASAweb, ESAweb}) -- is a joint ESA/NASA mission to observe these low frequency
+The Laser Interferometer Space Antenna (LISA) (see for example~\cite{LISAsymposium,
+NASAweb, ESAweb}) is a planned joint ESA/NASA mission to observe these low frequency
 gravitational waves, with a sensitive frequency band between 0.1\,mHz and
-0.1\,Hz. It consists of an array of three drag free spacecraft at the vertices
-of an equilateral triangle of length of side $5 \times 10^6$~km. This cluster
-is placed in an Earth-like orbit at a distance of 1~AU from the Sun,
+0.1\,Hz. It will consist of an array of three drag-free spacecraft at the vertices
+of an equilateral triangle of length of side $5\times10^6$~km, with the cluster 
+placed in an Earth-like orbit at a distance of 1~AU from the Sun,
 $20^{\circ}$ behind the Earth and inclined at $60^{\circ}$ to the ecliptic. A
 current review of LISA technologies, with expanded discussion of, and references
 for, topics touched upon below, can be found in \cite{Jennrich:2009}. Here we
@@ -2138,28 +2321,17 @@ Proof masses inside the spacecraft (two in each spacecraft) form the end points
 of three separate, but not independent, interferometers. Each single two-arm
 Michelson type interferometer is formed from a vertex (actually consisting of
 the proof masses in a `central' spacecraft), and the masses in two remote
-spacecraft as indicated in Fig.~\ref{figure:LISA}.
-
-\epubtkImage{}{%
-\begin{figure}[hptb]
-  \centerline{\includegraphics[scale=0.4]{fig8}}
-  \caption{\it The proposed LISA detector.}
-  \label{figure:LISA}
-\end{figure}}
-
-The three-interferometer configuration provides redundancy against component
-failure, gives better detection probability, and allows the determination of
-polarisation of the incoming radiation. The spacecraft in which they are
-accommodated shields each pair of proof masses from external disturbances (e.g.
+spacecraft as indicated in Fig.~\ref{figure:LISA}. The 
+three-interferometer configuration provides redundancy against component
+failure, gives better detection probability, and allows the determination of the
+polarisation of the incoming radiation. The spacecraft which house the optical benches
+are essentially there as a way to shield each pair of proof masses from external disturbances (e.g.
 solar radiation pressure). Drag free control servos enable the spacecraft to
 follow the proof masses to a high level of precision, the drag compensation
 being effected using proportional electric thrusters. Illumination of the
 interferometers is by highly stabilised laser light from Nd:YAG lasers at a
 wavelength of 1.064 microns, laser powers of $\simeq$2~W being available from
-monolithic, non planar ring oscillators which are diode pumped. For each
-interferometer -- consisting of a central spacecraft and two distant spacecraft
--- two lasers in the central spacecraft, each pointing along one of the arms,
-are phase locked together so they effectively behave as a single laser. For LISA
+monolithic, non planar ring oscillators which are diode pumped.  For LISA
 to achieve its design performance strain sensitivity of around $10^{-20}\,{\rm
 Hz}^{-1/2}$, adjacent arm lengths have to be sensed to an accuracy of about $10
 {\rm \ pm}(\rm Hz)^{-1/2}$. Because of the long distances involved and the
@@ -2169,16 +2341,22 @@ low photon fluxes make it impossible to use standard mirrors for reflection;
 thus active mirrors with phase locked laser transponders on the spacecraft will
 be implemented. Telescope mirrors will be used to reduce diffraction losses on
 transmission of the beam and to increase the collecting area for reception of
-the beam. The laser power in each arm is of the order of 2~W, and using
-arguments similar to those already discussed for ground based detectors, with
-regard to photoelectron shot noise considerations, mean that the diameters of
-the transmitting and receiving telescope mirrors on the spacecraft will be
-40~cm.
+the beam. With the given laser power, and using arguments similar to those already 
+discussed for ground based detectors with regard to photoelectron shot noise 
+considerations, means that for the required sensitivity the transmitting and 
+receiving telescope mirrors on the spacecraft will have diameters of 40~cm.
+
+\epubtkImage{}{%
+\begin{figure}[hptb]
+  \centerline{\includegraphics[scale=0.4]{fig8}}
+  \caption{\it The proposed LISA detector.}
+  \label{figure:LISA}
+\end{figure}}
 
 Further, just as in the case of the ground based detectors, the presence of
 laser frequency noise is a limiting factor. It leads to an error in the
-measurement of each arm length. If the arms are equal these errors cancel out
-but if they are unequal, the comparison of lengths used to search for
+measurement of each arm length. If the arms are equal these errors cancel out,
+but if they are unequal the comparison of lengths used to search for
 gravitational waves may be dominated by frequency noise. For the
 $5\times10^9$~m long arms of LISA, a difference in arm length of $10^8$~m is
 likely. Then for a relative arm length measurement of $2 \times 10^{-12}\,{\rm
@@ -2191,11 +2369,11 @@ the frequency of one laser in the system on to a local frequency reference,
 e.g.\ a Fabry-Perot cavity mounted on one of the craft (see for
 example~\cite{McNamara}), and then to effectively transfer this stability to
 other lasers in the system by phase locking techniques. With the temperature
-fluctuations inside each craft limited in the region of $10^{-3}$~Hz to
+fluctuations inside each craft limited in the region of 3~mHz to
 approximately $10^{-6}\,{\rm K}\,{\rm Hz}^{-1/2}$ by three stages of thermal
 insulation, a cavity formed of material of low expansion coefficient such as ULE
 allows a stability level of approximately $30 {\rm Hz}{\rm Hz}^{-1/2}$ (again
-at 3\,mHz). This level of laser frequency noise is clearly much worse than the
+at 3~mHz). This level of laser frequency noise is clearly much worse than the
 required $1.2 \times 10^{-6}\,{\rm Hz}\,{\rm Hz}^{-1/2}$ (at 3\,mHz) and a
 further correction scheme is needed. A second possible stage of frequency
 stabilisation is arm-locking \cite{Sheard:2003}, which relies on the fact that
@@ -2203,22 +2381,22 @@ by design the fractional stability of the LISA arms is of order $\delta{}l/L
 \sim 10^{-21}\,{\rm Hz}^{-1/2}$ to derive an error signal from the phase
 difference between the local laser and the received light. As the received light
 is phase locked with the local laser from the craft that sent it it caries a
-replicate of the frequency noise of the local laser noise delayed by one round
-trip time $\tau=33$\,s. From this noise can be suppressed at frequencies smaller
+replica of the frequency noise of the local laser noise delayed by one round
+trip time $\tau=33$\,s. Using this fact this noise can be suppressed at frequencies smaller
 than the round trip frequency $f= 1/\tau = 30$\,mHz. This scheme requires no
 additional hardware and can be completely implemented in software, but it will
 still leave frequency noise that is several orders of magnitude above required
 levels. A third stage frequency stabilisation scheme, which is a post-processing
 step, is time-delay interferometry (TDI). This makes use of the fact that,
-because the beams coming down each are not combined, the phase of each beam can
+because the beams coming down each arm are not combined, the phase of each beam can
 be measured and recorded. Therefore correlations in the frequency noise can be
 calculated and subtracted by algebraically combining phase measurements from
-different craft delayed by the multiples of the distance between the spacecraft.
+different craft delayed by the multiples of the time delay between the spacecraft.
 The accuracy of this is set by the phase measurement accuracy, which allows
 frequency noise subtraction to below the required level. A simple TDI scheme,
 for a much simplified constellation, was first based in the frequency domain
 \cite{Giampieri}, but due to complexities in taking into account changing arm
-lengths and more complex interferometric scheme subsequent implementations have
+lengths and a more complex interferometric scheme subsequent implementations have
 been in the time domain. A mathematical overview of the TDI scheme, along with
 moving spacecraft and unequal arm lengths, can be found in \cite{Tinto:2005}.
 
@@ -2227,11 +2405,11 @@ which is responsible for making sure the test masses follow, as far as
 possible, purely gravitational orbits. This consists of the gravitational
 reference sensor (GRS) and the control and propulsion systems used to keep the
 spacecraft centred on the test mass. The test masses for LISA are 1.96\,kg
-cubes, with sides of 46\,mm and made of an alloy of 75\% gold and 25\% platinum
+cubes, with sides of 46\,mm and made of an alloy of 75\% gold and 25\% platinum,
 chosen because of its very small magnetic susceptibility. The masses are housed
-in a cube of electrodes designed to capacitively sense their position designed
-to give measurement noise levels of 1.8\,nm\,Hz$^{-1/2}$. The masses need to be
-tightly held in place during launch and then releasing, so a caging mechanism
+in a cube of electrodes designed to capacitively sense their position and
+to have measurement noise levels of 1.8\,nm\,Hz$^{-1/2}$. The masses need to be
+tightly held in place during launch and then released, so a caging mechanism
 has been designed consisting of 8 hydraulic fingers (one for each corner of the
 mass) pushing with 1200\,N of force. There will be adhesion between the fingers
 and the masses, which will require about 10\,N of force per finger to break. To
@@ -2239,9 +2417,9 @@ provide this force two plungers will push on the the top and bottom surfaces of
 the masses releasing them from the fingers, followed by pushing smaller release
 tips in each plunger, and quickly retracting them, to overcome their adhesion to
 the masses. Charged particles produced by cosmic radiation interacting with the
-surrounding spacecraft can cause the test masses to become charged, at a rate of
-about 50 electrons per second. Current plans are to use UV light, from mercury
-lamps (or potentially UV LEDs), to discharge the masses. Another key technology
+surrounding spacecraft can cause the test masses to become charged at a rate of
+about 50 electrons per second. Current plans are to use UV light from mercury
+lamps (or potentially UV LEDs) to discharge the masses. Another key technology
 for the DRS are the micro-Newton thrusters, which provide the fine control
 needed for drag-free flight. These will mainly be used to counteract solar
 radiation pressure on the spacecraft, which requires about 10\,$\mu$N per
@@ -2249,11 +2427,11 @@ relevant thruster. Thrust noise as a function of frequency is required to be
 smaller than $0.1\,\mu{\rm N}\,{\rm
 Hz}^{-1/2}\times\sqrt{1+\left(\frac{10\,{\rm m}\,{\rm Hz}}{f}\right)^4}$. Two
 types of system, both of which meet the requirements, will be tested on LISA
-Pathfinder: the US colliod mirco-Newton thruster (CMNT); and the European field
+Pathfinder: the US colloid micro-Newton thruster (CMNT); and the European field
 emission electric propulsion system (FEEP). The CMNT uses small drops of a
 colloid, which it ionises through field emission, accelerates and ejects from
 the thruster. Two designs of FEEP currently exist, one using indium and the
-other caesium and with different geometries, which instead is ionising a droplet
+other caesium and with different geometries, which instead of ionising a droplet
 of colloid just use single ions. This means FEEPs have a better charge to mass
 ratio. The current baseline is to use caesium FEEPs. Many of these systems above
 are being tested in the LISA Pathfinder mission (see below) and use the nominal
@@ -2267,51 +2445,52 @@ Johann:2008} for a discussion of some of these.
 For LISA the baseline mission design was finalised in 2005. An industrial
 contract was awarded to Astrium GmbH for the LISA Mission Formulation study
 \cite{Johann:2008}. Within the current ESA Science Programme LISA is in the
-Cosmic Vision 2015-2025 Programme, with an earliest possible launch window of
-2018, although a launch after 2020 seems likely. In 2007 the National Research
+Cosmic Vision 2015-2025 Programme, and launch after 2020 seems likely. 
+In 2007 the National Research
 Council report on the NASA Beyond Einstein Program (soon to become the Physics
-of the Cosmos Program) gave LISA the highest scientific ranking. Recent
+of the Cosmos Program) gave LISA the highest scientific ranking, and it has
+been rated very highly in the Astro2010 decadal survey \cite{astro2010}. Recent
 technical reports for LISA can be found at \cite{LISATechReports}.
 
 Several of the key technologies for LISA are being testing on the LISA
 Pathfinder mission (formerly SMART-2). Details of the current status of this
 mission can be found in \cite{Armano:2009}. LISA Pathfinder, will fly the
 LISA Technology Package (LTP), which essentially consists of a downscaled
-version of one LISA arm compressed from 5 million km to 38\,cm. The LTP aims,
-which contains two test masses (an emitter and a receiver) with a Doppler link
+version of one LISA arm compressed from 5 million km to 38\,cm. The LTP {\it arm}
+contain two test masses (an emitter and a receiver) with a Doppler link
 between them. The three main things it will measure are: the acceleration phase
-noise, caused by the relative motion of the emitter and receiver from
+noise caused by the relative motion of the emitter and receiver from
 non-gravitational forces; the readout noise; and noise caused by the departure
 of the Doppler link from the ideal scheme, due to the fact that we are not
 truly measuring the relative accelerations of two point particles, but instead
 a more complex systems of multiple Doppler links and extended masses. It is
-designed to test the accuracy of these to within one-tenth of that required by
+designed to test the accuracy of these to within an order of magnitude of that required by
 the full LISA. Other aspects of the mission that will be tested are the
-de-charging of the test masses, the caging and release of the masses following
+discharging of the test masses, the caging and release of the masses following
 launch and the $\mu$Newton thrusters. As much as possible the nominal LISA
-systems and hardware is being used. LISA Pathfinder is currently scheduled for
-launch in late 2010, after which it will orbit the L1 point, with a 180 day
+systems and hardware are being used. LISA Pathfinder is currently scheduled for
+launch in mid 2013, after which it will orbit the L1 point, with a 180 day
 mission plan.
 
 \subsection{Other missions}
 LISA is the most advanced space-based project, but there exist concepts for at
 least two more detectors. DECIGO (DECi-hertz Interferometer Gravitational Wave
 Observatory) \cite{Sato:2009} is a Japanese project designed to fill the gap in
-frequency between ground-based detector and LISA, i.e.\ the 0.1--10\,Hz band. It
+frequency between ground-based detectors and LISA, i.e.\ the 0.1--10\,Hz band. It
 would have a similar configuration to LISA with three drag-free spacecraft, but
 have far shorter arm lengths at 1000\,km. Although still early in its design
-there are plans for two precursor technoology demonstration missions (DECIGO
+there are plans for two precursor technology demonstration missions (DECIGO
 Pathfinder \cite{Ando:2009} and Pre-DECIGO), with a the main mission having a
 launch date in the mid-2020s.
 
 A similar mission, in terms of the frequency band it seeks to cover, is the US
 Big Bang Observer (BBO) (see \cite{Crowder:2005, Cutler:2009, Harry:2006} for
-overviews of the proposal.) One of its main aims will be to detect the
+overviews of the proposal). One of its main aims will be to detect the
 stochastic background from the early universe, but it can also be used for high
 precision cosmology \cite{Cutler:2009}. The current configuration would consist
 of three LISA-like constellations of three spacecraft each, with 50\,000\,km arm
-lengths, and seperated in their orbit by $120^{\circ}$. The launch of this
-mission would be after DECIGO, but is desgined to be 2--3 times as senstive.
+lengths, and separated in their orbit by $120^{\circ}$. The launch of this
+mission would be after DECIGO, but is designed to be 2--3 times as sensitive.
 
 At lower frequencies than LISA, $\sim0.1\,\mu{\rm Hz}$--$1\,{\rm mHz}$, there
 are Chinese proposals for Super-ASTROD (Super Astrodynamical Space Test of
