@@ -14,9 +14,4 @@ ps: updated_article.tex refs.bib
 clean:
 	@echo "Cleaning directory of backups and logs"
 	rm -f *~ *.log *.aux *.dvi *.out *.bbl *.blg
-
-# rsync files with Dropbox
-copy:
-	@echo "rsync-ing with Dropbox"
-	rm -f *~ *.log *.aux *.dvi *.out *.bbl *.blg
-	rsync -rzva * /data/phlebas/matthew/Dropbox/my_papers/living_rev_article
+	
