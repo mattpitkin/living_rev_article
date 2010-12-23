@@ -992,7 +992,7 @@ noise must be satisfied.
 \subsubsection{Laser design}
 \label{subsubsection:laserdesign}
 
->From Equation~(\ref{equation:shot1}) it can be seen that the
+From Equation~(\ref{equation:shot1}) it can be seen that the
 photon-noise limited sensitivity of an interferometer is proportional
 to $P^{-1/2}$ where $P$ is the laser power incident on the
 interferometer, and $\lambda^{1/2}$ where $\lambda$ is the wavelength
@@ -2313,7 +2313,8 @@ masses in these craft using laser interferometry.
 The Laser Interferometer Space Antenna (LISA) (see for example~\cite{LISAsymposium,
 NASAweb, ESAweb}) is a planned joint ESA/NASA mission to observe these low frequency
 gravitational waves, with a sensitive frequency band between 0.1\,mHz and
-0.1\,Hz. It will consist of an array of three drag-free spacecraft at the vertices
+0.1\,Hz (a reference sensitivity curve is given in Fig~\ref{fig:lisasens}). 
+It will consist of an array of three drag-free spacecraft at the vertices
 of an equilateral triangle of length of side $5\times10^6$~km, with the cluster 
 placed in an Earth-like orbit at a distance of 1~AU from the Sun,
 $20^{\circ}$ behind the Earth and inclined at $60^{\circ}$ to the ecliptic. A
@@ -2321,6 +2322,16 @@ current review of LISA technologies, with expanded discussion of, and references
 for, topics touched upon below, can be found in \cite{Jennrich:2009}. Here we
 will focus upon a couple of topics regarding the interferometry needed to give
 the required sensitivity.
+
+\epubtkImage{}{%
+\begin{figure}[hptb]
+  \centerline{\includegraphics[scale=0.45]{lisacurve}}
+  \caption{\it A design sensitivity curves for LISA created using the online
+generator at \cite{lisasens}. Also included is a curve showing the expected
+background noise from galactic white dwarf binary systems, which will dominate
+over the instrumental noise in the range from $\approx$0.1--1~mHz.}
+  \label{fig:lisasens}
+\end{figure}}
 
 Proof masses inside the spacecraft (two in each spacecraft) form the end points
 of three separate, but not independent, interferometers. Each single two-arm 
