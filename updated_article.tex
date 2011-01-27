@@ -674,14 +674,14 @@ the test masses must be $\simeq 3 \times 10^{-8}$ or lower, and the loss factor
 of the pendulum resonances should be smaller than $10^{-10}$.
 
 Obtaining these values puts significant constraints on the choice of material
-for the test masses and their suspending fibres. GEO600 utilises very low-loss
+for the test masses and their suspending fibres. GEO~600 utilises very low-loss
 silica suspensions, a technology which should allow detector sensitivities to
 approach the level desired for second generation instruments~\cite{Braginsky1,
 Rowan1, Rowan2}, since the intrinsic loss factors in samples of synthetic fused
-silica have been measured at around $3 \times 10^{-8}$~\cite{Lunin, Startin}.
+silica have been measured down to around $5\times 10^{-9}$~\cite{Ageev:2004}.
 Still, the use of other materials such as sapphire is being seriously considered
 for future detectors~\cite{Braginsky2, Ju2, Rowan1} such as in
-LCGT~\cite{Miyoki:2005, Ohashi:2008}.
+LCGT~\cite{Miyoki:2005, Ohashi:2008}. 
 
 The technique of hydroxy-catalysis bonding provides a method of jointing oxide
 materials in a suitably low loss way to allow `monolithic' suspension systems to
@@ -694,7 +694,7 @@ LIGO mirror suspension are shown in Fig.~\ref{figure:monolithic}.
 \epubtkImage{}{%
 \begin{figure}[hptb]
   \centerline{\includegraphics[width=400pt]{monolithic}}
-  \caption{\it Monolithic silica suspension of (a) GEO600 6 kg mirror test mass
+  \caption{\it Monolithic silica suspension of (a) GEO~600 6 kg mirror test mass
 suspended from 4 fibres of thickness $250~\mu$m and (b) prototype monolithic
 suspension for Advanced LIGO at LASTI (mirror mass of 40 kg, silica fibre
 thickness $400~\mu$m).}
@@ -1160,7 +1160,7 @@ sensitivities~\cite{Hild:2010}.  Low-frequency sensitivity is expected to be
 achieved through the use of separate low-power interferometers with silicon
 optics operating at cryogenic temperatures~\cite{Rowan:2003, Punturo:2010}.
 Longer wavelengths are proposed here due to excessive absorption in silicon at
-1064 nm and the expected low absorption (less that 0.1 ppm/cm) at around 1550
+1064 nm and the expected low absorption (less than 0.1 ppm/cm) at around 1550
 nm~\cite{Green:1995}. Worldwide laser developments may provide new baseline
 light sources that can provide different wavelength and power options for future
 detectors. However, the stringent requirements on the temporal and spatial
@@ -1170,36 +1170,36 @@ required to continue beyond the second generation interferometers in order to
 design and build a laser system that meets third generation requirements, as
 discussed in more detail in~\cite{Mavalvala:2010}.
 
-In particular, to obtain high performance from the modulation techniques
-discussed in \S\ref{subsection:powerrec} it is necessary that at the
-modulation frequency, the power fluctuations of the laser light used must be
-shot noise limited in the amount of light detected at the interferometer output
-(typically up to a few Watts).
+%In particular, to obtain high performance from the modulation techniques
+%discussed in \S\ref{subsection:powerrec} it is necessary that at the
+%modulation frequency, the power fluctuations of the laser light used must be
+%shot noise limited in the amount of light detected at the interferometer output
+%(typically up to a few Watts).
 
-Previous studies of the noise properties of optical amplifiers have shown that
-in a given output power of light from an optical amplifier, power fluctuations
-exist which are in excess of those obtained from a shot noise limited laser of
-the same output power~\cite{Harris}. This gain dependent excess noise arises
-from the beating of the spontaneous emission from the amplifier with the light
-being amplified. Measurements of this excess noise at RF modulation frequencies
-have been made using a free space Nd:YAG linear optical amplifier
-system~\cite{Tulloch}. For this type of light source to be suitable for use in
-an interferometric gravitational wave detector, it is necessary to reduce these
-high frequency power fluctuations; a suitable technique is to pass the light
-through a resonant cavity similar to that used to spatially filter the input
-laser light as described in \S\ref{subsubsection:lasernoise}~\cite{Willke}.
-Above the corner frequency $f_{c}$ of the cavity, power and frequency
-fluctuations of the laser light are reduced by a factor $f/ f_{c}$ where $f$ is
-the frequency at which the fluctuation occurs, and
+%Previous studies of the noise properties of optical amplifiers have shown that
+%in a given output power of light from an optical amplifier, power fluctuations
+%exist which are in excess of those obtained from a shot noise limited laser of
+%the same output power~\cite{Harris}. This gain dependent excess noise arises
+%from the beating of the spontaneous emission from the amplifier with the light
+%being amplified. Measurements of this excess noise at RF modulation frequencies
+%have been made using a free space Nd:YAG linear optical amplifier
+%system~\cite{Tulloch}. For this type of light source to be suitable for use in
+%an interferometric gravitational wave detector, it is necessary to reduce these
+%high frequency power fluctuations; a suitable technique is to pass the light
+%through a resonant cavity similar to that used to spatially filter the input
+%laser light as described in \S\ref{subsubsection:lasernoise}~\cite{Willke}.
+%Above the corner frequency $f_{c}$ of the cavity, power and frequency
+%fluctuations of the laser light are reduced by a factor $f/ f_{c}$ where $f$ is
+%the frequency at which the fluctuation occurs, and
 %
-\begin{equation}
-  f_c = \frac{({\rm cavity\ free\ spectral\ range})}{(2 \times {\rm
-  \ finesse})}.
-  \label{equation:filtering}
-\end{equation}
+%\begin{equation}
+%  f_c = \frac{({\rm cavity\ free\ spectral\ range})}{(2 \times {\rm
+%  \ finesse})}.
+%  \label{equation:filtering}
+%\end{equation}
 %
-Thus the excess power noise introduced by the amplification process may be
-reduced to an appropriate level.
+%Thus the excess power noise introduced by the amplification process may be
+%reduced to an appropriate level.
 
 Another key area of laser development, targeted at improving the sensitivity of
 future gravitational wave detectors, is in the use of special optical modes in
@@ -1395,34 +1395,35 @@ estimating the expected number of sources that might be observable given their
 design sensitivities. In particular, for what are thought to be the strongest
 sources: the coalescence of binary neutron stars or black holes (see
 \S\ref{sec:cbc} for current rates as constrained by observations). These 
-estimates, based on observation and simulation, are summarised in
-\cite{Abadie:2010e} and suggest initial detectors might expect to see 0.02,
-0.004 and 0.007 events per year for binary neutron star, black hole-neutron
-star, and binary black hole systems respectively (although there is a wide range
-covering orders of magnitude in these estimates)\footnote{In terms of event
-rates the current best estimates for binary neutron star merger rates, based on
-the known population of binary neutron star systems, gives a 95\% confidence
-interval between 1--1000$\times10^{-6}$ per year per Milky Way Equivalent Galaxy
-(MWEG), where MWEG is equivalent to a volume that contains a blue light
-luminosity with $L = 9\times10^9L_{\odot}$ (MWEG was used in the S1 and S2 LIGO
-search, but was then changed to the $L_{10}$ unit, where $L_{10}$ is given as
-$10^{10}$ times the blue light luminosity of the sun, although there is only a
-10\% difference between the two), \cite{Abadie:2010e, Kalogera:2004a,
-Kalogera:2004b}, with a peak in the distribution at $100\times10^{-6}$ per year
-per MWEG -- or $\approx 0.02$ per year for initial LIGO at design sensitivity.
-The expected rate of binary black hole systems, or black hole-neutron star
-systems is far harder to infer as none have been observed, but estimates can be
-made on the population for a wide variety of models and give a 95\% confidence
-range of 0.05--100$\times10^{-6}$ per year per MWEG and 0.01--30$\times10^{-6}$
-per year per MWEG respectively \cite{Abadie:2010e, OShaughnessy:2005,
-OShaughnessy:2008, Abbott:2008a}. As an example of how to convert from rates to
-event numbers, cumulative blue light luminosities with respect to distance from
-the Earth in Mpcs, and the horizon distances of the LIGO detectors from S2
-through to S4, can be seen in Figure 3 of \cite{Abbott:2008a}.}. Second
-generation detectors (see \S\ref{subsection:aligo}), which can observe
-approximately 1000 time more volume than the initial detectors might expect to
-see 40, 10, and 20 per year for the same sources. With such rates a great deal
-of astrophysics could be possible (see \cite{Sathyaprakash:2009} for examples).
+estimates, based on observation and simulation, are summarised in Table~5 of
+\cite{Abadie:2010e} and the {\it realistic} rates suggest initial detectors
+would expect to see 0.02, 0.004 and 0.007 events per year for binary neutron
+star, black hole-neutron star, and binary black hole systems respectively (it
+should be noted that there is a range of possible rates consistent with current
+observations and models)\footnote{In terms of event rates the current best
+estimates for binary neutron star merger rates, based on the known population of
+binary neutron star systems, gives a 95\% confidence interval between
+1--1000$\times10^{-6}$ per year per Milky Way Equivalent Galaxy (MWEG), where
+MWEG is equivalent to a volume that contains a blue light luminosity with $L =
+9\times10^9L_{\odot}$ (MWEG was used in the S1 and S2 LIGO search, but was then
+changed to the $L_{10}$ unit, where $L_{10}$ is given as $10^{10}$ times the
+blue light luminosity of the sun, although there is only a 10\% difference
+between the two), \cite{Abadie:2010e, Kalogera:2004a, Kalogera:2004b}, with a
+peak in the distribution at $100\times10^{-6}$ per year per MWEG -- or $\approx
+0.02$ per year for initial LIGO at design sensitivity. The expected rate of
+binary black hole systems, or black hole-neutron star systems is far harder to
+infer as none have been observed, but estimates can be made on the population
+for a wide variety of models and give a 95\% confidence range of
+0.05--100$\times10^{-6}$ per year per MWEG and 0.01--30$\times10^{-6}$ per year
+per MWEG respectively \cite{Abadie:2010e, OShaughnessy:2005, OShaughnessy:2008,
+Abbott:2008a}. As an example of how to convert from rates to event numbers,
+cumulative blue light luminosities with respect to distance from the Earth in
+Mpcs, and the horizon distances of the LIGO detectors from S2 through to S4, can
+be seen in Figure 3 of \cite{Abbott:2008a}.}. Second generation detectors (see
+\S\ref{subsection:aligo}), which can observe approximately 1000 time more volume
+than the initial detectors might expect to see 40, 10, and 20 per year for the
+same sources. With such rates a great deal of astrophysics could be possible
+(see \cite{Sathyaprakash:2009} for examples).
 
 \subsection{Science Runs}\label{subsection:runs}
 Over the last decade the commissioning and improvement of the various
