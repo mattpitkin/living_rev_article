@@ -10,9 +10,6 @@
 \usepackage{color}
 \usepackage{upgreek}
 
-%\showlistoftablesfalse 
-
-
 %=========================================================================
 
 \begin{document}
@@ -175,7 +172,7 @@ the Parkes Pulsar Timing Array~\cite{Hobbs:2008}.
 All the above detection methods cover over 13 orders of magnitude in frequency
 (see Figure~\ref{fig:fullspectrum}) equivalent to covering from radio waves to
 X-rays in the electromagnetic spectrum.  This broadband coverage allows us to
-probe a wide range of potential sources. 
+probe a wide range of potential sources.
 
 \epubtkImage{}{%
 \begin{figure}[hptb]
@@ -331,8 +328,9 @@ detectors for operation in space~\cite{LISA}.
 The earliest experiments in the field were ground based and were carried out by
 Joseph Weber of the University of Maryland in the 1960s. With colleagues he
 began by looking for evidence of excitation of the normal modes of the earth by
-very low frequency gravitational waves~\cite{Forward2}. Weber then moved on to
-look for tidal strains in aluminium bars which were at room temperature and were
+very low frequency gravitational waves~\cite{Forward2}. Efforts to detect gravitational
+waves via the excitation of earth's normal modes was also pursued by Weiss and Block~\cite{Weiss:1965}.
+Weber then moved on to look for tidal strains in aluminium bars which were at room temperature and were
 well isolated from ground vibrations and acoustic noise in the
 laboratory~\cite{Weber1, Weber2}. The bars were resonant at $\simeq$~1600~Hz, a
 frequency where the energy spectrum of the signals from collapsing stars was
@@ -460,9 +458,9 @@ of these sources will be briefly reviewed.
 \label{subsection:seismic}
 
 Seismic noise at a reasonably quiet site on the earth follows a spectrum in all
-three dimensions close to $10^{-7}f^{-2}~{\rm m}{\rm Hz}^{-1/2}$ (where here
+three dimensions close to $10^{-7}f^{-2}~{\rm m/}{\rm Hz}^{1/2}$ (where here
 and elsewhere we measure $f$ in Hz) and thus if the disturbance to each test
-mass must be less than $3 \times 10^{-20}~{\rm m}{\rm Hz}^{-1/2}$ at, for
+mass must be less than $3 \times 10^{-20}~{\rm m/}{\rm Hz}^{1/2}$ at, for
 example, 30~Hz then the reduction of seismic noise required at that frequency in
 the horizontal direction is greater than $10^{9}$. Since there is liable to be
 some coupling of vertical noise through to the horizontal axis, along which the
@@ -561,11 +559,12 @@ $\tilde{x}(\omega)$, can be shown to be~\cite{Thorne:1998}
   \label{equation:GGN}
 \end{equation}
 %
-where $\rho$ is the Earth's density near the test mass, $G$ is Newton's constant
-and $\beta(\omega)$ is a dimensionless reduced transfer function that takes into
+where $\rho$ is the Earth's density near the test mass, $G$ is Newton's constant, $\omega$ is the angular frequency of the seismic spectrum,
+$\beta(\omega)$ is a dimensionless reduced transfer function that takes into
 account the correlated motion of the interferometer test masses in addition to
 the reduction due to the separation between the test mass and the Earth's
-surface.  In order to eliminate noise arising from gravity gradients, a detector
+surface and $\tilde{W}(\omega)$ is the displacement rms-averaged over 3-dimensional directions.
+In order to eliminate noise arising from gravity gradients, a detector
 would have to be operated far from these density fluctuations, that is, in
 space.  Proposed space missions are discussed later in
 section~\ref{section:space}.
@@ -941,7 +940,7 @@ chosen transmission -- a power recycling mirror -- between the laser and the
 interferometer so that a resonant cavity is formed between this mirror and the
 rest of the interferometer; in the case of perfect impedance matching no light
 is reflected back towards the laser~\cite{Drever3, Schilling}. There is then a
-power build-up inside the interferometer as shown in 
+power build-up inside the interferometer as shown in
 Figure~\ref{figure:Michelsons2a}. This can be high enough to create the required
 kilowatts of laser light at the beamsplitter, starting from an input laser light
 of only about 10~W.
@@ -1046,8 +1045,7 @@ the initial designs of long baseline detector~\cite{Hough} it can be estimated
 that the rms motion will be of the order of $10^{-13}$~m when the system is
 operating. Taking strains of around $3 \times 10^{-24}~{\rm Hz}^{-1/2}$ at
 300~Hz, as is the case for Advanced LIGO~\cite{Harry:2010}, requires power
-fluctuations of
-the laser not to exceed
+fluctuations of the laser not to exceed
 %
 \begin{equation}
   \frac{\delta P}{P} \leq 10^{-7} {\rm Hz}^{-1/2} \quad {\rm at}
@@ -1058,6 +1056,12 @@ the laser not to exceed
 To achieve this level of power fluctuations typically requires the use of active
 stabilisation techniques of the type developed for argon ion
 lasers~\cite{Mangan}.
+%
+It should be noted however that the most stringent constraint on laser power fluctuations
+in future ground-based detectors, where circulating laser powers will approach 1~MW or even beyond,
+will ultimately arise from classical radiation pressure on the mirrors, as previously described in
+Section~\ref{subsubsection:radiationnoise}.
+
 %
 \item {\bf Frequency fluctuations} \\
 For a simple Michelson interferometer it can be shown that a change $\delta x$
@@ -1095,7 +1099,14 @@ reference cavities~\cite{Hough}.
 Although the calculation here is for a simple Michelson interferometer, similar
 arguments apply to the more sophisticated systems with arm cavities, power
 recycling and signal recycling discussed earlier and lead to the same
-conclusions.
+conclusions. Frequency stabilisation is also important in other applications such
+as in high resolution optical spectroscopy~\cite{Rafac:2000}, optical frequency
+standards~\cite{Ludlow:2006,Webster:2004} and fundamental quantum
+measurements~\cite{Schmidt-Kaler:2003}. The best reference cavities, such as those
+developed by the Ye~\cite{Notcutt:2006} and Hansch~\cite{Alnis:2008} groups, have reported frequency stability
+performance of around $10^{-16}$, which is broadly equivalent to that achieved for ground-based
+gravitational wave detectors when scaling by cavity length.
+
 
 \item {\bf Beam geometry fluctuations} \\
 Fluctuations in the lateral or angular position of the input laser beam, along
@@ -1144,6 +1155,8 @@ acting as a filter for fast fluctuations in laser frequency and
 power~\cite{Skeldon, Willke}. This latter property is extremely useful for the
 conditioning of the light from some laser sources as will be discussed below.
 \end{itemize}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1195,6 +1208,11 @@ power.  This output is subsequently amplified by a four-head Nd:YVO laser
 amplifier to a power of 35 W~\cite{Frede:2007}, which is in turn delivered into
 an injection locked Nd:YAG oscillator to produce 200 W of output
 power~\cite{Wilke:2008}.
+
+Other laser developments are being pursued, such as high power fibre lasers which are
+currently being investigated by the AEI in Germany~\cite{Schnabel:2010} and prototyped for Advanced VIRGO
+by Gr$\acute{\textrm{e}}$verie et al in France~\cite{Greverie:2010}. Fibre amplifiers show great potential for extrapolation
+to higher laser powers in addition to lower production costs.
 
 Third generation interferometric gravitational wave detectors, such as the
 Einstein Telescope, require input laser powers of around 500 W at 1064 nm in
@@ -1990,7 +2008,7 @@ mass binary coalescences with component mass between 1--99\,$M_{\odot}$ and
 total masses of 25--100\,$M_{\odot}$. No signal was seen, but a 90\%
 confidence upper limit rate on mergers of binary black hole systems with
 component masses between 19 and 28\,$M_{\odot}$, and with negligible spin, was
-set at 2.0\,Mpc$^{-3}$\,Myr$^{-1}$ \cite{Abadie:2011a}. 
+set at 2.0\,Mpc$^{-3}$\,Myr$^{-1}$ \cite{Abadie:2011a}.
 
 \subsubsection{Externally triggered burst searches}
 
@@ -2394,7 +2412,8 @@ generation detectors, which could provide the premier gravitational wave
 observatories for the first half of the century. A brief summary of the planned
 upgrades to current and future detectors is given below. An overview can be also
 be found here~\cite{Whitcomb:2008}. Some of the technologies for these upgrades
-are discussed in earlier in this review (e.g. Section~\ref{section:interferometry}).
+are discussed in earlier in this review (e.g.
+Section~\ref{section:interferometry}).
 
 \subsubsection{Advanced LIGO, Advanced Virgo and LCGT}
 \label{subsection:aligo}
