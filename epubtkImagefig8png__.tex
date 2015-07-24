@@ -1,0 +1,169 @@
+\epubtkImage{fig8.png}{%
+
+
+Further, just as in the case of the ground-based detectors, the presence of
+laser frequency noise is a limiting factor. It leads to an error in the
+measurement of each arm length. If the arms are equal, these errors cancel out,
+but if they are unequal, the comparison of lengths used to search for
+gravitational waves may be dominated by frequency noise. For the 5~\texttimes~10\super{9}~m
+long arms of LISA, a difference in arm length of 10\super{8}~m is likely. Then, for a
+relative arm length measurement of 2~\texttimes~10\super{-12}~m~Hz\super{-1/2}
+(the error budget level allowed in the LISA design for this noise source),
+Equation~(\ref{equation:frequnoise}) suggests that a laser stability
+of $\simeq$~6~\texttimes~10\super{-6}~\HzHz is required, a level much
+better than can be achieved from the laser on its own. Thus, frequency stabilisation has
+to be provided. The first method of stabilisation is to lock the frequency of
+one laser in the system on to a local frequency reference, e.g., a Fabry--P\'{e}rot
+cavity mounted on one of the craft (see, for example,~\cite{McNamara}), and then
+to effectively transfer this stability to other lasers in the system by phase
+locking techniques. With the temperature fluctuations inside each craft limited
+in the region of 3~mHz to approximately 10\super{-6}~K~\Hz by
+three stages of thermal insulation, a cavity formed of material of low expansion
+coefficient such as ULE allows a stability level of approximately
+30~\HzHz (again at 3~mHz). This level of laser
+frequency noise is clearly much worse than the required
+1.2~\texttimes~10\super{-6}~\HzHz (at 3~mHz) and a further correction
+scheme is needed. A second possible stage of frequency stabilisation
+is arm-locking~\cite{Sheard:2003}, which relies on the fact that, by
+design, the fractional stability of the LISA arms is of order
+$\delta{}l/L \sim 10^{-21} \mathrm{\ Hz}^{-1/2}$ to derive an error
+signal from the phase difference between the local laser and the
+received light. As the received light is phase locked with the local
+laser from the craft that sent it, it caries a replica of the frequency
+noise of the local laser noise delayed by one round trip time $\tau =
+33\mathrm{\ s}$. Using this fact, this noise can be suppressed at
+frequencies smaller than the round trip frequency $f= 1/\tau =
+30\mathrm{\ mHz}$. This scheme requires no additional hardware and can
+be completely implemented in software, but it will still leave
+frequency noise that is several orders of magnitude above required
+levels. A third stage frequency stabilisation scheme, which is a
+post-processing step, is time-delay interferometry (TDI). This makes
+use of the fact that, because the beams coming down each arm are not
+combined, the phase of each beam can be measured and
+recorded. Therefore, correlations in the frequency noise can be
+calculated and subtracted by algebraically combining phase
+measurements from different craft delayed by the multiples of the time
+delay between the spacecraft. The accuracy of this is set by the phase
+measurement accuracy, which allows frequency noise subtraction to
+below the required level. A simple TDI scheme, for a much simplified
+constellation, was first based in the frequency
+domain~\cite{Giampieri}, but due to complexities in taking into
+account changing arm lengths and a more complex interferometric scheme,
+subsequent implementations have been in the time domain. A
+mathematical overview of the TDI scheme, along with moving spacecraft
+and unequal arm lengths, can be found in~\cite{Tinto:2005}.
+
+
+
+0.1\,\mu{\mathrm{N\ Hz}}^{-1/2}\times\sqrt{1 +
+\left(\frac{10\mathrm{\ mHz}}{f}\right)^4}.
+
+
+One of the major components of LISA is the disturbance reduction system (DRS),
+which is responsible for making sure the test masses follow, as far as
+possible, purely gravitational orbits. This consists of the gravitational
+reference sensor (GRS) and the control and propulsion systems used to keep the
+spacecraft centred on the test mass. The test masses for LISA are 1.96~kg
+cubes, with sides of 46~mm and made of an alloy of 75\% gold and 25\% platinum,
+chosen because of its very small magnetic susceptibility. The masses are housed
+in a cube of electrodes designed to capacitively sense their position and
+to have measurement noise levels of 1.8~nm~\Hz. The masses need to be
+tightly held in place during launch and then released, so a caging mechanism
+has been designed consisting of 8 hydraulic fingers (one for each corner of the
+mass) pushing with 1200~N of force. There will be adhesion between the fingers
+and the masses, which will require about 10~N of force per finger to break. To
+provide this force two plungers will push on the the top and bottom surfaces of
+the masses releasing them from the fingers, followed by pushing smaller release
+tips in each plunger, and quickly retracting them, to overcome their adhesion to
+the masses. Charged particles produced by cosmic radiation interacting with the
+surrounding spacecraft can cause the test masses to become charged at a rate of
+about 50 electrons per second. Current plans are to use UV light from mercury
+lamps (or potentially UV LEDs) to discharge the masses. Another key technology
+for the DRS are the micro-Newton thrusters, which provide the fine control
+needed for drag-free flight. These will mainly be used to counteract solar
+radiation pressure on the spacecraft, which requires about 10~\muN per
+relevant thruster. Thrust noise as a function of frequency is required to be
+smaller than 
+
+
+Two types of system, both of
+which meet the requirements, will be tested on LISA Pathfinder: the US colloid
+micro-Newton thruster (CMNT); and the European field emission electric
+propulsion system (FEEP). The CMNT uses small drops of a colloid, which it
+ionises through field emission, accelerates and ejects from the thruster. Two
+designs of FEEP currently exist, one using Indium and the other Caesium and with
+different geometries, which, instead of ionising a droplet of colloid, just use
+single ions. This means FEEPs have a better charge to mass ratio. The current
+baseline is to use caesium FEEPs. Many of the systems above are being tested
+in the LISA Pathfinder mission (see below) and use the nominal LISA designs.
+
+
+There are many other issues associated with laser interferometry, and other
+aspects of the mission mentioned above, for LISA, which are not dealt with here
+and the interested reader should refer to~\cite{Hough, et.al., Jennrich:2009,
+Johann:2008} for a discussion of some of these.
+
+
+For LISA the baseline mission design was finalised in 2005. An industrial
+contract was awarded to Astrium GmbH for the LISA Mission Formulation
+study~\cite{Johann:2008}. Within the current ESA Science Programme
+LISA is in the Cosmic Vision 2015\,--\,2025
+Programme~\cite{ESACosmicVisions}, and launch after 2020 seems
+likely. In 2007 the National Research Council report on the NASA
+Beyond Einstein Program (soon to become the Physics of the Cosmos
+Program) gave LISA the highest scientific ranking, and it has been
+rated very highly in the Astro2010 decadal
+survey~\cite{astro2010}. However, as stated above, as of earlier this
+year (2011) ESA is considering the feasibility of LISA as a single agency
+mission~\cite{LISAESAstatement}. Recent technical reports for LISA can
+be found at~\cite{LISATechReports}.
+
+
+Several of the key technologies for LISA are being testing on the LISA
+Pathfinder mission (formerly SMART-2). Details of the current status of this
+mission can be found in~\cite{Armano:2009}. LISA Pathfinder will fly the LISA
+Technology Package (LTP), which essentially consists of a downscaled version of
+one LISA arm compressed from 5 million km to 38~cm. The LTP \textit{arm} contains
+two test masses (an emitter and a receiver) with a Doppler link between them.
+The three main things it will measure are: the acceleration phase noise caused
+by the relative motion of the emitter and receiver from non-gravitational
+forces; the readout noise; and noise caused by the departure of the Doppler link
+from the ideal scheme, due to the fact that we are not truly measuring the
+relative accelerations of two point particles, but instead a more complex
+system of multiple Doppler links and extended masses. It is designed to test
+the accuracy of these to within an order  of magnitude of that required by
+the full LISA. Other aspects of the mission that will be tested are the
+discharging of the test masses, the caging and release of the masses following
+launch and the micro-Newton thrusters. As much as possible the nominal LISA
+systems and hardware are being used. LISA Pathfinder is currently scheduled for
+launch in mid 2013, after which it will orbit the L1 point, with a 180-day
+mission plan.
+
+
+\subsection{Other missions}
+
+
+LISA is the most advanced space-based project, but there exist concepts for at
+least two more detectors. DECIGO (DECi-hertz Interferometer Gravitational Wave
+Observatory)~\cite{Sato:2009, Kawamura:2011} is a Japanese project designed to
+fill the gap in frequency between ground-based detectors and LISA, i.e.\, the
+0.1\,--\,10~Hz band. It would have a similar configuration to LISA with three
+drag-free spacecraft, but have far shorter arm lengths at 1000~km. Although
+still early in its design there are plans for two precursor technology
+demonstration missions (DECIGO Pathfinder~\cite{Ando:2009} and Pre-DECIGO), with
+a the main mission having a launch date in the mid-2020s.
+
+
+A similar mission, in terms of the frequency band it seeks to cover, is the US
+Big Bang Observer (BBO) (see~\cite{Crowder:2005, Cutler:2009, Harry:2006} for
+overviews of the proposal). One of its main aims will be to detect the
+stochastic background from the early universe, but it can also be used for high
+precision cosmology~\cite{Cutler:2009}. The current configuration would consist
+of three LISA-like constellations of three spacecraft each, with 50\,000~km arm
+lengths, and separated in their orbit by 120\textdegree. The launch of this
+mission would be after DECIGO, but is designed to be 2\,--\,3 times as sensitive.
+
+
+At lower frequencies than LISA, $\sim$~0.1~\muHz\,--\,1~mHz, there are Chinese
+proposals for Super-ASTROD (Super Astrodynamical Space Test of
+Relativity using Optical Devices)~\cite{Ni:2009}.
