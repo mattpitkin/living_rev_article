@@ -8,28 +8,7 @@
 \usepackage{textcomp}
 \usepackage{xspace}
 
-% LivRev superscript and subscript macros
-\def\getfirst#1#2STOP{#1}%
-\DeclareRobustCommand*\super[1]{%
-\edef\tmpx{\getfirst#1STOP}%
-\def\tmpy{-}%
-\ifx\tmpx\tmpy
-\textsuperscript{-#1}%
-\else
-\textsuperscript{#1}%
-\fi
-}%
-\DeclareRobustCommand*\sub[1]{%
-\edef\tmpx{\getfirst#1STOP}%
-\def\tmpy{-}%
-\ifx\tmpx\tmpy
-\@sub{\selectfont-#1}%
-\else
-\@sub{\selectfont#1}%
-\fi
-}%
-\def\@sub#1{{\m@th\ensuremath{_{\mbox{\fontsize\sf@size\z@#1}}}}}
-
+\newcommand{\super}[1]{\ensuremath{^{#1}}}
 \newcommand{\mum}{\textmu\hspace{-0.2pt}m\xspace}
 \newcommand{\muHz}{\textmu\hspace{-0.2pt}Hz\xspace}
 \newcommand{\muN}{\textmu\hspace{-0.2pt}N\xspace}
