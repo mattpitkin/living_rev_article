@@ -2,7 +2,7 @@
 
 default: ps
 
-ps: updated_article.tex refs.bib
+ps: updated_article.tex bibliography/biblio.bib
 	latex updated_article
         # ignore the exit status of bibtex by adding a hyphen
 	- bibtex updated_article
