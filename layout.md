@@ -1,5 +1,4 @@
 abstract.tex
-bibliographystyleliv.tex
 introduction.tex
 figures/full_gw_spectrum/full_gw_spectrum.png
 sectionGravitational.tex
