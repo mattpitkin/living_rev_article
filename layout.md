@@ -1,6 +1,6 @@
 abstract.tex
 bibliographystyleliv.tex
-sectionIntroduction_.tex
+introduction.tex
 figures/full_gw_spectrum/default_figure.png
 epubtkImagefull_gw_s.tex
 sectionGravitational.tex
