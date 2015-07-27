@@ -17,11 +17,11 @@ figures/GGN/GGN.png
 Section4_3.tex
 figures/monolithic/monolithic.png
 Section4_4.tex
-sectionLaser_Interfe.tex
-figures/fig5e/default_figure.png
-epubtkImagefig5epng_.tex
-figures/fig6a/default_figure.png
-epubtkImagefig6apng_.tex
+Section5_1.tex
+figures/fig5e/fig5e.png
+Section5_2.tex
+figures/fig6a/fig6a.png
+Section5_3.tex
 figures/fig6b/default_figure.png
 epubtkImagefig6bpng_.tex
 sectionOperation_of_.tex
