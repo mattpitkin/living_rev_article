@@ -121,22 +121,19 @@ sources, Data analysis}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Detection of Gravitational Waves}
-\label{section:Detection}
-
 \input{Section3_1}
 
-\epubtkImage{figures/full_gw_spectrum/fig1.png}{%
+\epubtkImage{figures/fig1/fig1.png}{%
 \begin{figure}[htbp]
-  \centerline{\includegraphics[width=0.8\textwidth]{fig1}}
+  \centerline{\includegraphics[width=0.8\textwidth]{figures/fig1/fig1}}
   \caption[]{\input{figures/fig1/caption}}
 \end{figure}}
 
 \input{Section3_2}
 
-\epubtkImage{figures/full_gw_spectrum/fig2.png}{%
+\epubtkImage{figures/fig2/fig2.png}{%
 \begin{figure}[htbp]
-  \centerline{\includegraphics[width=0.5\textwidth]{fig2}}
+  \centerline{\includegraphics[width=0.5\textwidth]{figures/fig2/fig2}}
   \caption[]{\input{figures/fig2/caption}}
 \end{figure}}
 
@@ -144,8 +141,8 @@ sources, Data analysis}
 
 \epubtkImage{figures/LIGOsens/LIGOsens.png}{%
 \begin{figure}[htbp]
-  \centerline{\includegraphics[width=0.9\textwidth]{LIGOsens}}
-  \caption{\input{figures/LIGOsens/LIGOsens}}
+  \centerline{\includegraphics[width=0.9\textwidth]{figures/LIGOsens/LIGOsens}}
+  \caption[]{\input{figures/LIGOsens/caption}}
 \end{figure}}
 
 \input{Section3_4}
@@ -156,482 +153,40 @@ sources, Data analysis}
 
 \newpage
 
-\section{Main Noise Sources}
-\label{section:noise}
-
-In this section we discuss the main noise sources, which limit the sensitivity of
-interferometric gravitational-wave detectors. Fundamentally it should be
-possible to build systems using laser interferometry to monitor strains in space,
-which are limited only by the Heisenberg Uncertainty Principle; however there
-are other practical issues, which must be taken into account. Fluctuating
-gravitational gradients pose one limitation to the interferometer sensitivity
-achievable at low frequencies, and it is the level of noise from this source,
-which dictates that experiments to look for sub-Hz gravitational-wave signals
-have to be carried out in space~\cite{Spero, Saulson1, Beccaria, Thorne:1998}.
-In general, for ground-based detectors the most important limitations to
-sensitivity result from the effects of seismic and other ground-borne mechanical
-noise, thermal noise associated with the test masses and their suspensions, and
-quantum noise, which appears at high frequency as shot noise in the photocurrent
-from the photodiode, which detects the interference pattern and can appear at low
-frequency as radiation pressure noise due to momentum transfer to the test
-masses from the photons when using high laser powers. The significance of each
-of these sources will be briefly reviewed.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Seismic noise}
-\label{subsection:seismic}
-
-Seismic noise at a reasonably quiet site on the Earth follows a
-spectrum in all three dimensions close to 10\super{-7}{\it
-  f}\super{-2}~m/Hz\super{1/2} (where here and elsewhere we measure
-\textit{f} in Hz) and thus if the disturbance to each test mass must
-be less than 3~\texttimes~10\super{-20}~m/Hz\super{1/2} at, for
-example, 30~Hz, then the reduction of seismic noise required at that
-frequency in the horizontal direction is greater than
-10\super{9}. Since there is liable to be some coupling of vertical
-noise through to the horizontal axis, along which the gravitational-wave--induced strains are to be sensed, a significant level of
-isolation has to be provided in the vertical direction also. Isolation
-can be provided in a relatively simple way by making use of the fact
-that, for a simple pendulum system, the transfer function to the
-pendulum mass of the horizontal motion of the suspension point falls
-off as 1/(frequency)\super{2} above the pendulum resonance. In a
-similar way isolation can be achieved in the vertical direction by
-suspending a mass on a spring. In the case of the Virgo detector
-system the design allows operation to below 10~Hz and here a
-seven-stage horizontal pendulum arrangement is adopted with six of the
-upper stages being suspended with cantilever springs to provide vertical
-isolation~\cite{Braccini}, with similar systems developed in
-Australia~\cite{Ju1} and at Caltech~\cite{DeSalvo}. For the GEO600
-detector, where operation down to 50~Hz was planned, a triple pendulum
-system is used with the first two stages being hung from cantilever
-springs to provide the vertical isolation necessary to achieve the
-desired performance. This arrangement is then hung from a plate
-mounted on passive `rubber' isolation mounts and on an active
-(electro-mechanical) anti-vibration system~\cite{Plissi1, Torrie}. The
-upgraded seismic isolation for Advanced LIGO will also adopt a
-variety of active and passive isolation stages. The total isolation
-will be provided by one external stage (hydraulics), two stages of
-in-vacuum active isolation, and being completed by the test mass
-suspensions~\cite{Abbott:2002, Harry:2010}. For clarity, the two
-stages of in-vacuum isolation are shown in
-Figure~\ref{figure:LIGOseismic}, whereas the test-mass suspensions are
-shown separately in Figure~\ref{figure:LIGOquad}.
+\input{Section4_1}
 
 %LivRev: do not use eps for html processing!
-\epubtkImage{fig3.png}{%
+\epubtkImage{figures/fig3/fig3.png}{%
 \begin{figure}[htbp]
-  \centerline{\includegraphics[width=340pt]{fig3}}
-  \caption{Internal stages of the large chamber seismic isolation system
-for Advanced LIGO (image is inverted for clarity).}
-  \label{figure:LIGOseismic}
+  \centerline{\includegraphics[width=340pt]{figures/fig3/fig3}}
+  \caption[]{\input{figures/fig3/caption}}
 \end{figure}}
 
 %LivRev: do not use eps for html processing!
-\epubtkImage{fig4.png}{%
+\epubtkImage{figures/fig4/fig4.png}{%
 \begin{figure}[htbp]
-  \centerline{\includegraphics[width=250pt]{fig4_small}}
-  \caption{CAD drawing of quad suspension system for Advanced LIGO, showing
-the mirror test mass at the bottom and where the uppermost section is attached
-to the third stage platform of the large chamber seismic isolation system shown
-in Figure~\ref{figure:LIGOseismic}.}
-  \label{figure:LIGOquad}
+  \centerline{\includegraphics[width=250pt]{figures/fig4/fig4_small}}
+  \caption[]{\input{figures/fig4/caption}}
 \end{figure}}
 
-In order to cut down motion at the pendulum frequencies, active damping of the
-pendulum modes has to be incorporated, and to reduce excess motion at low
-frequencies around the micro-seismic peak, low-frequency isolators have to be
-incorporated. These low-frequency isolators can take different forms -- tall
-inverted pendulums in the horizontal direction and cantilever springs whose
-stiffness is reduced by means of attractive forces between magnets for the
-vertical direction in the case of the Virgo system~\cite{Losurdo},
-Scott~Russell mechanical linkages in the horizontal and torsion bar arrangements
-in the vertical for an Australian design~\cite{Winterflood}, and a
-seismometer/actuator (active) system as shown here for Advanced
-LIGO~\cite{Abbott:2002} and also used in GEO600~\cite{Plissi2}.  Such schemes
-can provide sufficiently-large reduction in the direct mechanical coupling of
-seismic noise through to the suspended mirror optic to allow operation down to
-3~Hz~\cite{Braccini:1993,ETweb}. However, it is also possible for this
-vibrational seismic noise to couple to the suspended optic through the
-gravitational field.
+\input{Section4_2}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Gravity gradient (Newtonian) noise}
-\label{subsection:gravitygradient}
-
-Gravity gradients, caused by direct gravitational coupling of mass density
-fluctuations to the suspended mirrors, were identified as a potential source of
-noise in ground-based gravitational-wave detectors in 1972~\cite{Weiss}. The
-noise associated with gravity gradients was first formulated by
-Saulson~\cite{Saulson1} and Spero~\cite{Spero}, with later developments by
-Hughes and Thorne~\cite{Thorne:1998} and Cella and Cuoco~\cite{Beccaria}.
-These studies suggest that the dominant source of gravity gradients arise from
-seismic surface waves, where density fluctuations of the Earth's surface are
-produced near the location of the individual interferometer test masses, as
-shown in Figure~\ref{figure:GGN}.
-
-\epubtkImage{GGN.png}{%
+\epubtkImage{figures/GGN/GGN.png}{%
 \begin{figure}[htbp]
-  \centerline{\includegraphics[width=\textwidth]{GGN}}
-  \caption{Time-lapsed schematic illustrating the fluctuating
-    gravitational force on a suspended mass by the propagation of a
-    surface wave through the ground.}
-  \label{figure:GGN}
+  \centerline{\includegraphics[width=\textwidth]{figures/GGN/GGN}}
+  \caption[]{\input{figures/GGN/caption}}
 \end{figure}}
 
-The magnitude of the rms motion of the interferometer test masses,
-$\tilde{x}(\omega)$, can be shown to be~\cite{Thorne:1998}
-%
-\begin{equation}
-  \tilde{x}(\omega) = \frac{4 \pi G \rho}{\omega^{2}} \beta(\omega)
-\tilde{W}(\omega),
-  \label{equation:GGN}
-\end{equation}
-%
-where $\rho$ is the Earth's density near the test mass, $G$ is
-Newton's constant, $\omega$ is the angular frequency of the seismic
-spectrum, $\beta(\omega)$ is a dimensionless reduced transfer function
-that takes into account the correlated motion of the interferometer
-test masses in addition to the reduction due to the separation between
-the test mass and the Earth's surface, and $\tilde{W}(\omega)$ is the
-displacement rms-averaged over 3-dimensional directions. In order to
-eliminate noise arising from gravity gradients, a detector would have
-to be operated far from these density fluctuations, that is, in space.
-Proposed space missions are discussed in Section~\ref{section:space}.
-
-However, there are two proposed approaches for reducing the level of gravity-gradient noise in future ground-based detectors. A monitor and subtraction
-method can be used, where an array of seismometers can be distributed
-strategically around each test mass to monitor the relevant ground motion (and
-ground compression) that would be expected to couple through local gravity. A
-subtraction signal may be developed from knowing how the observed density
-fluctuations couple to the motion of each test mass, and can potentially allow a
-significant reduction in gravity-gradient noise.
-
-Another approach is to choose a very quiet location, or better still, to also go
-underground, as is already going ahead for LCGT~\cite{Miyoki:2005}. Since the
-dominant source of gravity-gradient noise is expected to arise from surface
-waves on the Earth, the observed gravity-gradient noise will decrease with depth
-into the Earth. Current estimates suggest that gravity-gradient noise can be
-suppressed down to around 1~Hz by careful site selection and going $\sim$~150~m
-underground~\cite{Beker:2011}. The most promising approach (or likely only
-approach) to detecting gravitational waves whose frequency is below 1~Hz is to
-build an interferometer in space.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Thermal noise}
-\label{subsection:thermal}
-
-Thermal noise associated with the mirror masses and the last stage of their
-suspensions is the most significant noise source at the low frequency end of the
-operating range of initial long baseline gravitational wave
-detectors~\cite{Saulson2}. Advanced detector configurations are also expected to
-be limited by thermal noise at their most sensitive frequency
-band~\cite{Levin, Nakagawa:2002, Harry:2002, Crooks:2002}. Above the operating
-range there are the internal resonances of the test masses. The thermal noise in
-the operating range comes from the \emph{tails} of these resonant modes. For any
-simple harmonic oscillator such as a mass hung on a spring or hung as a pendulum,
-the spectral density of thermal motion of the mass can be expressed
-as~\cite{Saulson2}
-%
-\begin{equation}
-  x^{2}(\omega) = \frac{4 k_{\mathrm{B}} T \omega_{0}^{2}
-  \phi(\omega)}{\omega m [{(\omega_{0}^{2} - \omega^{2})^2 +
-  \omega_{0}^{4} \phi^{2}(\omega)}]},
-  \label{equation:thnoise}
-\end{equation}
-%
-where $k_{\mathrm{B}}$ is Boltzmann's constant, $T$ is the temperature, $m$ is the
-mass and  $\phi(\omega)$ is the loss angle or loss factor of the
-oscillator of angular resonant frequency $\omega_0$. This loss factor is the
-phase lag angle between the displacement of the mass and any force applied to
-the mass at a frequency well below $\omega_0$. In the case of a mass on a spring,
-the loss factor is a measure of the mechanical loss associated with the material
-of the spring. For a pendulum, most of the energy is stored in the lossless
-gravitational field. Thus, the loss factor is lower than that of the material,
-which is used for the wires or fibres used to suspend the pendulum. Indeed,
-following Saulson~\cite{Saulson2} it can be shown that for a pendulum of mass
-$m$, suspended on four wires or fibres of length $l$, the loss factor of the
-pendulum is related to the loss factor of the material by
-%
-\begin{equation}
-  \phi_{\mathrm{pend}}(\omega) = \phi_{\mathrm{mat}}(\omega)\frac{4 \sqrt{TEI}}{mgl},
-  \label{equation:pend}
-\end{equation}
-%
-where $I$ is the moment of the cross-section of  each wire, and $T$ is the
-tension in each wire, whose material has a Young's modulus $E$. In general, for
-most materials, it appears that the intrinsic loss factor is essentially
-independent of frequency over the range of interest for gravitational-wave
-detectors (although care has to be taken with some materials in that a form of
-damping known as thermo-elastic damping can become important for wires of small
-cross-section~\cite{Nowick} and for some bulk crystalline
-materials~\cite{Bragthermo}). In order to estimate the internal thermal noise of
-a test mass, each resonant mode of the mass can be regarded as a harmonic
-oscillator. When the detector operating range is well below the resonances of
-the masses, following Saulson~\cite{Saulson2}, the effective spectral density of
-thermal displacement of the front face of each mass can be expressed as the
-summation of the motion of the various mechanical resonances of the mirror as
-also discussed by Gillespie and Raab~\cite{Gillespie}. However, this intuitive
-approach to calculating the thermally-driven motion is only valid when the
-mechanical loss is distributed homogeneously and, therefore, not valid for real
-test-mass mirrors. The mechanical loss is known to be inhomogeneous due to, for
-example, the localisation of structural defects and stress within the bulk
-material, and the mechanical loss associated with the polished surfaces is
-higher than the levels typically associated with bulk effects.  Therefore, Levin
-suggested using a direct application of the fluctuation-dissipation theorem to
-the optically-sensed position of the mirror substrate surface~\cite{Levin}.
-This technique imposes a notional pressure (of the same spatial profile as the
-intensity of the sensing laser beam) to the front face of the substrate and
-calculates the resulting power dissipated in the substrate on its elastic
-deformation under the applied pressure.  Using such an approach we find that
-$S_x(f)$ can then be described by the relation
-%
-\begin{equation}
- S_x(f) = \frac{2k_\mathrm{B}T}{\pi^2 f^2} \frac{W_{\mathrm{diss}}}{F_0^2},
- \label{eqn:S-x_Levin}
-\end{equation}
-%
-where $F_0$ is the peak amplitude of the notional oscillatory force and
-$W_{\mathrm{diss}}$ is the power dissipated in the mirror described
-as,
-%
-\begin{equation}
- W_{\mathrm{diss}} = \omega \int{\epsilon(r)\phi(r)\partial V},
- \label{eqn:S-x_Levin2}
-\end{equation}
-%
-where $\epsilon(r)$ and $\phi(r)$ are the strain and mechanical loss located at
-specific positions within the volume $V$. This formalisation highlights the
-importance of where mechanical dissipation is located with respect to the
-sensing laser beam.  In particular, the thermal noise associated with the
-multi-layer dielectric mirror coatings, required for high reflectivity, will in
-fact limit the sensitivity of second-generation gravitational-wave detectors at
-their most sensitive frequency band, despite these coatings typically being only
-$\sim$~4.5~\mum in thickness~\cite{Harry:2002}. Identifying coating
-materials with lower mechanical loss, and trying to understand the sources of
-mechanical loss in existing coating materials, is a major R\&D effort targeted
-at enhancements to advanced detectors and for third generation
-instruments~\cite{Martin:2008}.
-
-In order to keep thermal noise as low as possible the mechanical loss factors of
-the masses and pendulum resonances should be as low as possible. Further, the
-test masses must have a shape such that the frequencies of the internal
-resonances are kept as high as possible, must be large enough to accommodate the
-laser beam spot without excess diffraction losses, and must be massive enough to
-keep the fluctuations due to radiation pressure at an acceptable level. Test
-masses currently range in mass from 6~kg for GEO600 to 40~kg for Advanced LIGO.
-To approach the best levels of sensitivity discussed earlier the loss factors of
-the test masses must be $\simeq$~3~\texttimes~10\super{-8} or lower,
-and the loss factor of the pendulum resonances should be smaller than
-10\super{-10}.
-
-Obtaining these values puts significant constraints on the choice of material
-for the test masses and their suspending fibres. GEO600 utilises very-low--loss
-silica suspensions, a technology, which should allow detector sensitivities to
-approach the level desired for second generation instruments~\cite{Braginsky1,
-Rowan1, Rowan2}, since the intrinsic loss factors in samples of synthetic fused
-silica have been measured down to around
-5~\texttimes~10\super{-9}~\cite{Ageev:2004}. Still, the use of other
-materials such as sapphire is being seriously considered for future
-detectors~\cite{Braginsky2, Ju2, Rowan1} such as in
-LCGT~\cite{Miyoki:2005, Ohashi:2008}.
-
-The technique of hydroxy-catalysis bonding provides a method of jointing oxide
-materials in a suitably low-loss way to allow `monolithic' suspension systems to
-be constructed~\cite{Rowan3}. A recent discussion on the level of mechanical
-loss and the associated thermal noise in advanced detectors resulting from
-hydroxy-catalysis bonds is given by Cunningham et al.~\cite{Cunningham:2010}.
-Images of the GEO600 monolithic mirror suspension and of the prototype Advanced
-LIGO mirror suspension are shown in Figure~\ref{figure:monolithic}.
+\input{Section4_3}
 
 %LivRev: do not use eps for html processing!
-\epubtkImage{monolithic.png}{%
+\epubtkImage{figures/monolithic/monolithic.png}{%
 \begin{figure}[htbp]
-  \centerline{\includegraphics[width=\textwidth]{monolithic_small}}
-  \caption{Monolithic silica suspension of (a) GEO600 6~kg mirror test mass
-suspended from 4 fibres of thickness 250~\mum and (b) prototype monolithic
-suspension for Advanced LIGO at LASTI (mirror mass of 40~kg, silica fibre
-thickness 400~\mum).}
-  \label{figure:monolithic}
+  \centerline{\includegraphics[width=\textwidth]{figures/monolithic/monolithic_small}}
+  \caption[]{\input{figures/monolithic/caption}}
 \end{figure}}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Quantum noise}
-\label{subsection:quantumnoise}
-
-\subsubsection{Photoelectron shot noise}
-\label{subsubsection:shotnoise}
-
-For gravitational-wave signals to be detected, the output of the interferometer
-must be held at one of a number of possible points on an interference fringe. An
-obvious point to choose is halfway up a fringe since the change in photon number
-produced by a given differential change in arm length is greatest at this
-point (in practice this is not at all a sensible option and interferometers
-are operated at, or near, a dark fringe -- see
-Sections~\ref{subsection:powerrec} and \ref{sec:readout}). The
-interferometer may be stabilised to this point by sensing any changes
-in intensity at the interferometer output with a photodiode and
-feeding the resulting signal back, with suitable phase, to a
-transducer capable of changing the position of one of the
-interferometer mirrors.  Information about changes in the length of
-the interferometer arms can then be obtained by monitoring the signal
-fed back to the transducer.
-
-As mentioned earlier, it is very important that the system used for sensing the
-optical fringe movement on the output of the interferometer can resolve strains
-in space of 2~\texttimes~10\super{-23}~\Hz or lower, or differences in the
-lengths of the two arms of less than $10^{-19} \mathrm{\ m/Hz}^{1/2}$,
-a minute displacement compared to the wavelength of light
-$\simeq$~10\super{-6}~m. A limitation to the sensitivity of the
-optical readout scheme is set by shot noise in the detected photocurrent. From
-consideration of the number of photoelectrons (assumed to obey Poisson
-statistics) measured in a time $\tau$ it can be shown~\cite{HoughMG5}
-that the detectable strain sensitivity depends on the level of laser
-power $P$ of wavelength $\lambda$ used to illuminate the
-interferometer of arm length $L$, and on the time $\tau$, such that:
-%
-\begin{equation}
-  \mathrm{detectable\ strain\ in\ time\ } \tau = \frac 1{L}\left[\frac{\lambda h
-  c}{2 \pi^{2} P \tau}\right]^{1/2},
-  \label{equation:shot1}
-\end{equation}
-%
-or
-%
-\begin{equation}
-  \mathrm{detectable\ strain\ }(\mathrm{Hz})^{-1/2} = \frac
-  1{L}\left[\frac{\lambda h c}{\pi^{2} P }\right]^{1/2},
-  \label{equation:shot2}
-\end{equation}
-%
-where $c$ is the velocity of light, $h$ is Planck's constant and we assume
-that the photodetectors have a quantum efficiency $\simeq$~1. Thus, achievement
-of the required strain sensitivity level requires a laser, operating at a
-wavelength of 10\super{-6}~m, to provide 6~\texttimes~10\super{6}
-power at the input to a simple Michelson interferometer. This is a
-formidable requirement; however, there are a number of techniques which
-allow a large reduction in this power requirement and these will be
-discussed in Section~\ref{section:interferometry}.
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsubsection{Radiation pressure noise}
-\label{subsubsection:radiationnoise}
-
-As the effective laser power in the arms is increased, another phenomenon
-becomes increasingly important arising from the effect on the test masses of
-fluctuations in the radiation pressure. One interpretation on the origin of this
-radiation pressure noise may be attributed to the statistical uncertainty in how
-the beamsplitter divides up the photons of laser light~\cite{Edelstein}. Each
-photon is scattered independently and therefore produces an anti-correlated
-binomial distribution in the number of photons, $N$, in each arm, resulting in a
-$\propto\sqrt{N}$ fluctuating force from the radiation pressure. This is more
-formally described as arising from the vacuum (zero-point) fluctuations in the
-amplitude component of the electromagnetic field. This additional light entering
-through the dark-port side of the beamsplitter, when being of suitable phase,
-will increase the intensity of laser light in one arm, while decreasing the
-intensity in the other arm, again resulting in anti-correlated variations in
-light intensity in each arm~\cite{Caves1, Caves2}. The laser light is
-essentially in a noiseless ``coherent state''~\cite{Glauber:1963} as it splits
-at the beamsplitter and fluctuations arise entirely from the addition
-of these vacuum fluctuations entering the unused port of the beamsplitter. Using
-this understanding of the coherent state of the laser, shot noise arises from
-the uncertainty in the phase component (quadrature) of the interferometer's
-laser field and is observed in the quantum fluctuations in the number of
-detected photons at the interferometer output. Radiation pressure noise arises
-from uncertainty in the amplitude component (quadrature) of the interferometer's
-laser field. Both result in an uncertainty in measured mirror positions.
-
-For the case of a simple Michelson, shown in
-Figure~\ref{figure:schematicdetector}, the power spectral density of the
-fluctuating motion of each test mass $m$ resulting from fluctuation in the
-radiation pressure at angular frequency $\omega$ is given
-by~\cite{Edelstein},
-%
-\begin{equation}
-\delta x^2(\omega) = \biggl(\frac{4 P h}{m^2 \omega^4 c
-\lambda}\biggr),
- \label{equ:radiation-pressure1}
-\end{equation}
-%
-where $h$ is Planck's constant, $c$ is the speed of light and $\lambda$ is the
-wavelength of the laser light. In the case of an interferometer with Fabry--P\'{e}rot
-cavities, where the typical number of reflections is 50, displacement noise
-$\delta x$ due to radiation pressure fluctuations scales linearly with the
-number of reflections, such that,
-%
-\begin{equation}
-\delta x^2(\omega) = 50^2 \times \biggl(\frac{4 P h}{m^2 \omega^4
-c \lambda}\biggr).
- \label{equ:radiation-pressure2}
-\end{equation}
-%
-Radiation pressure may be a significant limitation at low frequency and is
-expected to be the dominant noise source in Advanced LIGO between around 10 and
-50~Hz~\cite{Harry:2010}. Of course the effects of the radiation pressure
-fluctuations can be reduced by increasing the mass of the mirrors, or by
-decreasing the laser power at the expense of degrading sensitivity at higher
-frequencies.
-
-\subsubsection{The standard quantum limit}
-\label{subsubsection:SQL}
-
-Since the effect of photoelectron shot noise decreases when increasing the laser
-power as the radiation pressure noise increases, a fundamental limit to
-displacement sensitivity is set. For a particular frequency of operation, there
-will be an optimum laser power within the interferometer, which minimises the
-effect of these two sources of optical noise, which are assumed to be
-uncorrelated. This sensitivity limit is known as the Standard Quantum Limit
-(SQL) and corresponds to the Heisenberg Uncertainty Principle, in its position
-and momentum formulation; see~\cite{Edelstein, Caves1, Caves2, Loudon:1981}.
-
-Firstly, it is possible to reach the SQL at a tuned range of frequencies, when
-dominated by either radiation-pressure noise or shot noise, by altering the
-noise distribution in the two quadratures of the vacuum field. This effect can
-be achieved ``by squeezing the vacuum field''. There are a number of proposed
-designs for achieving this in future interferometric detectors, such as a
-``squeezed-input interferometer''~\cite{Caves2, Unruh:1983}, a
-``variational-output interferometer''~\cite{Vyatchanin:1993} or a
-``squeezed-variational interferometer'' using a combination of both techniques.
-This technique may be of importance in allowing an interferometer to reach the
-SQL at a particular frequency, for example, when using lower levels of laser
-power and otherwise being dominated by shot noise. Experiments are under way to
-incorporate squeezed-state injection as part of the upgrades to current
-gravitational-wave detectors, and where a squeezing injection bench has already
-been installed in the GEO600 gravitational-wave detector, which expects to be
-able to achieve an up-to-6~dB reduction in shot noise using the current
-interferometer configuration~\cite{Vahlbruch:2006}. Similar experiments are also
-under way to demonstrate variational readout, where ponderomotive squeezing
-arises from the naturally-occurring correlation of radiation-pressure noise to
-shot noise upon reflection of light from a
-mirror~\cite{Corbitt:2006, Sakata:2006}
-
-Secondly, if correlations exist between the radiation-pressure noise and the
-shot-noise displacement limits, then it is possible to bypass the SQL, at least
-in principle~\cite{Loudon:1981}.  There are at least two ways by which such
-correlations may be introduced into an interferometer.  One scheme is where an
-optical cavity is constructed, where there is a strong optical spring effect,
-coupling the optical field to the mechanical system.  This is already the case
-for the GEO600 detector, where the addition of a signal recycling cavity creates
-such correlation, where signal recycling is described in
-Section~\ref{subsection:sigrec}. Other schemes of optical springs have been studied,
-such as optical bars and optical levers~\cite{Braginsky:1996, Braginsky:1997}.
-Another method is to use suitable filtering at optical frequencies of the
-output signal, by means of long Fabry--P\'{e}rot cavities, which effectively
-introduces correlation~\cite{Kimble:2001, Corbitt:2004}.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{Section4_4}
 
 %\newpage
 
