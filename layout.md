@@ -23,7 +23,7 @@ Section5_2.tex
 figures/fig6a/fig6a.png
 Section5_3.tex
 figures/fig6b/default_figure.png
-epubtkImagefig6bpng_.tex
+Section5_4.tex
 sectionOperation_of_.tex
 figures/figpro/default_figure.png
 epubtkImagefigprojpg.tex
