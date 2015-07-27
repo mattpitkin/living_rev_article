@@ -2,13 +2,13 @@ abstract.tex
 introduction.tex
 figures/full_gw_spectrum/full_gw_spectrum.png
 Section2.tex
-sectionDetection_of_.tex
+Section3_1.tex
 figures/fig1/default_figure.png
-epubtkImagefig1png__.tex
+Section3_2.tex
 figures/fig2/default_figure.png
-epubtkImagefig2png__.tex
+Section3_3.tex
 figures/LIGOsens/default_figure.png
-epubtkImagefig2png__1.tex
+Section3_4.tex
 sectionMain_Noise_So.tex
 figures/fig3/default_figure.png
 epubtkImagefig3png.tex
