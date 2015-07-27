@@ -1,7 +1,7 @@
 abstract.tex
 introduction.tex
 figures/full_gw_spectrum/full_gw_spectrum.png
-sectionGravitational.tex
+Section2.tex
 sectionDetection_of_.tex
 figures/fig1/default_figure.png
 epubtkImagefig1png__.tex
