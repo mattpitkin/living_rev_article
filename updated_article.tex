@@ -105,8 +105,8 @@ sources, Data analysis}
 \epubtkImage{figures/full_gw_spectrum/full_gw_spectrum.png}{%
 \begin{figure}[htbp]
   \centerline{\includegraphics[width=\textwidth]{figures/full_gw_spectrum/full_gw_spectrum}}
-  % see http://www.latex-community.org/forum/viewtopic.php?f=5&t=12497 for why the [] is needed
-  \caption[]{\input{figures/full_gw_spectrum/caption}}
+  % \protect is required to use \input within the caption
+  \caption{\protect\input{figures/full_gw_spectrum/caption}}
 \end{figure}}
 
 \newpage
@@ -126,7 +126,7 @@ sources, Data analysis}
 \epubtkImage{figures/fig1/fig1.png}{%
 \begin{figure}[htbp]
   \centerline{\includegraphics[width=0.8\textwidth]{figures/fig1/fig1}}
-  \caption[]{\input{figures/fig1/caption}}
+  \caption{\protect\input{figures/fig1/caption}}
 \end{figure}}
 
 \input{Section3_2}
@@ -134,7 +134,7 @@ sources, Data analysis}
 \epubtkImage{figures/fig2/fig2.png}{%
 \begin{figure}[htbp]
   \centerline{\includegraphics[width=0.5\textwidth]{figures/fig2/fig2}}
-  \caption[]{\input{figures/fig2/caption}}
+  \caption{\protect\input{figures/fig2/caption}}
 \end{figure}}
 
 \input{Section3_3}
@@ -142,7 +142,7 @@ sources, Data analysis}
 \epubtkImage{figures/LIGOsens/LIGOsens.png}{%
 \begin{figure}[htbp]
   \centerline{\includegraphics[width=0.9\textwidth]{figures/LIGOsens/LIGOsens}}
-  \caption[]{\input{figures/LIGOsens/caption}}
+  \caption{\protect\input{figures/LIGOsens/caption}}
 \end{figure}}
 
 \input{Section3_4}
@@ -159,14 +159,14 @@ sources, Data analysis}
 \epubtkImage{figures/fig3/fig3.png}{%
 \begin{figure}[htbp]
   \centerline{\includegraphics[width=340pt]{figures/fig3/fig3}}
-  \caption[]{\input{figures/fig3/caption}}
+  \caption{\protect\input{figures/fig3/caption}}
 \end{figure}}
 
 %LivRev: do not use eps for html processing!
 \epubtkImage{figures/fig4/fig4.png}{%
 \begin{figure}[htbp]
   \centerline{\includegraphics[width=250pt]{figures/fig4/fig4_small}}
-  \caption[]{\input{figures/fig4/caption}}
+  \caption{\protect\input{figures/fig4/caption}}
 \end{figure}}
 
 \input{Section4_2}
@@ -174,7 +174,7 @@ sources, Data analysis}
 \epubtkImage{figures/GGN/GGN.png}{%
 \begin{figure}[htbp]
   \centerline{\includegraphics[width=\textwidth]{figures/GGN/GGN}}
-  \caption[]{\input{figures/GGN/caption}}
+  \caption{\protect\input{figures/GGN/caption}}
 \end{figure}}
 
 \input{Section4_3}
@@ -183,7 +183,7 @@ sources, Data analysis}
 \epubtkImage{figures/monolithic/monolithic.png}{%
 \begin{figure}[htbp]
   \centerline{\includegraphics[width=\textwidth]{figures/monolithic/monolithic_small}}
-  \caption[]{\input{figures/monolithic/caption}}
+  \caption{\protect\input{figures/monolithic/caption}}
 \end{figure}}
 
 \input{Section4_4}
@@ -195,7 +195,7 @@ sources, Data analysis}
 \epubtkImage{figures/fig5e/fig5e.png}{%
 \begin{figure}[htbp]
   \centerline{\includegraphics[width=\textwidth]{figures/fig5e/fig5e}}
-  \caption[]{\input{figures/fig5e/caption}}
+  \caption{\protect\input{figures/fig5e/caption}}
 \end{figure}}
 
 \input{Section5_2}
@@ -203,7 +203,7 @@ sources, Data analysis}
 \epubtkImage{figures/fig6a/fig6a.png}{%
 \begin{figure}[htbp]
   \centerline{\includegraphics[width=0.5\textwidth]{figures/fig6a/fig6a}}
-  \caption[]{\input{figures/fig6a/caption}}
+  \caption{\protect\input{figures/fig6a/caption}}
 \end{figure}}
 
 \input{Section5_3}
@@ -211,7 +211,7 @@ sources, Data analysis}
 \epubtkImage{figures/fig6b/fig6b.png}{%
 \begin{figure}[htbp]
   \centerline{\includegraphics[width=0.5\textwidth]{figures/fig6b/fig6b}}
-  \caption[]{\input{figures/fig6b/caption}}
+  \caption{\protect\input{figures/fig6b/caption}}
 \end{figure}}
 
 \input{Section5_4}
@@ -223,7 +223,7 @@ sources, Data analysis}
 \epubtkImage{figures/figpro/figpro.png}{%
 \begin{figure}[htbp]
   \centerline{\includegraphics[scale=0.4]{figures/figpro/figpro}}
-  \caption[]{\input{figures/figpro/caption}}
+  \caption{\protect\input{figures/figpro/caption}}
 \end{figure}}
 
 \input{Section6_2}
@@ -231,7 +231,7 @@ sources, Data analysis}
 \epubtkImage{figures/fig7/fig7.png}{%
 \begin{figure}[htbp]
   \centerline{\includegraphics[width=12cm]{figures/fig7/fig7}}
-  \caption[]{\input{figures/fig7/caption}}
+  \caption{\protect\input{figures/fig7/caption}}
 \end{figure}}
 
 \input{Section6_3}
@@ -239,7 +239,7 @@ sources, Data analysis}
 \epubtkImage{figures/runtimes/runtimes.png}{%
 \begin{figure}[htbp]
   \centerline{\includegraphics[width=\textwidth]{figures/runtimes/runtimes}}
-  \caption[]{\input{figures/runtimes/caption}}
+  \caption{\protect\input{figures/runtimes/caption}}
 \end{figure}}
 
 \input{Section6_4}
@@ -248,7 +248,7 @@ sources, Data analysis}
 \epubtkImage{figures/LIGOSrunASDs/LIGOSrunASDs.png}{%
 \begin{figure}[htbp]
   \centerline{\includegraphics[scale=0.45]{figures/LIGOSrunASDs/LIGOSrunASDs}}
-  \caption[]{\input{figures/LIGOSrunASDs/caption}}
+  \caption{\protect\input{figures/LIGOSrunASDs/caption}}
 \end{figure}}
 
 \input{Section6_5}
@@ -257,7 +257,7 @@ sources, Data analysis}
 \epubtkImage{figures/GEOSrunASDs/GEOSrunASDs.png}{%
 \begin{figure}[htbp]
   \centerline{\includegraphics[scale=0.45]{figures/GEOSrunASDs/GEOSrunASDs}}
-  \caption[]{\input{figures/GEOSrunASDs/caption}}
+  \caption{\protect\input{figures/GEOSrunASDs/caption}}
 \end{figure}}
 
 \input{Section6_6}
@@ -266,7 +266,7 @@ sources, Data analysis}
 \epubtkImage{figures/VirgoSrunASDs/VirgoSrunASDs.png}{%
 \begin{figure}[htbp]
   \centerline{\includegraphics[scale=0.45]{figures/VirgoSrunASDs/VirgoSrunASDs}}
-  \caption[]{\input{figures/VirgoSrunASDs/caption}}
+  \caption{\protect\input{figures/VirgoSrunASDs/caption}}
 \end{figure}}
 
 
@@ -276,7 +276,7 @@ sources, Data analysis}
 \epubtkImage{figures/advcurves/advcurves.png}{%
 \begin{figure}[htbp]
   \centerline{\includegraphics[scale=0.4]{figures/advcurves/advcurves}}
-  \caption[]{\input{figures/advcurves/caption}}
+  \caption{\protect\input{figures/advcurves/caption}}
 \end{figure}}
 
 \input{Section6_8}
@@ -284,7 +284,7 @@ sources, Data analysis}
 \epubtkImage{figures/etcurve/etcurve.png}{%
 \begin{figure}[htbp]
   \centerline{\includegraphics[scale=0.4]{figures/etcurve/etcurve}}
-  \caption[]{\input{figures/etcurve/caption}}
+  \caption{\protect\input{figures/etcurve/caption}}
 \end{figure}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -298,7 +298,7 @@ sources, Data analysis}
 \epubtkImage{figures/lisacurve/lisacurve.png}{%
 \begin{figure}[htbp]
   \centerline{\includegraphics[scale=0.4]{figures/lisacurve/lisacurve}}
-  \caption[]{\input{figures/lisacurve/caption}}
+  \caption{\protect\input{figures/lisacurve/caption}}
 \end{figure}}
 
 \input{Section7_2}
@@ -306,7 +306,7 @@ sources, Data analysis}
 \epubtkImage{figures/fig8/fig8.png}{%
 \begin{figure}[htbp]
   \centerline{\includegraphics[scale=0.4]{figures/fig8/fig8}}
-  \caption[]{\input{figures/fig8/caption}}
+  \caption{\protect\input{figures/fig8/caption}}
 \end{figure}}
 
 \input{Section7_3}
