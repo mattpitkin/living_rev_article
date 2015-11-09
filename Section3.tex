@@ -1,0 +1,135 @@
+\section{Detection of Gravitational Waves}
+\label{section:Detection} 
+
+Gravitational waves are most simply thought of as ripples in the curvature of
+space-time, their effect being to change the separation of adjacent masses on
+Earth or in space; this tidal effect is the basis of all present detectors.
+Gravitational wave strengths are characterised by the gravitational-wave
+amplitude $h$, given by
+\begin{equation}
+  h = \frac{2 \Delta L} L,
+  \label{equation:h}
+\end{equation}
+where $\Delta L$ is the change in separation of two masses a distance $L$ apart;
+for the strongest-allowed component of gravitational radiation, the value of $h$
+is proportional to the third time derivative of the quadrupole moment of the
+source of the radiation and inversely proportional to the distance to the
+source. The radiation field itself is quadrupole in nature and this shows up in
+the pattern of the interaction of the waves with matter.
+
+
+The problem for the experimental physicist is that the predicted magnitudes of
+the amplitudes or strains in space in the vicinity of the Earth caused by
+gravitational waves even from the most violent astrophysical events are
+extremely small, of the order of 10\super{-21} or lower~\cite{Sathyaprakash:2009,
+LISAsymposium}. Indeed, current theoretical models on the event rate and strength
+of such events suggest that in order to detect a few events per year -- from
+coalescing neutron-star binary systems, for example, an amplitude sensitivity
+close to 10\super{-22} over timescales as short as a millisecond is required. If
+the Fourier transform of a likely signal is considered it is found that the
+energy of the signal is distributed over a frequency range or bandwidth, which is
+approximately equal to 1/timescale.  For timescales of a millisecond the
+bandwidth is approximately 1000~Hz, and in this case the spectral density of the
+amplitude sensitivity is obtained by dividing 10\super{-22} by the square root of
+1000. Thus, detector noise levels must have an amplitude spectral density lower
+than $\simeq$~10\super{-23}~\Hz over the frequency range of the signal.
+Signal strengths at the Earth, integrated over appropriate time intervals, for a
+number of sources are shown in Figure~\ref{figure:sourcestrengths}.
+
+  The weakness of the signal means that limiting noise sources like the thermal
+motion of molecules in the critical components of the detector (thermal noise),
+seismic or other mechanical disturbances, and noise associated with the detector
+readout, whether electronic or optical, must be reduced to an extremely low
+level. For signals above $\simeq$~10~Hz ground based experiments are possible,
+but for lower frequencies where local fluctuating gravitational gradients and
+seismic noise on Earth become a problem, it is best to consider developing
+detectors for operation in space~\cite{LISA}.
+
+
+\subsection{Initial detectors and their development}
+\label{subsection:initdet} 
+
+The earliest experiments in the field were ground based and were carried out by
+Joseph Weber of the University of Maryland in the 1960s. With colleagues he
+began by looking for evidence of excitation of the normal modes of the Earth by
+very low frequency gravitational waves~\cite{Forward2}. Efforts to detect gravitational
+waves via the excitation of Earth's normal modes was also pursued by Weiss and Block~\cite{Weiss:1965}.
+Weber then moved on to look for tidal strains in aluminium bars, which were at room temperature and were
+well isolated from ground vibrations and acoustic noise in the
+laboratory~\cite{Weber1, Weber2}. The bars were resonant at $\simeq$~1600~Hz, a
+frequency where the energy spectrum of the signals from collapsing stars was
+predicted to peak. Despite the fact that Weber observed coincident excitations
+of his detectors placed up to 1000~km apart, at a rate of approximately one
+event per day, his results were not substantiated by similar experiments carried
+out in several other laboratories in the USA, Germany, Britain and Russia. It
+seems unlikely that Weber was observing gravitational-wave signals because,
+although his detectors were very sensitive, being able to detect strains of the
+order of 10\super{-16} over millisecond timescales~\cite{Weber1}, their sensitivity
+was far away from what was predicted to be required theoretically. Development
+of Weber bar type detectors continued with significant emphasis on cooling to
+reduce the noise levels, although work in this area is now subsiding with
+efforts continuing on Auriga~\cite{AURIGA}, Nautilus~\cite{NAUTILUS},
+MiniGRAIL~\cite{MiniGRAIL, Gottardi:2007} and M\'{a}rio Schenberg
+\cite{Schenberg, Aguiar:2006}.  In around 2003, the sensitivity of km-scale
+interferometric gravitational-wave detectors began to surpass the peak
+sensitivity of these cryogenic bar detectors ($\simeq$~10\super{-21})
+and, for example, the LIGO detectors reached their design sensitivities at
+almost all frequencies by 2005 (peak sensitivity
+$\simeq$~2~\texttimes~10\super{-23} at
+$\simeq$~200~Hz)~\cite{Whitcomb:2008}, see
+Section~\ref{subsection:runs} for more information on science runs of
+the recent generation of detectors.  In addition to gaining better
+strain sensitivities, interferometric detectors have a marked
+advantage over resonant bars by being sensitive to a broader range of
+frequencies, whereas resonant bar are inherently sensitive only to
+signals that have significant spectral energy in a narrow band around
+their resonant frequency. The concept and design of gravitational-wave
+detectors based on laser interferometers will be introduced in the
+following Section~\ref{subsection:earth}. 
+
+
+\subsection{Long baseline detectors on Earth}
+\label{subsection:earth} 
+
+An interferometric design of gravitational-wave detector offers the possibility
+of very high sensitivities over a wide range of frequency. It uses test masses,
+which are widely separated and freely suspended as pendulums to isolate against
+seismic noise and reduce the effects of thermal noise; laser interferometry
+provides a means of sensing the motion of these masses produced as they interact
+with a gravitational wave (Figure~\ref{figure:schematicdetector}).
+
+  This technique is based on the Michelson interferometer and is particularly
+suited to the detection of gravitational waves as they have a quadrupole nature.
+Waves propagating perpendicular to the plane of the interferometer will result
+in one arm of the interferometer being increased in length while the other arm
+is decreased and vice versa. The induced change in the length of the
+interferometer arms results in a small change in the intensity of the light
+observed at the interferometer output.
+
+
+As will be explained in detail in the next Section~\ref{section:noise},
+the sensitivity of an interferometric gravitational-wave detector is
+limited by noise from various sources. Taking this frequency-dependent
+noise floor into account, a design goal can be estimated for a
+particular detector design. For example, the design sensitivity for
+initial LIGO is show in Figure~\ref{figure:LIGOsens} plotted alongside
+the achieved sensitivities of the three individual interferometers
+during the fifth science run (see Section~\ref{subsection:runs}). Such
+strain sensitivities are expected to allow a reasonable probability
+for detecting gravitational wave sources. However, in order to
+guarantee the observation of a full range of sources and to initiate
+gravitational-wave astronomy, a sensitivity or noise performance
+approximately ten times better in the mid-frequency range and several
+orders of magnitude better at 10~Hz, is desired. Therefore, initial
+detectors will be upgraded to an advanced configuration, such as
+Advanced LIGO, which will be ready for operation around 2015.
+
+  For the initial interferometric detectors, a noise floor in strain
+close to 2~\texttimes~10\super{-23}~\Hz was achieved. Detecting a
+strain in space at this level implies measuring a residual motion of
+each of the test masses of about 8~\texttimes~10\super{-20}~m/\Hz over
+part of the operating range of the detector, which may be from
+$\simeq$~10~Hz to a few kHz. Advanced detectors will push this
+target down further by another factor of 10\,--\,15. This sets a
+formidable goal for the optical detection system at the output of the
+interferometer.

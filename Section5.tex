@@ -1,3 +1,78 @@
+\section{Laser Interferometric Techniques for Gravitational-Wave Detectors}
+\label{section:interferometry} 
+
+As explained in Section~\ref{subsubsection:shotnoise}, high-power laser
+light is needed to overcome limitations of a detector's sensitivity due to
+photoelectron shot noise. The situation can be helped greatly if a multi-pass
+arrangement is used in the arms of the interferometer as this multiplies up the
+apparent movement by the number of bounces the light makes in the arms. The
+multiple beams can either be separate, as in an optical delay line~\cite{Weiss,
+Billing}, or may lie on top of each other as in a Fabry--P\'{e}rot resonant
+cavity~\cite{Drever2}, as shown in Figure~\ref{figure:Michelsons}.Optimally, the light should be stored for a time comparable to the
+characteristic timescale of the signal. Thus, if signals of characteristic
+timescale 1~msec are to be searched for, the number of bounces should be
+approximately 50 for an arm length of 3~km. With 50 bounces the required laser
+power is reduced to 2.4~\texttimes~10\super{3}~W, still a formidable
+requirement.
+
+\subsection{Power recycling}
+\label{subsection:powerrec} 
+
+It can be shown that an optimum signal-to-noise ratio in a Michelson interferometer
+can be obtained when the arm lengths are such that the output light is very
+close to a minimum (this is not intuitively obvious and is discussed more fully
+in~\cite{Edelstein}). Thus, rather than lock the interferometer to the side of a
+fringe as discussed above in Section~\ref{subsubsection:shotnoise}, it is usual
+to make use of a modulation technique to operate the interferometer close to a
+null in the interference pattern. An electro-optic phase modulator placed in
+front of the interferometer can be used to phase modulate the input laser light.
+If the arms of the interferometer are arranged to have a slight mismatch in
+length this results in a detected signal, which, when demodulated, is zero with
+the cavity exactly on a null fringe and changes sign on different sides of the
+null providing a bipolar error signal; this can be fed back to the transducer
+controlling the interferometer mirror to hold the interferometer locked near to
+a null fringe (this is the RF readout scheme discussed in Section~\ref{sec:readout}).
+
+
+In this situation, if the mirrors are of very low optical loss, nearly all of the
+light supplied to the interferometer is reflected back towards the laser. In
+other words the laser is not properly impedance matched to the interferometer.
+The impedance matching can be improved by placing another mirror of correctly
+chosen transmission -- a power recycling mirror -- between the laser and the
+interferometer so that a resonant cavity is formed between this mirror and the
+rest of the interferometer; in the case of perfect impedance matching, no light
+is reflected back towards the laser~\cite{Drever3, Schilling}. There is then a
+power build-up inside the interferometer as shown in 
+Figure~\ref{figure:Michelsons2a}. This can be high enough to create the required
+kilowatts of laser light at the beamsplitter, starting from an input laser light
+of only about 10~W.
+To be more precise, if the main optical power losses are those associated with
+the test mass mirrors -- taken to be A per reflection -- the intensity inside
+the whole system considered as one large cavity is increased by a factor given
+by $(\pi L)/(c A \tau)$, where the number of bounces, or light storage time, is
+optimised for signals of timescale $\tau$ and the other symbols have their usual
+meaning. Then:
+\begin{equation}
+  \mathrm{detectable\ strain\ in\ time\ } \tau = \left( \frac{\lambda h
+  A}{4 \pi L P \tau^2} \right)^{1/2}.
+  \label{equation:shotpower}
+\end{equation}
+
+
+\subsection{Signal recycling}
+\label{subsection:sigrec} 
+
+To enhance further the sensitivity of an interferometric detector and to allow
+some narrowing of the detection bandwidth, which may be valuable in searches for
+continuous wave sources of gravitational radiation, another technique known as
+signal recycling can be implemented~\cite{Meers, Strain, Heinzel}. This relies
+on the fact that sidebands created on the light by gravitational-wave signals
+interacting with the arms do not interfere destructively and so do appear at the
+output of the interferometer. If a mirror of suitably-chosen reflectivity is put
+at the output of the system as shown in Figure~\ref{figure:Michelsons2b}, then the
+sidebands can be recycled back into the interferometer, where they resonate, and
+hence the signal size over a given bandwidth (set by the mirror reflectivity) is
+enhanced.
 The centre of this frequency band is set by the precise length of the cavity
 formed by the signal recycling mirror and the cavities in the interferometer
 arms. Thus, control of the precise position of the signal recycling mirror allows
