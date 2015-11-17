@@ -1,18 +1,24 @@
+% check if compiling with latexml on authorea
+\RequirePackage{latexml}
 \iflatexml
 \documentclass{article}
-\fi
-%\usepackage{epubtk}
-\usepackage{graphicx}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{textcomp}
-\usepackage{xspace}
 
 % define separate super and sub commands rather than those from epubtk, which do not work
 \newcommand{\super}[1]{$^{#1}$}
 \newcommand{\sub}[1]{$_{#1}$}
 \newcommand{\epubtkFootnote}[2][default]{\footnote{\ #2}}
 \newcommand{\epubtkSIMBAD}[2][]{#2}
+\else
+\documentclass{article}
+\bibliographystyle{livrevrel}
+\usepackage{epubtk}
+\fi
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{xspace}
 
 \newcommand{\mum}{\textmu\hspace{-0.2pt}m\xspace}
 \newcommand{\muHz}{\textmu\hspace{-0.2pt}Hz\xspace}
