@@ -1,9 +1,8 @@
 abstract.tex
 Section1.tex
-figures/full_gw_spectrum/full_gw_spectrum.png
+figures/fig1/fig1.png
 Section2.tex
 Section3.tex
-figures/fig1/fig1.png
 figures/fig2/fig2.png
 figures/LIGOsens/LIGOsens.png
 Section4.tex
