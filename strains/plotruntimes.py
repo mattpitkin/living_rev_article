@@ -43,13 +43,13 @@ LIGO = {'S1': {'times': [(2002+(7/12)+(23/365.25)), (2002+(8/12)+(9/365.25))],  
 
 # GEO600 science runs (S1-6)
 GEO = {'S1':   {'times': LIGO['S1']['times'], 'textoffset': runyoffsetbelow, 'kwargs': {'marker': 'o'}},
-       'S3I':  {'times': [(2003+(10/12)+(5/365.25)), (2003+(10/12)+(11/365.25))], 'textoffset': runyoffsetabove, 'kwargs': {'marker': 'o'}},
-       'S3II': {'times': [(2003+(11/12)+(30/365.25)), (2004+(13/365.25))], 'textoffset': runyoffsetbelow, 'kwargs': {'marker': 'o'}},
+       'S3I':  {'times': [(2003+(10/12)+(5/365.25)), (2003+(10/12)+(11/365.25))], 'textoffset': runyoffsetbelow, 'kwargs': {'marker': 'o'}},
+       'S3II': {'times': [(2003+(11/12)+(30/365.25)), (2004+(13/365.25))], 'textoffset': runyoffsetabove, 'kwargs': {'marker': 'o'}},
        'S4':   {'times': LIGO['S4']['times'], 'textoffset': runyoffsetbelow, 'kwargs': {'marker': 'o'}},
-       'preS5':{'times': [(2006+20/365.25), (2006+(4/12))], 'textoffset': runyoffsetbelow*1e6, 'kwargs': {'marker': 'o', 'alpha': 0.45}}, # pre-S5 overnight and weekend astrowatch
+       'preS5':{'times': [(2006+20/365.25), (2006+(4/12))], 'textoffset': runyoffsetbelow*1e6, 'kwargs': {'marker': None, 'alpha': 0.45}}, # pre-S5 overnight and weekend astrowatch
        'S5':   {'times': [(2006+(4/12)), (2006+(9/12)+(15/365.25))], 'textoffset': runyoffsetbelow, 'kwargs': {'marker': 'o'}},
-       'Astrowatch': {'times': [(2006+(9/12)+(15/365.25)), (2009+(6/12)+(7/365.25))], 'textoffset': runyoffsetbelow, 'kwargs': {'marker': 'o', 'alpha': 0.45}}, # to start of S6
-       'S6/Astrowatch': {'times': [(2009 + (6/12) + (7/365.25)), 2012], 'textoffset': runyoffsetbelow, 'kwargs': {'marker': '>', 'alpha': 0.45}}}
+       'Astrowatch': {'times': [(2006+(9/12)+(15/365.25)), (2009+(6/12)+(7/365.25))], 'textoffset': runyoffsetbelow, 'kwargs': {'marker': None, 'alpha': 0.45}}, # to start of S6
+       'S6/Astrowatch': {'times': [(2009 + (6/12) + (7/365.25)), 2012], 'textoffset': runyoffsetbelow, 'kwargs': {'alpha': 0.45}}}
 
 # TAMA data taking runs (DT1-9)
 TAMA = {'DT1': {'times': [(1999+(7/12)+(6/365.25)),   (1999+(7/12)+(7/365.25))],  'textoffset': runyoffsetbelow, 'kwargs': {'marker': 'o'}},
@@ -63,9 +63,9 @@ TAMA = {'DT1': {'times': [(1999+(7/12)+(6/365.25)),   (1999+(7/12)+(7/365.25))],
         'DT9': {'times': [(2003+(10/12)+(28/365.25)), (2004+10/365.25)], 'textoffset': runyoffsetbelow, 'kwargs': {'marker': 'o'}}}
 
 # Virgo runs, weekend science run (WSR) and VSR1-4
-VIRGO = {'WSR1': {'times': [(2006+(8/12)+(8/365.25)), (2007+(2/12)+(12/365.25))], 'textoffset': runyoffsetbelow*1e6, 'kwargs': {'marker': 'o', 'alpha': 0.45}},
+VIRGO = {'WSR1': {'times': [(2006+(8/12)+(8/365.25)), (2007+(2/12)+(12/365.25))], 'textoffset': runyoffsetbelow*1e6, 'kwargs': {'marker': None, 'alpha': 0.45}},
          'VSR1': {'times': [(2007+(4/12)+(18/365.25)), (2007+(9/12))], 'textoffset': runyoffsetbelow, 'kwargs': {'marker': 'o'}},
-         'A5':   {'times': [(2007+(9/12)), (2009+(6/12)+(7/365.25))], 'textoffset': runyoffsetbelow*1e6, 'kwargs': {'marker': 'o', 'alpha': 0.45}},
+         'A5':   {'times': [(2007+(9/12)), (2009+(6/12)+(7/365.25))], 'textoffset': runyoffsetbelow*1e6, 'kwargs': {'marker': None, 'alpha': 0.45}},
          'VSR2': {'times': [(2009+(6/12)+(7/365.25)), (2010+(8/365.25))], 'textoffset': runyoffsetbelow, 'kwargs': {'marker': 'o'}},
          'VSR3': {'times': [(2010+(7/12)+(11/365.25)), (2010+(6/12)+(20/365.25))], 'textoffset': runyoffsetbelow, 'kwargs': {'marker': 'o'}},
          'VSR4': {'times': [(2011+(5/12)+(3/365.25)), (2011+(8/12)+(5/365.25))], 'textoffset': runyoffsetbelow, 'kwargs': {'marker': 'o'}}}
@@ -83,7 +83,7 @@ ax.plot([1999, 2012], [3, 3], 'k--', linewidth=0.5)
 ax.plot([1999, 2012], [4, 4], 'k--', linewidth=0.5)
 
 # detector positions in plot
-detpos = orddic([('LIGO', 1), ('GEO600', 2), ('TAMA300',  3), ('Virgo', 4)])
+detpos = orddic([('LIGO', 2), ('GEO600', 3), ('TAMA300',  1), ('Virgo', 4)])
 
 # plot LIGO runs
 for run in LIGO:
@@ -122,12 +122,40 @@ for run in VIRGO:
   ax.text(VIRGO[run]['times'][0] + 0.5*np.diff(VIRGO[run]['times']), detpos['Virgo'] + VIRGO[run]['textoffset'], run, fontsize=12, ha='center')
 
 # add other LIGO annotation
+# first lock of H2 (not actual date it happened, but when it was announced https://labcit.ligo.caltech.edu/LIGO_web/firstlock/)
 ax.annotate('first lock H2', xy=(2000+(9/12)+(20/365.25), detpos['LIGO']), xytext=(2000+(9/12)+(20/365.25), detpos['LIGO']-0.5), fontsize=12,
             arrowprops=dict(facecolor='black', shrink=0.05, width=1, headwidth=6, headlength=5), ha='center')
-ax.annotate('full lock\\\\all detectors', xy=(2002.25, detpos['LIGO']), xytext=(2002.25, detpos['LIGO']-0.5), fontsize=12,
-            arrowprops=dict(facecolor='black', shrink=0.05, width=1, headwidth=6, headlength=5), ha='center', va='center')
+# full lock all detectors
+ax.annotate('full lock\nall detectors', xy=(2002.25, detpos['LIGO']), xytext=(2002.25, detpos['LIGO']-0.5), fontsize=12,
+            arrowprops=dict(facecolor='black', shrink=0.05, width=1, headwidth=6, headlength=5), ha='center', va='center', multialignment='center')
+# Note Enhanced LIGO period
 ax.text(LIGO['S6']['times'][0] + 0.5*np.diff(LIGO['S6']['times']), detpos['LIGO'] + runyoffsetabove,
         'Enhanced LIGO', fontsize=12, ha='center')
+
+# add other GEO annotation
+# first lock of power recycled Michelson (25th Oct 2001 from Appendix E of Hartmut's thesis http://inspirehep.net/record/1228030/files/Grote,%20Hartmut_Diss.pdf)
+ax.annotate('first lock of full\npower-recycled Michelson', xy=(2001+(9/12)+(25/365.25), detpos['GEO600']), xytext=(2001+(9/12)+(25/365.25), detpos['GEO600']-0.5), fontsize=12,
+            arrowprops=dict(facecolor='black', shrink=0.05, width=1, headwidth=6, headlength=5), ha='center', va='center', multialignment='center')
+# first lock of dual-recycled Michelson (15 Nov 2002 from Appendix E of Hartmut's thesis http://inspirehep.net/record/1228030/files/Grote,%20Hartmut_Diss.pdf)
+ax.annotate('first lock of\ndual-recycled Michelson', xy=(2002+(10/12)+(15/365.25), detpos['GEO600']), xytext=(2002+(10/12)+(15/365.25), detpos['GEO600']+0.5), fontsize=12,
+            arrowprops=dict(facecolor='black', shrink=0.05, width=1, headwidth=6, headlength=5), ha='center', va='center')
+# Note the overnight and weekend run period
+ax.annotate('Overnight and\nweekend', xy=(GEO['S5']['times'][0] - 2./12, detpos['GEO600']), xytext=(GEO['S5']['times'][0], detpos['GEO600']+0.3), textcoords='data', multialignment='center', arrowprops=dict(facecolor='black', shrink=0.05, width=1, headwidth=6, headlength=5), fontsize=12)
+ax.annotate('Overnight and\nweekend', xy=(GEO['S5']['times'][1] + 8./12, detpos['GEO600']), xytext=(GEO['S5']['times'][0], detpos['GEO600']+0.3), xycoords='data', textcoords='data', multialignment='center', arrowprops=dict(facecolor='black', shrink=0.05, width=1, headwidth=6, headlength=5), fontsize=12, alpha=0.0)
+# Note GEO-HF period
+ax.text(GEO['S6/Astrowatch']['times'][0] + 0.5*np.diff(GEO['S6/Astrowatch']['times']), detpos['GEO600'] + runyoffsetabove,
+        'GEO-HF', fontsize=12, ha='center')
+
+# add other Virgo annotation
+# first full lock of IFO with power-recycling 26 Oct 2004 http://iopscience.iop.org/article/10.1088/0264-9381/22/18/S01/meta
+ax.annotate('first full lock with\npower-recycling', xy=(2004+(9/12)+(26/365.25), detpos['Virgo']), xytext=(2004+(9/12)+(26/365.25), detpos['Virgo']+0.5), fontsize=12,
+            arrowprops=dict(facecolor='black', shrink=0.05, width=1, headwidth=6, headlength=5), ha='center', va='center', multialignment='center')
+# add weekend science run label
+ax.annotate('Weekend\nScience Run', xy=(VIRGO['VSR1']['times'][0] - 6./12, detpos['Virgo']), xytext=(VIRGO['VSR1']['times'][0]-3/12, detpos['Virgo']+0.3), textcoords='data', multialignment='center', arrowprops=dict(facecolor='black', shrink=0.05, width=1, headwidth=6, headlength=5), fontsize=12)
+ax.annotate('Weekend\nScience Run', xy=(VIRGO['VSR1']['times'][1] + 6./12, detpos['Virgo']), xytext=(VIRGO['VSR1']['times'][0]-3/12, detpos['Virgo']+0.3), xycoords='data', textcoords='data', multialignment='center', arrowprops=dict(facecolor='black', shrink=0.05, width=1, headwidth=6, headlength=5), fontsize=12, alpha=0.0)
+# add Virgo+
+ax.text(VIRGO['VSR3']['times'][0] + 0.5*np.diff(VIRGO['VSR3']['times']), detpos['Virgo'] + runyoffsetabove,
+        'Virgo+', fontsize=12, ha='center')
 
 # set plot limits
 pl.xlim([1999.25, 2012])
@@ -150,5 +178,12 @@ ax.set_xticklabels(xticklabels)
 
 pl.tight_layout()
 
-pl.show()
+fig.savefig('../figures/runtimes/runtimes.png', dpi=400)
+fig.savefig('../figures/runtimes/runtimes.pdf')
+
+# rasterize for eps output with transparencies
+ax.set_rasterized(True)
+fig.savefig('../figures/runtimes/runtimes.eps', dpi=400)
+
+#pl.show()
 
