@@ -4,6 +4,8 @@
 Plot "best" LIGO sensitivity curves for the initial detector era (S1-S6)
 """
 
+from __future__ import division
+
 import os
 
 import numpy as np
@@ -37,8 +39,8 @@ strainfiles = {'S1': 'S1/llo_020907_strain.txt',
                'S6': 'S6/lho4k_15May2010_05hrs17min45secUTC_strain.txt',
                'SRD': 'LIGO_4k_SRD.txt'}
 
-# colours for plotting strains
-colors = {'S1': 'g', 'S2': 'r', 'S3': 'c', 'S4': 'b', 'S5': 'm', 'S6': 'grey', 'SRD': 'k'}
+# colours for plotting strains (use colourblind friendly palettes e.g. http://mkweb.bcgsc.ca/biovis2012/color-blindness-palette.png)
+colors = {'S1': (36/255, 1, 36/255), 'S2': (146/255, 0, 0), 'S3': (109/255, 182/255, 1), 'S4': (73/255, 0, 146/255), 'S5': (1, 109/155, 182/255), 'S6': (0, 146/255, 146/255), 'SRD': 'k'}
 
 # legend labels for runs
 labels = {'S1': 'S1 - LLO (7 Sep 2002)',
@@ -54,7 +56,7 @@ for run in ['S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'SRD']:
   strain = np.loadtxt(strainfiles[run])
   linewidth = 1
   if run == 'SRD': linewidth = 3 # make SRD curve thicker
-  ax.loglog(strain[:,0], strain[:,1], colors[run], label=labels[run], linewidth=linewidth)
+  ax.loglog(strain[:,0], strain[:,1], color=colors[run], label=labels[run], linewidth=linewidth)
 
 ax.set_xlim([20., 7000.])
 ax.set_ylim([1e-24, 1e-16])

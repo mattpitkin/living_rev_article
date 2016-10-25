@@ -4,6 +4,8 @@
 Plot Virgo sensitivity curves for the initial detector era (WSR1-10 and VSR1-4)
 """
 
+from __future__ import division
+
 import os
 
 import numpy as np
@@ -37,8 +39,8 @@ strainfiles = {'WSR1': 'S5/VIRGOWSR1.txt',
                'VSR4': 'S6/Sensitivity_VSR4_20110805_11d8Mpc.txt',
                'SRD': 'VIRGO_DesignSensitivityH.txt'}
 
-# colours for plotting strains
-colors = {'WSR1': (36./255., 1., 36./255.), 'WSR10': (219./255., 209./255., 0.), 'VSR1': (146./255., 0., 0.), 'VSR2': (73./255., 0., 146./255.), 'VSR3': (1., 109./255., 182./255.), 'VSR4': (0., 146./255., 146./255.), 'SRD': 'k'}
+# colours for plotting strains (use colour blind friendly palettes e.g. http://mkweb.bcgsc.ca/biovis2012/color-blindness-palette.png)
+colors = {'WSR1': (36/255, 1, 36/255), 'WSR10': (219/255, 209/255, 0), 'VSR1': (146/255, 0, 0), 'VSR2': (73/255, 0, 146/255), 'VSR3': (1, 109/255, 182/255), 'VSR4': (0, 146/255, 146/255), 'SRD': 'k'}
 
 # legend labels for runs
 labels = {'WSR1': 'Weekend Science Run 1 (8-11 Sep 2006)',

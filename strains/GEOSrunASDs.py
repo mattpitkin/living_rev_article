@@ -4,7 +4,7 @@
 Plot "typical" GEO sensitivity curves for the initial detector era (S1-S6)
 """
 
-import os
+from __future__ import division
 
 import numpy as np
 import matplotlib as mpl
@@ -40,8 +40,8 @@ allstrains = {'S1': strains[:,[0,1]],
               'S6e': np.loadtxt('S6/GEO_s6e_sens.txt'), # S6E strain file
               'SRD': np.loadtxt('GEOdesign_550HzSRC.txt', comments='%')}
 
-# colours for plotting strains
-colors = {'S1': 'g', 'S3I': 'c', 'S3II': 'aqua', 'S4': 'b', 'S5': 'm', 'S52': 'violet', 'S6': 'orangered', 'S6e': 'darksalmon', 'SRD': 'k'}
+# colours for plotting strains (use colour blind friendly palettes e.g. http://mkweb.bcgsc.ca/biovis2012/color-blindness-palette.png)
+colors = {'S1': (36/255, 1, 36/255), 'S3I': (219/255, 109/255, 0), 'S3II': (146/255, 0, 0), 'S4': (182/255, 109/255, 1), 'S5': (0, 109/255, 219/255), 'S52': (73/255, 0, 146/255), 'S6': (1, 109/255, 182/255), 'S6e': (0, 146/255, 146/255), 'SRD': 'k'}
 
 # legend labels for runs
 labels = {'S1': 'S1',
@@ -59,7 +59,7 @@ for run in ['S1', 'S3I', 'S3II', 'S4', 'S5', 'S52', 'S6', 'S6e', 'SRD']:
   strain = allstrains[run]
   linewidth = 1
   if run == 'SRD': linewidth = 3 # make SRD curve thicker
-  ax.loglog(strain[:,0], strain[:,1], colors[run], label=labels[run], linewidth=linewidth)
+  ax.loglog(strain[:,0], strain[:,1], color=colors[run], label=labels[run], linewidth=linewidth)
 
 ax.set_xlim([10., 5000.])
 ax.set_ylim([5e-23, 1e-15])
