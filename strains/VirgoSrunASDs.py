@@ -6,8 +6,6 @@ Plot Virgo sensitivity curves for the initial detector era (WSR1-10 and VSR1-4)
 
 from __future__ import division
 
-import os
-
 import numpy as np
 import matplotlib as mpl
 from matplotlib import pyplot as pl
@@ -72,6 +70,8 @@ ax.set_xticklabels(['$10$', '$100$', '$1000$'])
 ax.grid(b=True, which='minor', color='k', alpha=0.2)
 
 ax.legend()
+
+fig.tight_layout()
 
 #pl.show()
 fig.savefig('../figures/VirgoSrunASDs/VirgoSrunASDs.pdf')

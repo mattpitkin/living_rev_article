@@ -74,6 +74,8 @@ ax.grid(b=True, which='minor', color='k', alpha=0.2)
 
 ax.legend()
 
+fig.tight_layout()
+
 #pl.show()
 fig.savefig('../figures/GEOSrunASDs/GEOSrunASDs.pdf')
 fig.savefig('../figures/GEOSrunASDs/GEOSrunASDs.eps')

@@ -6,8 +6,6 @@ Plot "best" LIGO sensitivity curves for the initial detector era (S1-S6)
 
 from __future__ import division
 
-import os
-
 import numpy as np
 import matplotlib as mpl
 from matplotlib import pyplot as pl
@@ -70,6 +68,8 @@ ax.set_xticklabels(['$100$', '$1000$'])
 ax.grid(b=True, which='minor', color='k', alpha=0.2)
 
 ax.legend()
+
+fig.tight_layout()
 
 #pl.show()
 fig.savefig('../figures/LIGOSrunASDs/LIGOSrunASDs.pdf')
