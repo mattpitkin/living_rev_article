@@ -59,19 +59,30 @@ ENTRY
     adsurl
     archive
     archivePrefix
+    ark
     author
     booktitle
+    cited
     chapter
     collaboration
+    conference
+    day
     doi
     edition
     editor
+    eid
     eprint
+    format
+    gbs_id
     journal
     key
+    keywords
     month
     note
+    newspaper
     number
+    onlineversion
+    organization
     pages
     primaryClass
     publisher
@@ -82,21 +93,6 @@ ENTRY
     url
     volume
     year
-    organization
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% LIVING REVIEWS SPECIFIC FIELDS                               %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-    cited
-    conference
-    day
-    format
-    gbs_id
-    id
-    keywords
-    newspaper
-    onlineversion
   }
   {}
   { label }
@@ -178,6 +174,10 @@ FUNCTION {new.sentence}
       if$
     }
   if$
+}
+
+FUNCTION {add.blank}
+{  " " * before.all 'output.state :=
 }
 
 FUNCTION {not}
@@ -316,32 +316,17 @@ FUNCTION {format.names}
     while$
     }
   if$
-  format.collaboration *
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Functions to output thesis formats                           %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-FUNCTION {bbl.phd} 
-{ "Ph.D. Thesis" 
-}
+FUNCTION {bbl.mthesis}
+{ "Master's thesis" }
 
-FUNCTION {bbl.masters} 
-{ "Masters Thesis" 
-}
-
-FUNCTION {bbl.habil} 
-{ "Habilitation" 
-}
-
-FUNCTION {bbl.dipl} 
-{ "Diploma Thesis" 
-}
-
-FUNCTION {bbl.licentiate} 
-{ "Licentiate Thesis" 
-}
+FUNCTION {bbl.phdthesis}
+{ "Ph.D. thesis" }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Functions to output format for 'misc' and 'online'           %
@@ -364,7 +349,6 @@ FUNCTION {bbl.other.format}
 % nb: field 'format' provides statusinfo in genre 'unpublished'%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 FUNCTION {bbl.unknown.status}
 { "unpublished" 
 }
@@ -374,24 +358,18 @@ FUNCTION {bbl.default.status}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Function to format the id                                    %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-FUNCTION {format.id}
-{ id empty$
-    { "" }
-    { "" id *}
-  if$
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Function to format the series (for tech rep)                 %
+% Function to format series and number (for tech rep)          %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 FUNCTION {format.tr.series}
-{ id empty$
+{ number empty$
     { "" }
-    { "" series *}
+    { series empty$
+        'skip$
+        { ", " * series * }
+      if$
+      number
+    }
   if$
 }
 
@@ -425,6 +403,7 @@ FUNCTION {format.authors}
     { "" }
     { "" author format.names * }
   if$
+  format.collaboration *
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -520,6 +499,17 @@ FUNCTION {format.ads}
 { adsurl empty$
     { "" }
     { "{\small[\href{" adsurl * "}" * "{ADS}]}" *}
+  if$
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Function to format the ark field                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+FUNCTION {format.ark}
+{ ark empty$
+    { "" }
+    { "{\small[\href{" ark * "}" * "{ARK}]}" *}
   if$
 }
 
@@ -724,12 +714,11 @@ FUNCTION {either.or.check}
 FUNCTION {format.bvolume}
 { volume empty$
     { "" }
-    {
-      series empty$
+    { series empty$
         'skip$
         { ", " * series * }
       if$
-      "" volume tie.or.space.connect
+      volume
       "volume and number" number either.or.check
     }
   if$
@@ -812,23 +801,26 @@ FUNCTION {multi.page.check}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Function to formats pages.                                    %
+% Function to format pages (or eid).                            %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 FUNCTION {format.pages}
-{ pages empty$
-    { "" }
-    { pages multi.page.check
-        { "pp." pages n.dashify tie.or.space.connect }
-        { "p." pages tie.or.space.connect }
+{ eid empty$
+    { pages empty$
+	{ "there are no pages in " cite$ * warning$ "" }
+	{ pages multi.page.check
+            { "pp." pages n.dashify tie.or.space.connect }
+            { "p." pages tie.or.space.connect }
+	  if$
+	}
       if$
     }
+    { "" eid * }
   if$
 }
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Function to format the volume, number, and pages               %
+% Function to format the volume, number, and pages (eid)         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 FUNCTION {format.vol.num.pages}
@@ -845,18 +837,17 @@ FUNCTION {format.vol.num.pages}
       if$
     }
   if$
-  id empty$
-    { skip$ }
-    { ", " id * "" * * }
-  if$
-  pages empty$
-% obsolete, we often use id { "there are no pages in " cite$ * warning$ }
-    { skip$ }
-    { duplicate$ empty$
-        { pop$ format.pages }
-        { ", " * pages n.dashify * }
+  eid empty$
+    { pages empty$
+	{ "there are no pages in " cite$ * warning$ }
+	{ duplicate$ empty$
+            { pop$ format.pages }
+            { ", " * pages n.dashify * }
+	  if$
+	}
       if$
     }
+    { ", " eid * "" * * }
   if$
 }
 
@@ -997,8 +988,14 @@ FUNCTION {format.tr.publisher.address.year}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 FUNCTION {format.keywords}
+% { keywords empty$
+%    { " !!! K E Y W O R D S missing in " cite$ * warning$ }
+%    { "" }
+%    if$
+% }
+% disabled warning
 { keywords empty$
-   { " !!! K E Y W O R D S missing in " cite$ * warning$ }
+   { "" }
    { "" }
    if$
 }
@@ -1093,28 +1090,14 @@ FUNCTION {format.preprint.format}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Function to format thesis type (=format)                       %
+% Function to format thesis type                                 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-FUNCTION {format.thesis.format}
-{ format empty$
-    { skip$ }
-    { format "ma" =
-        { bbl.masters }
-	    { format "msc" =
-		{ bbl.masters }
-		    { format "phd" =
-			{ bbl.phd }
-			    { format "habil" =
-				{ bbl.habil }
-				  { bbl.dipl }
-	          if$
-            	}
-              if$
-            }
-          if$
-        }
-      if$
+FUNCTION {format.thesis.type}
+{ type empty$
+    'skip$
+    { pop$
+      type "t" change.case$
     }
   if$
 }
@@ -1130,10 +1113,12 @@ FUNCTION {article}
   format.title "title" output.check
   format.journal "journal" output.check
   format.vol.num.pages "pages" output.check
+  add.blank
   format.date "year" output.check
   new.sentence
   format.doi output
   format.ads output
+  format.ark output
   format.eprint output
   new.sentence
   url empty$
@@ -1314,12 +1299,12 @@ FUNCTION {inproceedings}
 % Function to output citation style "thesis"                     %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-FUNCTION {thesis}
+FUNCTION {phdthesis}
 { output.bibitem
   "" write$ newline$ ""
   format.authors "author" output.check
   format.btitle "title" output.check
-  format.thesis.format output.nonnull
+  bbl.phdthesis format.thesis.type output.nonnull
   format.school.address.year "year" output.check
   new.sentence
   format.doi output
@@ -1342,6 +1327,36 @@ FUNCTION {thesis}
   format.keywords output 
   fin.entry
 }
+
+FUNCTION {mastersthesis}
+{ output.bibitem
+  "" write$ newline$ ""
+  format.authors "author" output.check
+  format.btitle "title" output.check
+  bbl.mthesis format.thesis.type output.nonnull
+  format.school.address.year "year" output.check
+  new.sentence
+  format.doi output
+  format.ads output
+  format.eprint output
+  new.sentence
+  url empty$
+    { skip$ }
+    {format.url "url" output.check
+    new.sentence
+    }
+  if$
+  onlineversion empty$
+    { skip$ }
+    {format.onlineversion "onlineversion" output.check
+    new.sentence
+    }
+  if$
+  note output
+  format.keywords output 
+  fin.entry
+}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Function to output citation style "misc"                       %
@@ -1378,7 +1393,7 @@ FUNCTION {online}
   format.conference output
   format.online.format output.nonnull
   publisher "publisher" output.check
-  format.date "year" output.check
+  format.date output
   new.sentence
   format.url "url" output.check
   new.sentence
@@ -1506,16 +1521,15 @@ FUNCTION {techreport}
     }
     { format.authors "author" output.check }
   if$
-  format.btitle "title" output.check 
-  series output
-%  format.tr.series "series" output.check
-  format.id "id" output.check
+  format.btitle "title" output.check
+  format.tr.series output
   format.tr.publisher.address.year output
   format.edition output
   new.sentence
   format.doi output
   format.ads output
   format.eprint output
+  format.gbs output
   new.sentence
   url empty$
     { skip$ }
