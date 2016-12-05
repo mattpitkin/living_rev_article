@@ -822,18 +822,18 @@ an event~\cite{Phinney:2009}.
 \subsubsection{Continuous sources}
 
 Searches for continuous waves focus on rapidly-spinning neutron stars as sources. There are fully targeted 
-searches, which look for gravitational waves from known radio pulsars in which the position and spin 
-evolution of the objects are precisely known. There are semi-targeted, or directed, searches, which look at 
-potential sources in which some, but not all, the source signal parameters are known, for example neutron 
-stars in X-ray binary systems, or sources in supernova remnants where no pulses are seen, which have known 
-position, but unknown frequency. Finally, there are all-sky broadband searches in which none of the signal 
-parameters are known. The targeted searches tend to be most sensitive as they are able to perform coherent 
-integration over long stretches of data with relatively low computational overheads, and have a much smaller 
-parameter space leading to fewer statistical outliers. Due to various neutron-star population statistics, 
-birth rates and energetics arguments, there is an estimate that the amplitude of the strongest 
-gravitational-wave pulsar observed at Earth will be $h_0 \lesssim 4\times10^{-24}$~\cite{Abbott:2007a} (a more 
-thorough discussion of this argument can be found in~\cite{Knispel:2008}), although this does not rule out 
-stronger sources.
+searches, which look for gravitational waves from known radio electromagnetically-observed pulsars for which 
+the position and spin evolution of the objects are precisely known. There are semi-targeted, or directed, 
+searches, which look at potential sources in which some, but not all, the source signal parameters are known, 
+for example neutron stars in X-ray binary systems, or sources in supernova remnants where no pulses are seen, 
+which have known position, but unknown frequency. Finally, there are all-sky broadband searches in which none 
+of the signal parameters are known. The targeted searches tend to be most sensitive as they are able to 
+perform coherent integration over long stretches of data with relatively low computational overheads, and 
+have a much smaller parameter space leading to fewer statistical outliers. Due to various neutron-star 
+population statistics, birth rates and energetics arguments, there is an estimate that the amplitude of the 
+strongest gravitational-wave pulsar observed at Earth will be $h_0 \lesssim 
+4\times10^{-24}$~\cite{Abbott:2007a} (a more thorough discussion of this argument can be found 
+in~\cite{Knispel:2008}), although this does not rule out stronger sources.
 
 The various search techniques used to produce these results all look for statistically-significant excess 
 power in narrow frequency bins that have been Doppler demodulated to take into account the signal's shifting 
@@ -841,256 +841,379 @@ frequency caused by the Earth's orbital motion with respect to the source (or al
 to the signal caused by the source's own motion relative to the Earth, such as for a pulsar in a binary 
 system). The statistical significance of a measured level of excess power is often compared to what would be 
 expected from data that consisted of Gaussian noise alone. A selection of the searches and methods are
-summarised in~\cite{Prix:2006}, but for more detailed descriptions of the various methods 
-see~\cite{Brady:2000, Krishnan:2004, Jaranowski:1998, Abbott:2008e, Abbott:2007a, Dupuis:2005}.
+summarised in~\cite{Prix:2006} (with some direct comparison between them given 
+in~\cite{2016arXiv160600660W}), but for more detailed descriptions of the various methods 
+see e.g.~\cite{Brady:2000, Krishnan:2004, Jaranowski:1998, Abbott:2008e, Abbott:2007a, Dupuis:2005}. The 
+methods make use of different coherent integration times, and are often hierarchical in nature. In the most 
+computationally expensive broadband, and/or all-sky, searches initially short coherent stages are combined 
+incoherently to build up sensitivity. These have also made use of distributed computing via the 
+Einstein@Home~\cite{eath} project (built upon the Berkeley Open Infrastructure for Network 
+Computing~\cite{BOINC}).  There are also hierarchical schemes for assessing the follow-up of potential 
+candidate signals. The various directed and all-sky searches that have been performed also span a range of 
+different source frequencies and frequency derivatives. A broad summary of the directed and all-sky search 
+results performed over the initial detector era is given Table~\ref{tab:cwbroadband}, although the details and 
+astrophysical interpretations can be found in the references provided.
 
-In S1 a fully-coherent targeted search for gravitational waves from the then-fastest millisecond pulsar 
-\epubtkSIMBAD{PSR~J1939+2134} was performed~\cite{Abbott:2004d}. This analysis, and the subsequent LSC 
-known-pulsar searches, assumes that the star is triaxial and emitting gravitational waves at exactly twice its 
-rotation frequency. All the data from LIGO and GEO600 was analysed and no evidence of a signal was seen. A 
-95\% degree-of-belief upper limit on the gravitational-wave strain amplitude was set using data from the most 
-sensitive detector, L1, giving a value of 1.4~\texttimes~10\super{-22}. This result was also interpreted as an 
-ellipticity of the star, given a canonical moment of inertia of 10\super{38}~kg~m\super{2}, at 
-$\epsilon$~=~2.9~\texttimes~10\super{-4}.  However, this was still of order 100\,000 times higher than the 
-limit that can be set by equating the star's rate of loss of rotational kinetic energy with that emitted
-via gravitational radiation -- called the ``spin-down limit''.
+A summary of the searches for signals from known pulsars can be found in Table~\ref{tab:cwknown}, with 
+details given in the associated references. In these searches, which make use of the known sky location and 
+phase evolution of the signals as provided through electromagnetic observations, are target has been to beat 
+the so-called spin-down limit for each source. This limit is set by equating a pulsar's spin-down luminosity 
+(the kinetic energy lost as the star's rotation frequency decreases) to the gravitational wave luminosity, 
+and calculating the equivalent gravitational wave strain expected at Earth (see e.g. equation~5 in 
+\cite{2014ApJ...785..119A}) under the assumption of a moment of inertia of 10\super{38}~kg~m\super{2}. The 
+smallest ratio of the observed strain to the spin-down limit strain for each search is given in 
+Table~\ref{tab:cwknown}. The observed strain limits can also be interpreted in fiducial ellipticity, 
+$\varepsilon$, and mass quadrupole moment of the source \cite{2005PhRvL..95u1101O}. For all bar 
+\cite{2015MNRAS.453.4399P} these searches have been looking for emission from a triaxial star at twice the 
+rotation frequency. In the initial detector era searches the spin-down limit has been surpassed using 
+gravitational wave observations for two pulsars: the Crab pulsar \cite{Abbott:2008j} 
+(\epubtkSIMBAD{PSR~J0534+2200}) and the Vela pulsar \cite{Abadie:2011b} (\epubtkSIMBAD{PSR~J0835--4510}). A 
+summary of the upper limit results from searches for a total of 195 known pulsars using initial LIGO, Virgo 
+and GEO600 data, including S6 and VSR2,3,4, is in \cite{2014ApJ...785..119A}.
 
-In S2 the number of known pulsar sources searched for with LIGO data increased from 1 to 28, although all of 
-these were isolated pulsars (i.e.\ not in binary systems, although potentially still associated with 
-supernova remnants or globular clusters). This search used pulsar timing data supplied by Lyne and Kramer 
-from Jodrell Bank Observatory to precisely reconstruct the phase of the gravitational-wave signal over the 
-period of the run. The lowest 95\% upper limit on gravitational-waves amplitude was
-1.7~\texttimes~10\super{-24} for \epubtkSIMBAD{PSR~J1910--5959D}, and the smallest upper limit on ellipticity 
-(again assuming the canonical moment of inertia) was 4.5~\texttimes~10\super{-6} for the relatively close
-pulsar \epubtkSIMBAD{PSR~J2124--3358}~\cite{Abbott:2005f}, at a distance of 0.25~kpc. The pulsar closest to 
-its inferred spin-down limit was the Crab pulsar (\epubtkSIMBAD{PSR~J0534+2200}) with an upper limit 30 times 
-greater than that from spin-down. S2 also saw the use of two different all-sky--wide frequency band searches 
-that focused on isolated sources, but also including a search for gravitational waves from the low mass X-ray
-binary Scorpius~X1 (\epubtkSIMBAD[V818~Sco]{Sco-X1}). The first search used a semi-coherent technique to 
-search $\sim$~60~days of S2 data in the frequency band between 200\,--\,400~Hz and with signal spin-downs 
-between --1.1~\texttimes~10\super{-9} and 0~Hz~s\super{-1}~\cite{Abbott:2005g}. This gave a lowest 
-gravitational-wave strain 95\% upper limit of 4.4~\texttimes~10\super{-23} for the L1 detector at around 
-200~Hz. The other all-sky search was fully coherent and as such was computationally limited to only use a few
-hours of the most sensitive S2 data. It searched frequencies between 160\,--\,728.8~Hz and spin-downs less 
-than --4~\texttimes~10\super{-10}~Hz~s\super{-1} for isolated sources and gave a 95\% upper limit across this 
-band from 6.6~\texttimes~10\super{-23} to 1~\texttimes~10\super{-21}~\cite{Abbott:2007a}. The search for 
-gravitational waves from \epubtkSIMBAD[V818~Sco]{Sco-X1} used the same period of data. It did not have to 
-search over sky position as this is well known, but did have to search over two binary orbital parameters -- 
-the projected semi-major axis and the orbital phase reference time. The frequency ranges of this search 
-relied on estimates of the spin-frequency from quasi-periodic oscillations in the X-rays from the source, and 
-covered two 20~Hz bands from 464\,--\,484~Hz and 604\,--\,624~Hz (it should be noted that it is now
-thought that these estimates of the spin-frequency are unreliable). In these two frequency ranges upper 
-limits of 1.7~\texttimes~10\super{-22} and 1.3~\texttimes~10\super{-21} were found respectively.
+%In S1 a fully-coherent targeted search for gravitational waves from the then-fastest millisecond pulsar 
+%\epubtkSIMBAD{PSR~J1939+2134} was performed~\cite{Abbott:2004d}. This analysis, and the subsequent LSC 
+%known-pulsar searches, assumes that the star is triaxial and emitting gravitational waves at exactly twice 
+%its rotation frequency. All the data from LIGO and GEO600 was analysed and no evidence of a signal was seen. 
+%A 95\% degree-of-belief upper limit on the gravitational-wave strain amplitude was set using data from the 
+%most sensitive detector, L1, giving a value of 1.4~\texttimes~10\super{-22}. This result was also 
+%interpreted as an ellipticity of the star, given a canonical moment of inertia of 
+%10\super{38}~kg~m\super{2}, at $\epsilon$~=~2.9~\texttimes~10\super{-4}.  However, this was still of order 
+%100\,000 times higher than the limit that can be set by equating the star's rate of loss of rotational 
+%kinetic energy with that emitted via gravitational radiation -- called the ``spin-down limit''.
 
-One search that was carried out purely on LIGO S3 data was the coherent all-sky wide-band isolated pulsar 
-search using the distributed computing project Einstein@Home~\cite{eath}. The project is built upon the 
-Berkeley Open Infrastructure for Network Computing~\cite{BOINC} and allows the computational workload to be 
-distributed among many computers, generally contributed by the general public who sign up to the project. 
-This used the most sensitive 600 hours of data from H1 and cut it into 60 ten hour stretches on each of which
-a coherent search could be performed. The data was farmed out to computers owned by participants in the 
-project and ran as a background process or screen saver. The search band spanned the range from 
-50\,--\,1500.5~Hz. The search saw no plausible gravitational-wave candidates and the result is described
-at~\cite{eathS3}, but it was not used to produce an upper limit.
+%In S2 the number of known pulsar sources searched for with LIGO data increased from 1 to 28, although all of 
+%these were isolated pulsars (i.e.\ not in binary systems, although potentially still associated with 
+%supernova remnants or globular clusters). This search used pulsar timing data supplied by Lyne and Kramer 
+%from Jodrell Bank Observatory to precisely reconstruct the phase of the gravitational-wave signal over the 
+%period of the run. The lowest 95\% upper limit on gravitational-waves amplitude was
+%1.7~\texttimes~10\super{-24} for \epubtkSIMBAD{PSR~J1910--5959D}, and the smallest upper limit on 
+%ellipticity (again assuming the canonical moment of inertia) was 4.5~\texttimes~10\super{-6} for the 
+%relatively close pulsar \epubtkSIMBAD{PSR~J2124--3358}~\cite{Abbott:2005f}, at a distance of 0.25~kpc. The 
+%pulsar closest to its inferred spin-down limit was the Crab pulsar (\epubtkSIMBAD{PSR~J0534+2200}) with an 
+%upper limit 30 times greater than that from spin-down.
+%S2 also saw the use of two different all-sky--wide frequency band searches 
+%that focused on isolated sources, but also including a search for gravitational waves from the low mass X-ray
+%binary Scorpius~X1 (\epubtkSIMBAD[V818~Sco]{Sco-X1}). The first search used a semi-coherent technique to 
+%search $\sim$~60~days of S2 data in the frequency band between 200\,--\,400~Hz and with signal spin-downs 
+%between --1.1~\texttimes~10\super{-9} and 0~Hz~s\super{-1}~\cite{Abbott:2005g}. This gave a lowest 
+%gravitational-wave strain 95\% upper limit of 4.4~\texttimes~10\super{-23} for the L1 detector at around 
+%200~Hz. The other all-sky search was fully coherent and as such was computationally limited to only use a few
+%hours of the most sensitive S2 data. It searched frequencies between 160\,--\,728.8~Hz and spin-downs less 
+%than --4~\texttimes~10\super{-10}~Hz~s\super{-1} for isolated sources and gave a 95\% upper limit across 
+%this band from 6.6~\texttimes~10\super{-23} to 1~\texttimes~10\super{-21}~\cite{Abbott:2007a}. The search 
+%for gravitational waves from \epubtkSIMBAD[V818~Sco]{Sco-X1} used the same period of data. It did not have 
+%to search over sky position as this is well known, but did have to search over two binary orbital parameters 
+%-- the projected semi-major axis and the orbital phase reference time. The frequency ranges of this search 
+%relied on estimates of the spin-frequency from quasi-periodic oscillations in the X-rays from the source, 
+%and covered two 20~Hz bands from 464\,--\,484~Hz and 604\,--\,624~Hz (it should be noted that it is now
+%thought that these estimates of the spin-frequency are unreliable). In these two frequency ranges upper 
+%limits of 1.7~\texttimes~10\super{-22} and 1.3~\texttimes~10\super{-21} were found respectively.
 
-In the known pulsar search the number of sources searched for using the combined LIGO data from S3 and S4 was 
-increased to 78. This included many pulsars within binary systems. For many of the pulsars that overlapped 
-with the previous S2 analysis results were improved by about an order of magnitude. The lowest 95\%
-upper limit on gravitational-waves amplitude was 2.6~\texttimes~10\super{-25} for
-\epubtkSIMBAD{PSR~~J1603--7202}, and the smallest ellipticity was again for \epubtkSIMBAD{PSR~J2124--3358} at 
-just less than 10\super{-6}~\cite{Abbott:2007d}. The upper limit for the Crab pulsar was found to be only 2.2 
-times above that set by the spin-down limit. Three different, but related, semi-coherent all-sky continuous 
-wave searches were performed on S4 LIGO data, looking for isolated neutron stars in the frequency
-range from 50\,--\,1000~Hz and the spin-down range from --1~\texttimes~10\super{-8} to 
-0~Hz~s\super{-1}~\cite{Abbott:2008e}. The best 95\% upper limit based on an isotropically-distributed, 
-randomly-oriented, population of neutron stars was 4.3~\texttimes~10\super{-24} near 140~Hz. This is 
-approaching the amplitude of the strongest potential signal discussed above. For one of the searches, which
-combined data from the different detectors, an isolated pulsar emitting at near 100~Hz, and with an extreme 
-ellipticity of 10\super{-4} could have been seen at a distance of 1~kpc, although for a more realistic 
-ellipticity of 10\super{-8} only a distance of less than 1~pc would be visible over the entire LIGO band. The
-Einstein@Home project~\cite{eath} was also used to search the most sensitive data from S4, which consisted of 
-300 hours of H1 data and 210 hours of L1 data. The search performed a coherent analysis on 30-hour stretches 
-of this data and covered the frequency range of 50\,--\,1500~Hz~\cite{Abbott:2008f}. The range of spin-downs 
-$\dot{f}$ was chosen by using a minimum spin-down age $\tau$ and having $-f/\tau < \dot{f} < 0.1f/\tau$ 
-(small spin-ups are allowed as some pulsars in globular clusters exhibit this due to their Doppler motions 
-within the clusters), with $\tau$~= 1000~years for signals below 300~Hz and $\tau$~= 10\,000~years above 
-300~Hz. Approximately 6000 years of computational time spread over about 100\,000 computers were required to 
-perform the analysis. No plausible gravitational-wave candidates were found, although the results suggest
-that 90\% of sources with strain amplitudes greater than 10\super{-23} would have been detected by the 
-search. A search designed to produce a sky map of the stochastic background was also used to search for 
-gravitational waves from \epubtkSIMBAD[V818~Sco]{Sco-X1} using a method of cross-correlating H1 and L1 
-data~\cite{Abbott:2007f}. This produced a 90\% root-mean-squared upper limit on gravitational wave strain
-of $h = 3.4\times10^{-24}(f/200 \mathrm{\ Hz})$ for frequencies greater than 200 Hz.
+%One search that was carried out purely on LIGO S3 data was the coherent all-sky wide-band isolated pulsar 
+%search using the distributed computing project Einstein@Home~\cite{eath}. The project is built upon the 
+%Berkeley Open Infrastructure for Network Computing~\cite{BOINC} and allows the computational workload to be 
+%distributed among many computers, generally contributed by the general public who sign up to the project. 
+%This used the most sensitive 600 hours of data from H1 and cut it into 60 ten hour stretches on each of which
+%a coherent search could be performed. The data was farmed out to computers owned by participants in the 
+%project and ran as a background process or screen saver. The search band spanned the range from 
+%50\,--\,1500.5~Hz. The search saw no plausible gravitational-wave candidates and the result is described
+%at~\cite{eathS3}, but it was not used to produce an upper limit.
 
-Various all-sky searches for unknown period sources have been carried out with parts of, or all, LIGO S5 
-data. The first used 8 months of S5 and applied a semi-coherent method to look in the frequency range 
-50\,--\,1100~Hz and spin-down range --5~\texttimes~10\super{-9}\,--\,0~Hz~s\super{2}~\cite{Abbott:2008i}. It 
-obtained 95\% strain upper limits of less than 10\super{-24} over a frequency band of 200~Hz. The search would 
-have been sensitive to a neutron star with equatorial ellipticity greater than 10\super{-6} within around 
-500~pc. The same method was later applied to all S5 data giving a best upper limit, for a linearly polarised 
-source, of 1~\texttimes~10\super{-24} near 150~Hz~\cite{2012PhRvD..85b2001A}. Einstein@Home~\cite{eath} has 
-also been used for all-sky searches for periodic waves of 50\,--\,1500~Hz~\cite{Abbott:2009a, 
-2013PhRvD..87d2001A, 2016PhRvD..94f4061S} with S5 data. These searches looked for young pulsars, but saw no 
-significant candidates. The initial search~\cite{Abbott:2009a} would have been sensitive to 90\% of sources in 
-the 125\,--\,225~Hz band with amplitudes greater than 3~\texttimes~10\super{-24}, whilst the most sensitive 
-band for the later search~\cite{2013PhRvD..87d2001A} placed a best 90\% confidence limit of 
-7.6~\texttimes~10\super{-25} at 152.5~Hz. The search of~\cite{2016PhRvD..94f4061S} was specifically in the 
-high-frequency range, between 1250\,--\,1500~Hz, and set a most constraining 90\% confidence limit on strain 
-of 5.0~\texttimes~10\super{-24} at around 1254~Hz. A method involving the Hough transform searched for signal 
-between 50\,--\,1000~Hz giving a most stringent upper limit of 8.9~\texttimes~10\super{-25} around 
-146.5~Hz~\cite{2014CQGra..31h5014A}.
+%In the known pulsar search the number of sources searched for using the combined LIGO data from S3 and S4 
+%was increased to 78. This included many pulsars within binary systems. For many of the pulsars that 
+%overlapped with the previous S2 analysis results were improved by about an order of magnitude. The lowest 
+%95\% upper limit on gravitational-waves amplitude was 2.6~\texttimes~10\super{-25} for
+%\epubtkSIMBAD{PSR~~J1603--7202}, and the smallest ellipticity was again for \epubtkSIMBAD{PSR~J2124--3358} 
+%at just less than 10\super{-6}~\cite{Abbott:2007d}. The upper limit for the Crab pulsar was found to be only 
+%2.2 times above that set by the spin-down limit. 
+%Three different, but related, semi-coherent all-sky continuous 
+%wave searches were performed on S4 LIGO data, looking for isolated neutron stars in the frequency
+%range from 50\,--\,1000~Hz and the spin-down range from --1~\texttimes~10\super{-8} to 
+%0~Hz~s\super{-1}~\cite{Abbott:2008e}. The best 95\% upper limit based on an isotropically-distributed, 
+%randomly-oriented, population of neutron stars was 4.3~\texttimes~10\super{-24} near 140~Hz. This is 
+%approaching the amplitude of the strongest potential signal discussed above. For one of the searches, which
+%combined data from the different detectors, an isolated pulsar emitting at near 100~Hz, and with an extreme 
+%ellipticity of 10\super{-4} could have been seen at a distance of 1~kpc, although for a more realistic 
+%ellipticity of 10\super{-8} only a distance of less than 1~pc would be visible over the entire LIGO band. The
+%Einstein@Home project~\cite{eath} was also used to search the most sensitive data from S4, which consisted 
+%of 300 hours of H1 data and 210 hours of L1 data. The search performed a coherent analysis on 30-hour 
+%stretches of this data and covered the frequency range of 50\,--\,1500~Hz~\cite{Abbott:2008f}. The range of 
+%spin-downs $\dot{f}$ was chosen by using a minimum spin-down age $\tau$ and having $-f/\tau < \dot{f} < 
+%0.1f/\tau$ (small spin-ups are allowed as some pulsars in globular clusters exhibit this due to their 
+%Doppler motions within the clusters), with $\tau$~= 1000~years for signals below 300~Hz and $\tau$~= 
+%10\,000~years above 300~Hz. Approximately 6000 years of computational time spread over about 100\,000 
+%computers were required to perform the analysis. No plausible gravitational-wave candidates were found, 
+%although the results suggest that 90\% of sources with strain amplitudes greater than 10\super{-23} would 
+%have been detected by the search. A search designed to produce a sky map of the stochastic background was 
+%also used to search for gravitational waves from \epubtkSIMBAD[V818~Sco]{Sco-X1} using a method of 
+%cross-correlating H1 and L1 data~\cite{Abbott:2007f}. This produced a 90\% root-mean-squared upper limit on 
+%gravitational wave strain of $h = 3.4\times10^{-24}(f/200 \mathrm{\ Hz})$ for frequencies greater than 200 
+%Hz.
 
-The first approximately 9~months of S5 data was used for a coherent search for gravitational waves from the 
-Crab pulsar~\cite{Abbott:2008j}. In this search two methods were used: the first followed the method of the 
-targeted search and assumed that the gravitational waves are phase locked to the electromagnetic pulses; the 
-second allowed for some mechanism, which would cause a small mismatch between the two phases. Two 95\%
-upper limits were set, one using astrophysical constraints on the pulsar orientation angle and polarisation 
-angle~\cite{Ng:2008} and the other applying no such constraints. With the first method these 95\%
-upper limits were 3.4~\texttimes~10\super{-25} and 2.7~\texttimes~10\super{-25} respectively, which 
-correspond to ellipticities of 1.8~\texttimes~10\super{-4} and 1.4~\texttimes~10\super{-4} (assuming the 
-canonical moment of inertia). These beat the Crab pulsar's spin-down limit by 4 to 5 times and can be 
-translated into the amount of the available spin-down power that is emitted via gravitational waves, with the
-lower of these limits showing that less than 4\% of power is going into gravitational waves. For the second 
-search the uniform and restricted prior analyses gave upper limits of 1.7~\texttimes~10\super{-24} and 
-1.2~\texttimes~10\super{-24} respectively. The whole of S5 was used to search for emissions from 116 known
-pulsars~\cite{Abbott:2010a}. During this search the Crab limit was further brought down to be less than a 
-factor of 7 below the spin-down limit, and the spin-down limit is reached for one other pulsar 
-\epubtkSIMBAD{PSR~J0537--6910}. Of the other pulsars, the best (lowest) upper limit on gravitational-wave 
-amplitude was 2.3~\texttimes~10\super{-26} for \epubtkSIMBAD{PSR~J1603--7202} and our best (lowest) limit on 
-the inferred pulsar ellipticity is 7.0~\texttimes~10\super{-8} for \epubtkSIMBAD{PSR~J2124--3358}. S5 data 
-was also used to perform the first search for emission at both the rotation frequency \textit{and} 
-twice the rotation frequency for a subset of 43 isolated pulsars~\cite{2015MNRAS.453.4399P}.
+%Various all-sky searches for unknown period sources have been carried out with parts of, or all, LIGO S5 
+%data. The first used 8 months of S5 and applied a semi-coherent method to look in the frequency range 
+%50\,--\,1100~Hz and spin-down range --5~\texttimes~10\super{-9}\,--\,0~Hz~s\super{2}~\cite{Abbott:2008i}. It 
+%obtained 95\% strain upper limits of less than 10\super{-24} over a frequency band of 200~Hz. The search 
+%would have been sensitive to a neutron star with equatorial ellipticity greater than 10\super{-6} within 
+%around 500~pc. The same method was later applied to all S5 data giving a best upper limit, for a linearly 
+%polarised source, of 1~\texttimes~10\super{-24} near 150~Hz~\cite{2012PhRvD..85b2001A}. 
+%Einstein@Home~\cite{eath} has also been used for all-sky searches for periodic waves of 
+%50\,--\,1500~Hz~\cite{Abbott:2009a, 2013PhRvD..87d2001A, 2016PhRvD..94f4061S} with S5 data. These searches 
+%looked for young pulsars, but saw no significant candidates. The initial search~\cite{Abbott:2009a} would 
+%have been sensitive to 90\% of sources in the 125\,--\,225~Hz band with amplitudes greater than 
+%3~\texttimes~10\super{-24}, whilst the most sensitive band for the later search~\cite{2013PhRvD..87d2001A} 
+%placed a best 90\% confidence limit of 7.6~\texttimes~10\super{-25} at 152.5~Hz. The search 
+%of~\cite{2016PhRvD..94f4061S} was specifically in the high-frequency range, between 1250\,--\,1500~Hz, and 
+%set a most constraining 90\% confidence limit on strain of 5.0~\texttimes~10\super{-24} at around 1254~Hz. A 
+%method involving the Hough transform searched for signal between 50\,--\,1000~Hz giving a most stringent 
+%upper limit of 8.9~\texttimes~10\super{-25} around 146.5~Hz~\cite{2014CQGra..31h5014A}.
 
-A semi-targeted search was performed with 12 days of S5 data, although this time searching for a source with 
-a known position in the Cassiopeia~A (\epubtkSIMBAD{Cas~A}) supernova remnant, but for which there is no 
-known frequency. The search~\cite{Abadie:2010g} looked in the frequency band between 100\,--\,300~Hz and 
-covered a wide range of first and second frequency derivatives and no signal was seen, but it gave 95\% 
-amplitude and ellipticity upper limits over the band of (0.7\,--\,1.2)~\texttimes~10\super{-24} and
-(0.4\,--\,4)~\texttimes~10\super{-4} respectively. These results beat indirect limits on the emission based 
-on energy-conservation arguments (similar, but not the same as the spin-down limits) and were also the
-first results to be cast as limits on the \textit{r}-mode amplitude~\cite{Owen:2010}. A further search for 
-emission from \epubtkSIMBAD{Cas~A}, over the broader frequency range of 50\,--\,1000~Hz, using S6 data with
-Einstein@Home, has provided a most sensitive gravitational wave upper limit of 
-2.9~\texttimes~10\super{-25}~\cite{2016PhRvD..94h2008Z}.
+%The first approximately 9~months of S5 data was used for a coherent search for gravitational waves from the 
+%Crab pulsar~\cite{Abbott:2008j}. In this search two methods were used: the first followed the method of the 
+%targeted search and assumed that the gravitational waves are phase locked to the electromagnetic pulses; the 
+%second allowed for some mechanism, which would cause a small mismatch between the two phases. Two 95\%
+%upper limits were set, one using astrophysical constraints on the pulsar orientation angle and polarisation 
+%angle~\cite{Ng:2008} and the other applying no such constraints. With the first method these 95\%
+%upper limits were 3.4~\texttimes~10\super{-25} and 2.7~\texttimes~10\super{-25} respectively, which 
+%correspond to ellipticities of 1.8~\texttimes~10\super{-4} and 1.4~\texttimes~10\super{-4} (assuming the 
+%canonical moment of inertia). These beat the Crab pulsar's spin-down limit by 4 to 5 times and can be 
+%translated into the amount of the available spin-down power that is emitted via gravitational waves, with the
+%lower of these limits showing that less than 4\% of power is going into gravitational waves. For the second 
+%search the uniform and restricted prior analyses gave upper limits of 1.7~\texttimes~10\super{-24} and 
+%1.2~\texttimes~10\super{-24} respectively. The whole of S5 was used to search for emissions from 116 known
+%pulsars~\cite{Abbott:2010a}. During this search the Crab limit was further brought down to be less than a 
+%factor of 7 below the spin-down limit, and the spin-down limit is reached for one other pulsar 
+%\epubtkSIMBAD{PSR~J0537--6910}. Of the other pulsars, the best (lowest) upper limit on gravitational-wave 
+%amplitude was 2.3~\texttimes~10\super{-26} for \epubtkSIMBAD{PSR~J1603--7202} and our best (lowest) limit on 
+%the inferred pulsar ellipticity is 7.0~\texttimes~10\super{-8} for \epubtkSIMBAD{PSR~J2124--3358}. S5 data 
+%was also used to perform the first search for emission at both the rotation frequency \textit{and} 
+%twice the rotation frequency for a subset of 43 isolated pulsars~\cite{2015MNRAS.453.4399P}.
 
-Signals from the Galactic Centre, with frequencies in the range 78\,--\,496~Hz and first frequency derivative 
-between 0 and -7.9~\texttimes~10\super{-8}~Hz/s, were also searched for using S5 data 
-\cite{2013PhRvD..88j2002A}. The most constraining 90\% confidence limit on the gravitational wave was 
-3.35~\texttimes~10\super{-25} at frequencies near 150~Hz.
+%A semi-targeted search was performed with 12 days of S5 data, although this time searching for a source with 
+%a known position in the Cassiopeia~A (\epubtkSIMBAD{Cas~A}) supernova remnant, but for which there is no 
+%known frequency. The search~\cite{Abadie:2010g} looked in the frequency band between 100\,--\,300~Hz and 
+%covered a wide range of first and second frequency derivatives and no signal was seen, but it gave 95\% 
+%amplitude and ellipticity upper limits over the band of (0.7\,--\,1.2)~\texttimes~10\super{-24} and
+%(0.4\,--\,4)~\texttimes~10\super{-4} respectively. These results beat indirect limits on the emission based 
+%on energy-conservation arguments (similar, but not the same as the spin-down limits) and were also the
+%first results to be cast as limits on the \textit{r}-mode amplitude~\cite{Owen:2010}. A further search for 
+%emission from \epubtkSIMBAD{Cas~A}, over the broader frequency range of 50\,--\,1000~Hz, using S6 data with
+%Einstein@Home, has provided a most sensitive gravitational wave upper limit of 
+%2.9~\texttimes~10\super{-25}~\cite{2016PhRvD..94h2008Z}.
 
-A directed search for a signal from \epubtkSIMBAD[V818~Sco]{Sco-X1} using 10 days of LIGO S5 data was 
-performed, covering the 50\,--\,550~Hz frequency range~\cite{2015PhRvD..91f2008A}. The provided a median 
-95\% confidence strain limit across of the band of 8~\texttimes~10\super{-25}, under the assumption that the 
-orientation of the system is constrained.
+%Signals from the Galactic Centre, with frequencies in the range 78\,--\,496~Hz and first frequency 
+%derivative between 0 and -7.9~\texttimes~10\super{-8}~Hz/s, were also searched for using S5 data 
+%\cite{2013PhRvD..88j2002A}. The most constraining 90\% confidence limit on the gravitational wave was 
+%3.35~\texttimes~10\super{-25} at frequencies near 150~Hz.
 
-Similarly to the previously mentioned \epubtkSIMBAD{Cas~A} searches, gravitational wave signals from nine 
-young Galactic supernova remnants (including \epubtkSIMBAD{Cas~A}) have been looked for using LIGO S6 
-data~\cite{2015ApJ...813...39A}. The searches used coherent data spans ranging from 5.3 to 25.3 days, and the 
-most stringent limits on gravitational wave amplitude, fiducial ellipticity and \textit{r}-mode amplitude were 
-4.2~\texttimes~10\super{-25} (for G18.9--1.1 and G291.0--0.1), 2.3~\texttimes~10\super{-7} (for G266.2--1.2), 
-and 3.7~\texttimes~10\super{-5} (again for G266.2--1.2) respectively. For all sources the indirect limits on 
-gravitaional wave amplitude were beaten across large parts of the search frequency bands.
+%A directed search for a signal from \epubtkSIMBAD[V818~Sco]{Sco-X1} using 10 days of LIGO S5 data was 
+%performed, covering the 50\,--\,550~Hz frequency range~\cite{2015PhRvD..91f2008A}. The provided a median 
+%95\% confidence strain limit across of the band of 8~\texttimes~10\super{-25}, under the assumption that the 
+%orientation of the system is constrained.
 
-The first all-sky search for unknown sources in binary systems was performed using LIGO S6 and Virgo VSR2,3 
-data~\cite{2014PhRvD..90f2010A}. The search looked for signals between 20\,--\,520~Hz with orbital periods 
-between 2\,--\,2245 hours and, assuming circular orbits, projected semi-major axes between 
-6~\texttimes~10\super{-4}\,--\,6500~light seconds. The most senstive 95\% upper limit on strains was found to 
-be 2.3~\texttimes~10\super{-24} at 217~Hz. The search was also able to place limits on emission from 
-\epubtkSIMBAD[V818~Sco]{Sco-X1} at frequencies between 20\,--\,57.25~Hz, covering a lower range than other
-searches~\cite{2015PhRvD..91f2008A}. 
+%Similarly to the previously mentioned \epubtkSIMBAD{Cas~A} searches, gravitational wave signals from nine 
+%young Galactic supernova remnants (including \epubtkSIMBAD{Cas~A}) have been looked for using LIGO S6 
+%data~\cite{2015ApJ...813...39A}. The searches used coherent data spans ranging from 5.3 to 25.3 days, and 
+%the most stringent limits on gravitational wave amplitude, fiducial ellipticity and \textit{r}-mode 
+%amplitude were 4.2~\texttimes~10\super{-25} (for G18.9--1.1 and G291.0--0.1), 2.3~\texttimes~10\super{-7} 
+%(for G266.2--1.2), and 3.7~\texttimes~10\super{-5} (again for G266.2--1.2) respectively. For all sources the 
+%indirect limits on gravitaional wave amplitude were beaten across large parts of the search frequency bands.
 
-An all-sky search covering the frequency band 100\,--\,1500~Hz using S6 data has been 
-performed~\cite{2016PhRvD..94d2002A}, giving a smallest upper limit for linearly polarised signals of 
-9.7~\texttimes~10\super{-25} near 169~Hz. A wide-band (50\,--\,1500~Hz) search, directed at a particular 
-region of our Galaxy known as the Orion spur, was performed on LIGO S6 data~\cite{2016PhRvD..93d2006A}. A 
-lowest 95\% confidence strain upper limit (assuming a linearly polarised source) was found to be 
-6.3~\texttimes~10\super{-25} near 169~Hz. The deepest all-sky search for continuous gravitational waves in S6 
-data specifically taregted the most sensitive region of the detecors from 50\,--\,510~Hz, and used 
-Einstein@Home~\cite{2016arXiv160609619T}. The best strain sensitivity allowed a 90\% confidence upper limit 
-of 5.5~\texttimes~10\super{-25} to be set around 170~Hz.
+%The first all-sky search for unknown sources in binary systems was performed using LIGO S6 and Virgo VSR2,3 
+%data~\cite{2014PhRvD..90f2010A}. The search looked for signals between 20\,--\,520~Hz with orbital periods 
+%between 2\,--\,2245 hours and, assuming circular orbits, projected semi-major axes between 
+%6~\texttimes~10\super{-4}\,--\,6500~light seconds. The most senstive 95\% upper limit on strains was found 
+%to be 2.3~\texttimes~10\super{-24} at 217~Hz. The search was also able to place limits on emission from 
+%\epubtkSIMBAD[V818~Sco]{Sco-X1} at frequencies between 20\,--\,57.25~Hz, covering a lower range than other
+%searches~\cite{2015PhRvD..91f2008A}. 
 
-LIGO S6 data was used to search for signals from the globular cluster NGC~6544, at a distance oe 2.7~kpc, 
-over the frequency band from 92.5\,--\,675~Hz~\cite{2016arXiv160702216A}. It set a 95\% upper limit of 
-6.0~\texttimes~10\super{-25} near 173~Hz, whilst also setting limits on ellipticities and \textit{r}-mode 
-amplitudes.
+%An all-sky search covering the frequency band 100\,--\,1500~Hz using S6 data has been 
+%performed~\cite{2016PhRvD..94d2002A}, giving a smallest upper limit for linearly polarised signals of 
+%9.7~\texttimes~10\super{-25} near 169~Hz. A wide-band (50\,--\,1500~Hz) search, directed at a particular 
+%region of our Galaxy known as the Orion spur, was performed on LIGO S6 data~\cite{2016PhRvD..93d2006A}. A 
+%lowest 95\% confidence strain upper limit (assuming a linearly polarised source) was found to be 
+%6.3~\texttimes~10\super{-25} near 169~Hz. The deepest all-sky search for continuous gravitational waves in 
+%S6 data specifically taregted the most sensitive region of the detecors from 50\,--\,510~Hz, and used 
+%Einstein@Home~\cite{2016arXiv160609619T}. The best strain sensitivity allowed a 90\% confidence upper limit 
+%of 5.5~\texttimes~10\super{-25} to be set around 170~Hz.
 
-The Vela pulsar (\epubtkSIMBAD{PSR~J0835--4510}) has a spin frequency of $\sim$~11~Hz and was not accessible 
-with current LIGO data.  However, Virgo VSR2 data had sensitivity in the low frequency band that made a search 
-for it worthwhile. Using $\sim$~150~days of Virgo data, three semi-independent methods were used to search 
-for the Vela pulsar \cite{Abadie:2011b}. No signal was seen, but a 95\% upper limit on the amplitude of 
-$\sim$~2~\texttimes~10\super{-24} was set, which beat the spin-down limit by $\sim$~1.6 times. This made it 
-the second pulsar for which the spin-down limit was beaten.
+%LIGO S6 data was used to search for signals from the globular cluster NGC~6544, at a distance oe 2.7~kpc, 
+%over the frequency band from 92.5\,--\,675~Hz~\cite{2016arXiv160702216A}. It set a 95\% upper limit of 
+%6.0~\texttimes~10\super{-25} near 173~Hz, whilst also setting limits on ellipticities and \textit{r}-mode 
+%amplitudes.
 
-A low-frequency (20\,--\,128~Hz) all-sky search just using Virgo VSR2 and VSR4 data was 
-performed~\cite{2016PhRvD..93d2007A}, which was the first all-sky search to reach below 50~Hz. 90\% 
-confidence upper limits between 10\super{-24} and 2~\texttimes~10\super{-23} were placed across the band.
+%The Vela pulsar (\epubtkSIMBAD{PSR~J0835--4510}) has a spin frequency of $\sim$~11~Hz and was not accessible 
+%with current LIGO data.  However, Virgo VSR2 data had sensitivity in the low frequency band that made a 
+%search for it worthwhile. Using $\sim$~150~days of Virgo data, three semi-independent methods were used to 
+%search for the Vela pulsar \cite{Abadie:2011b}. No signal was seen, but a 95\% upper limit on the amplitude 
+%of $\sim$~2~\texttimes~10\super{-24} was set, which beat the spin-down limit by $\sim$~1.6 times. This made 
+%it the second pulsar for which the spin-down limit was beaten.
 
-A summary of the upper limit results from searches for a total of 195 known pulsars using initial LIGO, Virgo 
-and GEO600 data, including S6 and VSR2,3,4, is in \cite{2014ApJ...785..119A}. The upper limits for the Crab 
-and Vela pulsars were further improved upon, making them factors of approximately ten and three lower than 
-the spin-down limits respectively. Virgo VSR4 alone was also used to search for signals from the Crab and 
-Vela pulsars assuming that the gravitational wave emission could actually be slightly different (within a 
-0.02~Hz band) from twice the observed rotation frequency~\cite{2015PhRvD..91b2004A}. This search was able to 
-beat the spin-down limit for the Crab pulsar across the band by about a factor of two, whilst for Vela the 
-results were comparable to the spin-down limit.
+%A low-frequency (20\,--\,128~Hz) all-sky search just using Virgo VSR2 and VSR4 data was 
+%performed~\cite{2016PhRvD..93d2007A}, which was the first all-sky search to reach below 50~Hz. 90\% 
+%confidence upper limits between 10\super{-24} and 2~\texttimes~10\super{-23} were placed across the band.
+
+%A summary of the upper limit results from searches for a total of 195 known pulsars using initial LIGO, 
+%Virgo and GEO600 data, including S6 and VSR2,3,4, is in \cite{2014ApJ...785..119A}. The upper limits for the 
+%Crab and Vela pulsars were further improved upon, making them factors of approximately ten and three lower 
+%than the spin-down limits respectively. Virgo VSR4 alone was also used to search for signals from the Crab 
+%and Vela pulsars assuming that the gravitational wave emission could actually be slightly different (within 
+%a 0.02~Hz band) from twice the observed rotation frequency~\cite{2015PhRvD..91b2004A}. This search was able 
+%to beat the spin-down limit for the Crab pulsar across the band by about a factor of two, whilst for Vela 
+%the results were comparable to the spin-down limit.
 
 \begin{longtable}{c|cccc}
-  \caption[Summary of broadband continuous wave searches]{A summary of broad-band searches for continuous 
+  \caption[Summary of broadband continuous wave searches]{A summary of broadband searches for continuous 
 wave signals using data from the initial detector era. Upper limits marked $\dagger$ or $\ddagger$ represent 
 90\% and 95\% confidence limits respectively.}\label{tab:cwbroadband} \\
 \hline
-Detectors/ & Search type/ & Frequency & best $h_0$ upper  & Notes/ \\
-observing runs & target & band (Hz) & limit (frequency) & reference \\
+Detectors/ & Search type/ & Frequency & best $h_0$ upper & Reference \\
+observing runs & target & band (Hz) & limit (frequency) &  \\
 \hline
 \hline
 \multirow{6}{*}{LIGO S2} & \multirow{2}{*}{all-sky} & \multirow{2}{*}{200\,--\,400} & $4.4\!\times\!10^{-23}$ 
- & semi-coherent \\
- & & & ($\sim 200$~Hz) $\ddagger$ & \cite{Abbott:2005g} \\
+ & \multirow{2}{*}{\cite{Abbott:2005g}} \\
+ & & & ($\sim 200$~Hz) $\ddagger$ &  \\
 \cline{2-5}
  & \multirow{2}{*}{all-sky} & \multirow{2}{*}{160\,--\,728.8} & 
-$6.6\!\times\!10^{-23}$\,--\,$1\!\times\!10^{-21}$ & coherent \\
- & & & (full-band) $\ddagger$ & \cite{Abbott:2007a} \\
+$6.6\!\times\!10^{-23}$\,--\,$1\!\times\!10^{-21}$ & \multirow{2}{*}{\cite{Abbott:2007a}} \\
+ & & & (full-band) $\ddagger$ &  \\
 \cline{2-5}
  & \multirow{2}{*}{\epubtkSIMBAD[V818~Sco]{Sco-X1}} & 464\,--\,484  & 
 $1.7\!\times\!10^{-22}$  & \multirow{2}{*}{\cite{Abbott:2007a}} \\
  & & \& 604\,--\,624 & \& $1.3\!\times\!10^{-21}$ $\ddagger$ & \\
 
  \hline
- \multirow{2}{*}{LIGO S3} & all-sky & \multirow{2}{*}{50\,--\,1500.5} & no limits & coherent \\
- & (Einstein@Home)~\cite{eath} & & & \cite{eathS3} \\
+ \multirow{2}{*}{LIGO S3} & all-sky & \multirow{2}{*}{50\,--\,1500.5} & \multirow{2}{*}{no limits} & 
+\multirow{2}{*}{\cite{eathS3}} 
+\\
+ & (Einstein@Home)~\cite{eath} & & & \\
 \hline
- \multirow{6}{*}{LIGO S4} & all-sky & \multirow{2}{*}{50\,--\,1500} & $\sim 10^{-23}$ & coherent \\
- & (Einstein@Home) & & (full-band) $\dagger$ & \cite{Abbott:2008f} \\
+ \multirow{6}{*}{LIGO S4} & all-sky & \multirow{2}{*}{50\,--\,1500} & $\sim 10^{-23}$ & 
+\multirow{2}{*}{\cite{Abbott:2008f}} \\
+ & (Einstein@Home) & & (full-band) $\dagger$ & \\
 \cline{2-5}
  & \multirow{2}{*}{all-sky} & \multirow{2}{*}{50\,--\,1000} & $4.3\,\times\,10^{-24}$ 
-& three methods \\
- & & & ($\sim 140$~Hz) $\ddagger$ & used~\cite{Abbott:2008e} \\
+& \multirow{2}{*}{\cite{Abbott:2008e}} \\
+ & & & ($\sim 140$~Hz) $\ddagger$ & \\
 \cline{2-5}
  & \multirow{2}{*}{\epubtkSIMBAD[V818~Sco]{Sco-X1}} & \multirow{2}{*}{50\,--\,1800} & 
-$3.4\!\times\!10^{-24}\left(\frac{f}{200\,{\rm Hz}}\right)$ $\dagger$ & stochastic \\
- & & & ($> 200$~Hz) & method~\cite{Abbott:2007f} \\
+$3.4\!\times\!10^{-24}\left(\frac{f}{200\,{\rm Hz}}\right)$ $\dagger$ & \multirow{2}{*}{\cite{Abbott:2007f}} 
+\\
+ & & & ($> 200$~Hz) & \\
 \hline
-\multirow{12}{*}{LIGO S5} & \multirow{2}{*}{all-sky} & \multirow{2}{*}{50\,--\,1100} & $\sim 10^{-24}$ & 
-semi-coherent \\
- & & & (200~Hz) $\ddagger$ & (partial data)~\cite{Abbott:2008i} \\
+\multirow{18}{*}{LIGO S5} & \multirow{2}{*}{all-sky} & \multirow{2}{*}{50\,--\,1100} & $\sim 10^{-24}$ & 
+\multirow{2}{*}{\cite{Abbott:2008i}} \\
+ & & & (200~Hz) $\ddagger$ & \\
 \cline{2-5}
  & \multirow{2}{*}{all-sky} & \multirow{2}{*}{50\,--\,1100} & $\lesssim 10^{-24}$ &
- semi-coherent \\
- & & & (150~Hz) & (all data)~\cite{2012PhRvD..85b2001A} \\
+ \multirow{2}{*}{\cite{2012PhRvD..85b2001A}} \\
+ & & & (150~Hz) & \\
 \cline{2-5}
- & all-sky & \multirow{2}{*}{50\,--\,1500} & $3\,\times\,10^{-24}$ & coherent \\
- & (Einstein@Home) & & (125\,--225~Hz) $\dagger$ & \cite{Abbott:2009a} \\
+ & all-sky & \multirow{2}{*}{50\,--\,1500} & $3\,\times\,10^{-24}$ & \multirow{2}{*}{\cite{Abbott:2009a}} \\
+ & (Einstein@Home) & & (125\,--225~Hz) $\dagger$ & \\
 \cline{2-5}
  & all-sky & \multirow{2}{*}{50\,--\,1190} & 
-$7.6\!\times\,10^{-25}$ & coherent \\
- & (Einstein@Home) & & 152.5~Hz $\dagger$ & \& incoherent~\cite{2013PhRvD..87d2001A} \\
+$7.6\!\times\,10^{-25}$ & \multirow{2}{*}{\cite{2013PhRvD..87d2001A}} \\
+ & (Einstein@Home) & & 152.5~Hz $\dagger$ &  \\
 \cline{2-5}
- & all-sky & \multirow{2}{*}{1250\,--\,1500} & $5\,\times\,10^{-24}$ & high-frequency \\
- & (Einstein@Home) & & ($\sim 1254$~Hz) $\dagger$ & \cite{2016PhRvD..94f4061S} \\
+ & all-sky & \multirow{2}{*}{1250\,--\,1500} & $5\,\times\,10^{-24}$ & 
+\multirow{2}{*}{\cite{2016PhRvD..94f4061S}} \\
+ & (Einstein@Home) & & ($\sim 1254$~Hz) $\dagger$ &  \\
 \cline{2-5}
  & \multirow{2}{*}{all-sky} & \multirow{2}{*}{50\,--\,1000} & 
-$8.9\!\times\!10^{-25}$ & Hough method \\
- & & & (146.5~Hz) & \cite{2014CQGra..31h5014A} \\
- \hline
+$8.9\!\times\!10^{-25}$ & \multirow{2}{*}{\cite{2014CQGra..31h5014A}} \\
+ & & & (146.5~Hz) &  \\
+\cline{2-5}
+ & \multirow{2}{*}{\epubtkSIMBAD{Cas~A}} & \multirow{2}{*}{100\,--\,300} & 
+$7\!\times\!10^{-25}$--$1.2\!\times\!10^{-24}$ & \multirow{2}{*}{\cite{Abadie:2010g}} \\
+ & & & (full band) $\ddagger$ & \\
+\cline{2-5}
+ & \multirow{2}{*}{Galactic centre} & \multirow{2}{*}{78\,--\,489} & $3.35\!\times\!10^{-25}$ & 
+\multirow{2}{*}{\cite{2013PhRvD..88j2002A}} \\
+ & & & (150~Hz) $\dagger$ & \\
+\cline{2-5}
+ & \multirow{2}{*}{\epubtkSIMBAD[V818~Sco]{Sco-X1}} & \multirow{2}{*}{50\,--\,550} & $1.3\!\times\!10^{-24}$ 
+\& $8\!\times\!10^{-25}$  & \multirow{2}{*}{\cite{2015PhRvD..91f2008A}}  \\
+ & & & (medians over band) $\ddagger$ & \\
+\hline
+\multirow{10}{*}{LIGO S6} & \epubtkSIMBAD{Cas~A} & \multirow{2}{*}{50\,--\,1000} & $2.9\!\times\!10^{-25}$ & 
+\multirow{2}{*}{\cite{2016PhRvD..94h2008Z}} \\
+ & (Einstein@Home) & & (170~Hz) $\dagger$ & \\
+\cline{2-5}
+ & Nine young & source & $4.2\!\times\!10^{-25}$ (G18.9--1.1 \& & \multirow{2}{*}{\cite{2015ApJ...813...39A}} 
+\\
+ & supernova remnants & dependent & G291.0--0.1) $\ddagger$ & \\
+\cline{2-5}
+ & \multirow{2}{*}{all-sky} & \multirow{2}{*}{100\,--\,1500} & $9.7\!\times\!10^{-25}$ & 
+\multirow{2}{*}{\cite{2016PhRvD..94d2002A}} \\
+ & & & (169~Hz) $\ddagger$ &  \\
+\cline{2-5}
+ & all-sky & \multirow{2}{*}{50\,--\,510} & $5.5\!\times\!10^{-25}$ & 
+\multirow{2}{*}{\cite{2016arXiv160609619T}} \\
+ & (Einstein@Home) & & ($\sim 170$~Hz) $\dagger$ &  \\
+ \cline{2-5}
+ & \multirow{2}{*}{Orion spur} & \multirow{2}{*}{50\,--\,1500} & $6.3\!\times\!10^{-25}$ & 
+\multirow{2}{*}{\cite{2016PhRvD..93d2006A}} \\
+ & & & (169~Hz) $\ddagger$ &  \\
+\cline{2-5}
+ & globular cluster & \multirow{2}{*}{92.5\,--\,675} & $6.0\!\times\!10^{-25}$ &
+\multirow{2}{*}{\cite{2016arXiv160702216A}} \\
+ & NGC~6544 & & (173~Hz) $\ddagger$ & \\
+\hline
+LIGO S6 & all-sky & \multirow{2}{*}{20\,--\,520} & $2.3\!\times\!10^{-24}$ &  
+\multirow{2}{*}{\cite{2014PhRvD..90f2010A}} \\
+Virgo VSR2,3 & binary (circular) & & (217~Hz) $\ddagger$ & \\
+\hline
+\multirow{2}{*}{Virgo VSR2,4} & \multirow{2}{*}{all-sky} & \multirow{2}{*}{20\,--\,128} & 
+ $2\!\times\!10^{-23}$ -- $10^{-24}$ & \multirow{2}{*}{\cite{2016PhRvD..93d2007A}} \\
+ & & & (full-band) $\dagger$ & \\
+\hline
+\hline
+
+\end{longtable}
+
+\begin{longtable}{c|ccccc}
+  \caption[Summary of targeted continuous wave searches]{A summary of targeted searches for continuous 
+wave signals from known pulsars using data from the initial detector era. Upper limits 
+are 95\% credible limits.}\label{tab:cwknown} \\
+\hline
+Detectors/ & no.\ pulsars &  best $h_0$ upper & best $\varepsilon$ & smallest spin-down & Reference \\
+observing runs &  & limit & limit & ratio & \\
+\hline
+\hline
+LIGO/GEO600 S1 & \epubtkSIMBAD{PSR~J1939+2134} & $1.4\!\times\!10^{-22}$ & $2.9\!\times\!10^{-4}$ & $\sim 
+100\,000$ & \cite{Abbott:2004d} \\
+\hline
+\multirow{2}{*}{LIGO S2} & \multirow{2}{*}{28} & $1.7\!\times\!10^{-24}$ & $4.5\!\times\!10^{-6}$ & $\sim 30$ 
+&
+\multirow{2}{*}{\cite{Abbott:2005f}} \\
+ & & (PSR~J1910$-$2929D) & (PSR~J2124$-$3358) & (Crab pulsar)  & \\
+\hline
+\multirow{2}{*}{LIGO S3/S4} & \multirow{2}{*}{78} & $2.6\!\times\!10^{-25}$ & $\lesssim 10^{-6}$ & 2.2 & 
+\multirow{2}{*}{\cite{Abbott:2007d}} \\
+ & & (PSR~J1602$-$7202) & (J2124$-$3358) & (Crab pulsar) & \\
+\hline
+\multirow{5}{*}{LIGO S5} & Crab pulsar & $2.7\!\times\!10^{-25}$ & $1.4\!\times\!10^{-4}$ & $\sim 0.2$ & 
+\cite{Abbott:2008j} \\
+\cline{2-6}
+ & \multirow{2}{*}{116} & $2.3\!\times\!10^{-26}$ & $7.0\!\times\!10^{-8}$ & $\sim 0.14$ & 
+\multirow{2}{*}{\cite{Abbott:2010a}} \\
+ & & (PSR~J1602$-$7202) & (J2124$-$3358) & (Crab pulsar) & \\
+\cline{2-6}
+ & 43 (two & $4.3\!\times\!10^{-26}$ & & & \multirow{2}{*}{\cite{2015MNRAS.453.4399P}} \\
+ & harmonics) & (J2322+2057 @ $f$) & & & \\
+\hline
+Virgo VSR2 & Vela pulsar & $2\!\times\!10^{-24}$ & $\sim 10^{-3}$ & $\sim 0.6$ & \cite{Abadie:2011b} \\
+\hline
+LIGO S6 & \multirow{2}{*}{195} & $2.1\!\times\!10^{-26}$ & $6.7\!\times\!10^{-8}$ & 0.1 & 
+\multirow{2}{*}{\cite{2014ApJ...785..119A}} \\ 
+Virgo VSR2,4 & & (PSR~J1910$-$5959D) & (PSR~J2124$-$3358) & (Crab pulsar) &  \\
+\hline
+Virgo VSR4 & Crab pulsar \& & & & & \multirow{2}{*}{\cite{2015PhRvD..91b2004A}} \\
+(narrow band) & Vela pulsar & & & & \\
+\hline
 \hline
 
 \end{longtable}
