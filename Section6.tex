@@ -507,7 +507,7 @@ should be checked if wanting to be able to perform a direct comparison.
 gravitational waves using data from the initial detector era. Rates are given as 
 90\% confidence upper limits, although the units can vary between searches}\label{tab:burstunmodelled} \\
 \hline
-Detectors/ & Frequency & sensitivity & Rate & Reference/ \\
+Detectors/ & Frequency & sensitivity & Rate & Ref./ \\
 observing runs &  band (Hz) & ($h_{\rm rss}$ Hz\super{-1/2}) & limit & notes \\
 \hline
 \hline
@@ -554,16 +554,17 @@ Virgo VSR2,3 & & $5\!\times\!10^{-22}$ & & \\
 \label{sec:cbc} 
 
 Modelled bursts generally mean the inspiral and coalescence stage of binaries consisting of compact objects, 
-e.g.\ neutron stars and black holes, also known as compact binary coalescences (CBCs). The signals are generally
-well approximated by post-Newtonian expansions of the Einstein equation, which give the amplitude and
-phase evolution of the orbit (see e.g.\ \cite{lrr-2007-2, lrr-2014-2}). There are now also many signal models 
-that include numerical relativity simulations \cite{lrr-2015-1} of the merger stage, in particular for black 
-hole systems~\cite{Aylott:2009, 2014CQGra..31k5004A}. Whilst for systems containing a neutron star the 
-effect on the waveform of pre-merger tidal disruption have also been studied and modelled, e.g.\ 
-~\cite{2009PhRvD..79l4033R, 2010PhRvD..81f4026F}. As mentioned in Section~\ref{section:construction} the best 
-estimate for the number of signals that could have been observable with initial LIGO at design sensitivity 
-(i.e.\ during S5) was 0.02 per year (based on an event rate of 1~\texttimes~10\super{-6} per year per MWEG). 
-Therefore, the fact that no CBC signals were observed during the initial detector era was not surprising.
+e.g.\ neutron stars and black holes, also known as compact binary coalescences (CBCs). The inpiral stages of 
+the signals are well approximated by post-Newtonian expansions of the Einstein equation, which give the 
+amplitude and phase evolution of the orbit (see e.g.\ \cite{lrr-2007-2, lrr-2014-2}). There are now also many 
+signal models that include numerical relativity simulations \cite{lrr-2015-1} of the merger stage, in 
+particular for black hole systems~\cite{Aylott:2009, 2014CQGra..31k5004A}. Whilst for systems containing a 
+neutron star the effect on the waveform of pre-merger tidal disruption have also been studied and modelled, 
+e.g.\ ~\cite{2009PhRvD..79l4033R, 2010PhRvD..81f4026F}. As mentioned in Section~\ref{section:construction} 
+the best estimate for the number of signals that could have been observable with initial LIGO at design 
+sensitivity (i.e.\ during S5) was 0.02 per year (based on an event rate of 1~\texttimes~10\super{-6} per year 
+per MWEG). Therefore, the fact that no CBC signals were observed during the initial detector era was not 
+surprising.
 
 The majority of inspiral searches make use of matched filtering in which a template bank of signal models is 
 built~\cite{Owen:1996, Owen:1999}, with a maximum mismatch between templates that is generally of order 
@@ -571,67 +572,145 @@ $\sim$~10\%. These templates are then cross-correlated with the data and statist
 \textit{triggers} (i.e.\ times when the template and data are highly correlated) from this are looked for. 
 Triggers must be coincident between detectors and the significance of any trigger is judged against a 
 background calculated in the same way as described in Section~\ref{subsubsection:unmodelled}. See
-\cite{Abbott:2005b} and \cite{2012PhRvD..85l2006A} for a good description of the search method.
+\cite{Abbott:2005b} and \cite{2012PhRvD..85l2006A} for a good description of the search method. A weakly 
+modelled search has also been used to look for higher mass binary black hole systems, for which well-defined 
+source waveforms do not currently exist \cite{2008CQGra..25k4029K, 2012PhRvD..85j2004A}.
 
-The first search for an inspiral signal with data from the LIGO S1 run looked for compact object coalescences 
-with component masses between $1$\,--\,$3\,M_{\odot}$ and was sensitive to such sources within the Milky Way 
-and Magellanic Clouds~\cite{Abbott:2004c}. It gave a 90\% confidence upper limit on the rate of 170 per year 
-per MWEG.
+A summary of the results modelled (primarily CBC) all-sky burst searched from the initial detector era is 
+given in Table~\ref{tab:cbc}. The senstive ranges given are the horizon distance for the searches. These are 
+not necessarily calculated using consistent component mass systems, and is some cases uses the best distance 
+whilst in others uses a run-averaged distance, so consult the associated reference for exact details. 
+These include searches spanning a range of source masses and mass ratios, specifically targeting binary 
+neutron star (BNS) systems, binary black hole (BBH) systems, neutron-star-black-hole (NSBH) systems and 
+intermediate mass black hole binaries (IMBHB).
 
-For the S2 LIGO analysis the search was split into 3 areas covering binary neutron-stars (BNS), binary 
-black-holes (BBH), and primordial black-hole binaries in the galactic halo. The BNS 
-search~\cite{Abbott:2005b} used 15 days of data with coincidence between either H1 and L1 or H2 and L1. It 
-had a range of $\sim$~1.5~Mpc, which spanned the Local Group of galaxies, and gave a 90\% event rate upper 
-limit on systems with component masses of $1$\,--\,$3\,M_{\odot}$ of 47 per year per MWEG. The BBH search 
-looked for systems with component masses in the $3$\,--\,$20\,M_{\odot}$ range using the same data set as the 
-BNS search~\cite{Abbott:2006a}. This search had a 90\% detection efficiency for sources 
-out to 1\,Mpc and set a 90\% rate upper limit of 38 per year per MWEG. The third search looked for low mass 
-($0.2$\,--\,$1\,M_{\odot}$) primordial black-hole binaries in a 50~kpc radius halo surrounding the Milky 
-Way~\cite{Abbott:2005e}. This placed a 90\% confidence-rate upper limit of 63 events per year per Milky Way 
-halo. The S2 search was performed in coincidence with the TAMA300 DT8 period and an inspiral search for 
-neutron-star binaries was performed on data when TAMA300 and at least one of the LIGO sites was operational. 
-This gave a total of 584~hours of data for the analysis, which set a 90\% rate upper limit of 49 per year per 
-MWEG, although this search was only sensitive to sources within the majority of the Milky 
-Way~\cite{Abbott:2006b}.
+\begin{longtable}{c|cccc}
+  \caption[Summary of CBC searches]{A summary of searches for CBC gravitational wave signals using data from 
+the initial detector era. Rates are given as 90\% confidence upper limits, although the units can vary 
+between searches, whilst some conversions can be found in \cite{Abadie:2010e}.}\label{tab:cbc} \\
+\hline
+Detectors/ & Mass & sensitivity & Rate & Ref./ \\
+observing runs & range (M$_\odot$) & range\footnotemark (Mpc) & limit & notes \\
+\hline
+\hline
+LIGO S1 & 1--3 (BNS) & Milky Way & 170~year\super{-1}~MWEG\super{-1} & \cite{Abbott:2004c} \\
+\hline
+\multirow{4}{*}{LIGO S2} & 1--3 (BNS) & 1.5 & 47~year\super{-1}~MWEG\super{-1} & \cite{Abbott:2005b} \\
+\cline{2-5}
+& 3--20 (BBH) & $\sim 1$ &  38~year\super{-1}~MWEG\super{-1} & \cite{Abbott:2006a} \\
+\cline{2-5}
+& 0.2--1 (primordial & \multirow{2}{*}{0.05} & 63~year\super{-1} & \multirow{2}{*}{\cite{Abbott:2005e}} \\
+&  BBH) & & ~per Milky Way halo & \\
+\hline
+LIGO S2/ & \multirow{2}{*}{1--3 (BNS)} & \multirow{2}{*}{$\sim$ Milky Way} & 
+\multirow{2}{*}{49~year\super{-1}~MWEG\super{-1}} & \multirow{2}{*}{\cite{Abbott:2006b}} \\
+TAMA300 DT8 & & & & \\
+\hline
+\multirow{2}{*}{LIGO S3} & \multirow{2}{*}{1--20 (NSBH)} & \multirow{2}{*}{$\sim$ local group} & 
+15.9~year\super{-1}~$L_{10}^{-1}$ & \multirow{2}{*}{\cite{Abbott:2008d}} \\
+ & & & (in mass range 1.35--5\,M$_{\odot}$) & \\
+\hline
+\multirow{3}{*}{LIGO S3/S4} & $<40$ (S3) & $\lesssim 6$ & 4.9~year\super{-1}~$L_{10}^{-1}$ 
+(primordial BBH) & \multirow{3}{*}{\cite{Abbott:2008a}} \\
+ & $<80$ (S4) & $\lesssim 16$ & 1.2~year\super{-1}~$L_{10}^{-1}$ (BNS) & \\
+ & & $\lesssim 77$ & 0.5~year\super{-1}~$L_{10}^{-1}$ (BBH) & \\
+\hline
+\multirow{2}{*}{LIGO S4} & 10--500 & \multirow{2}{*}{300} & 
+$1.6\!\times\!10^{-3}$~year\super{-1}~$L_{10}^{-1}$ & \multirow{2}{*}{\cite{Abbott:2009g}} \\
+ & (BH ring-downs) & & (in mass range 85--390~M$_{\odot}$) & \\
+\hline
+\multirow{6}{*}{LIGO S5} & \multirow{3}{*}{2--35} &  $\sim 30$
+& $1.4\!\times\!10^{-2}$~year\super{-1}~$L_{10}^{-1}$ (BNS) & \multirow{3}{*}{\cite{Abbott:2009e, Abbott:2009f}} \\
+ & & $\sim 100$ & $7.3\!\times\!10^{-4}$~year\super{-1}~$L_{10}^{-1}$ (BBH) & \\
+ & & $\sim 60$ & $3.6\!\times\!10^{-3}$~year\super{-1}~$L_{10}^{-1}$ (NSBH) & \\
+ \cline{2-5}
+ & \multirow{3}{*}{1--99 (BBH)} & \multirow{3}{*}{\ldots} & 2~Myr\super{-1}~Mpc\super{-3} & 
+\multirow{3}{*}{\cite{Abadie:2011a}} \\
+ & & & (component masses less  & \\
+ & & & than 19 and 28~M$_{\odot}$) & \\
+ \hline
+& & \multirow{3}{*}{2--35} & \multirow{3}{*}{37 (BNS)} &
+$8.7\!\times\!10^{-3}$~year\super{-1}~$L_{10}^{-1}$ (BNS) & \multirow{3}{*}{\cite{Abadie:2010f}} \\
+LIGO S5/ & &  & $4.4\!\times\!10^{-4}$~year\super{-1}~$L_{10}^{-1}$ (BBH) & \\
+Virgo VSR1 & &  & $2.2\!\times\!10^{-3}$~year\super{-1}~$L_{10}^{-1}$ (NSBH) & \\
+\cline{2-5}
+ & 100--450 (IMBHB) & 241 (for two & \multirow{2}{*}{0.13~Myr\super{-1}~Mpc\super{-3}} & 
+\cite{2012PhRvD..85j2004A} \\
+ & (mass ratios 1:1 to 4:1) & 88~M$_{\odot}$ objects) & & (using method \cite{2008CQGra..25k4029K}) \\
+\hline
+LIGO S6/     & \multirow{3}{*}{2--25}    & 40                         & 130~Myr\super{-1}~Mpc\super{-3} (BNS) & \multirow{3}{*}{\cite{2012PhRvD..85h2002A}} \\
+Virgo VSR2,3 &                           & 80                         & 31~Myr\super{-1}~Mpc\super{-3} (NSBH) & \\
+             &                           & 90                         & 6.4~Myr\super{-1}~Mpc\super{-3} (BBH) & \\
+\cline{2-5}
+             & \multirow{2}{*}{25--100}  & \multirow{2}{*}{$\sim300$} & 0.33~Myr\super{-1}~Mpc\super{-3} & \multirow{2}{*}{\cite{2013PhRvD..87b2002A}} \\
+             &                           &                            & (component masses between 19 and 28~M$_{\odot}$) & \\
+\cline{2-5}
+             & \multirow{2}{*}{100--450} & \multirow{2}{*}{$\sim200$} & 0.12~Myr\super{-1}~Mpc\super{-3} & \multirow{2}{*}{\cite{2014PhRvD..89l2003A}} \\
+             &                           &                            & (two 88~M$_{\odot}$ objects) \\
+\hline
+\hline
+\end{longtable}
 
-The search for NSBH binaries in S3 LIGO data used techniques designed specifically for systems with spinning 
-components. It searched for systems with component masses in the range $1$\,--\,$20\,M_{\odot}$ and analysed 
-167 hours of triple coincident data and 548 hours of H1-H2 data to set the upper limits~\cite{Abbott:2008d}. 
-For a typical system with neutron-star and black-hole mass distributions centred on $1.35\,M_{\odot}$ and 
-$5\,M_{\odot}$ (from the population statistics discussed in~\cite{Abbott:2008a}) this search produced a 90\% 
-confidence-rate upper limit of 15.9 per year per $L_{10}$.
+%The first search for an inspiral signal with data from the LIGO S1 run looked for compact object 
+%coalescences with component masses between $1$\,--\,$3\,M_{\odot}$ and was sensitive to such sources within 
+%the Milky Way and Magellanic Clouds~\cite{Abbott:2004c}. It gave a 90\% confidence upper limit on the rate 
+%of 170 per year per MWEG.
 
-The search for a wide range of binary systems with components consisting of primordial black holes, neutron 
-stars, and black holes with masses in the ranges given above was conducted on the combined S3 and S4 
-data~\cite{Abbott:2008a}. 788 hours of S3 data and 576 hours of S4 data were used and no plausible
-gravitational-wave candidate was found. The highest mass range for the black-hole--binary search was set at 
-$40\,M_{\odot}$ for S3 and $80\,M_{\odot}$ for S4. At peak in the mass distribution of these sources 90\% 
-confidence-rate upper limits were set at 4.9 per year per $L_{10}$ for primordial black holes, 1.2 per year 
-per $L_{10}$ for neutron-star binaries, and 0.5 per year per $L_{10}$ for black-hole--binaries. S4 data has 
-also been used to search for ring-downs from perturbed black holes, for example following black-hole-binary 
-coalescence~\cite{Abbott:2009g}. The search was sensitive to ring-downs from $10$\,--\,$500\,M_{\odot}$ black 
-holes out to a maximum range of 300~Mpc, and produced a best 90\% confidence upper limit on the rate of 
-ring-downs to be 1.6~\texttimes~10\super{-3} per year per $L_{10}$ for the mass range 
-$85$\,--\,$390\,M_{\odot}$.
+%For the S2 LIGO analysis the search was split into 3 areas covering binary neutron-stars (BNS), binary 
+%black-holes (BBH), and primordial black-hole binaries in the galactic halo. The BNS 
+%search~\cite{Abbott:2005b} used 15 days of data with coincidence between either H1 and L1 or H2 and L1. It 
+%had a range of $\sim$~1.5~Mpc, which spanned the Local Group of galaxies, and gave a 90\% event rate upper 
+%limit on systems with component masses of $1$\,--\,$3\,M_{\odot}$ of 47 per year per MWEG. The BBH search 
+%looked for systems with component masses in the $3$\,--\,$20\,M_{\odot}$ range using the same data set as 
+%the BNS search~\cite{Abbott:2006a}. This search had a 90\% detection efficiency for sources 
+%out to 1\,Mpc and set a 90\% rate upper limit of 38 per year per MWEG. The third search looked for low mass 
+%($0.2$\,--\,$1\,M_{\odot}$) primordial black-hole binaries in a 50~kpc radius halo surrounding the Milky 
+%Way~\cite{Abbott:2005e}. This placed a 90\% confidence-rate upper limit of 63 events per year per Milky Way 
+%halo. The S2 search was performed in coincidence with the TAMA300 DT8 period and an inspiral search for 
+%neutron-star binaries was performed on data when TAMA300 and at least one of the LIGO sites was operational. 
+%This gave a total of 584~hours of data for the analysis, which set a 90\% rate upper limit of 49 per year 
+%per MWEG, although this search was only sensitive to sources within the majority of the Milky 
+%Way~\cite{Abbott:2006b}.
 
-Data from the first~\cite{Abbott:2009e} and second year of S5 (prior to Virgo joining with 
-VSR1)~\cite{Abbott:2009f} have been searched for low-mass binary coalescences with total masses in the range 
-$2$\,--\,$35\,M_{\odot}$. The second year search results have produced the more stringent upper limits with 
-90\% confidence rates for BNS, BBH and NSBH systems respectively of 1.4~\texttimes~10\super{-2}, 
-7.3~\texttimes~10\super{-4} and 3.6~\texttimes~10\super{-3} per year per $L_{10}$. Five months of overlapping 
-S5 and VSR1 data were also searched for the same range of signals~\cite{Abadie:2010f} giving 90\% confidence 
-upper rates of 8.7~\texttimes~10\super{-3} per year per $L_{10}$, 2.2~\texttimes~10\super{-3} per year per 
-$L_{10}$, and 4.4~\texttimes~10\super{-4} per year per $L_{10}$. The whole 2 years of LIGO S5 data were also 
-used to search for higher mass binary coalescences with component mass between $1$\,--\,$99\,M_{\odot}$ and 
-total masses of $25$\,--\,$100\,M_{\odot}$. No signal was seen, but a 90\% confidence upper limit rate on 
-mergers of black-hole--binary systems with component masses between 19 and $28\,M_{\odot}$, and with 
-negligible spin, was set at 2.0~Mpc\super{-3}~Myr\super{-1} \cite{Abadie:2011a}. A ``weakly modelled'' search 
-(using a generic transient detection algorithm~\cite{2008CQGra..25k4029K}, but applying specific waveform 
-polarisaion constraints) in LIGO S5 and Virgo VSR1 data was performed to look for intermediate mass black 
-holes binaries (IMBHB) in the total mass range $100$\,--\,$450\,M_{\odot}$ with mass ratios between 1:1 and 
-4:1~\cite{2012PhRvD..85j2004A}. Averaged over the mass range the search set a 90\% confidence rate limit of 
-0.9 Mpc\super{-3}\,Myr\super{-1}, with the most stringent limit being 0.13~Mpc\super{-3}\,Myr\super{-1} for 
-two black holes of mass $88\,{\rm M}_{\odot}$. 
+%The search for NSBH binaries in S3 LIGO data used techniques designed specifically for systems with spinning 
+%components. It searched for systems with component masses in the range $1$\,--\,$20\,M_{\odot}$ and analysed 
+%167 hours of triple coincident data and 548 hours of H1-H2 data to set the upper limits~\cite{Abbott:2008d}. 
+%For a typical system with neutron-star and black-hole mass distributions centred on $1.35\,M_{\odot}$ and 
+%$5\,M_{\odot}$ (from the population statistics discussed in~\cite{Abbott:2008a}) this search produced a 90\% 
+%confidence-rate upper limit of 15.9 per year per $L_{10}$.
+
+%The search for a wide range of binary systems with components consisting of primordial black holes, neutron 
+%stars, and black holes with masses in the ranges given above was conducted on the combined S3 and S4 
+%data~\cite{Abbott:2008a}. 788 hours of S3 data and 576 hours of S4 data were used and no plausible
+%gravitational-wave candidate was found. The highest mass range for the black-hole--binary search was set at 
+%$40\,M_{\odot}$ for S3 and $80\,M_{\odot}$ for S4. At peak in the mass distribution of these sources 90\% 
+%confidence-rate upper limits were set at 4.9 per year per $L_{10}$ for primordial black holes, 1.2 per year 
+%per $L_{10}$ for neutron-star binaries, and 0.5 per year per $L_{10}$ for black-hole--binaries. S4 data has 
+%also been used to search for ring-downs from perturbed black holes, for example following black-hole-binary 
+%coalescence~\cite{Abbott:2009g}. The search was sensitive to ring-downs from $10$\,--\,$500\,M_{\odot}$ 
+%black holes out to a maximum range of 300~Mpc, and produced a best 90\% confidence upper limit on the rate 
+%of ring-downs to be 1.6~\texttimes~10\super{-3} per year per $L_{10}$ for the mass range 
+%$85$\,--\,$390\,M_{\odot}$.
+
+%Data from the first~\cite{Abbott:2009e} and second year of S5 (prior to Virgo joining with 
+%VSR1)~\cite{Abbott:2009f} have been searched for low-mass binary coalescences with total masses in the range 
+%$2$\,--\,$35\,M_{\odot}$. The second year search results have produced the more stringent upper limits with 
+%90\% confidence rates for BNS, BBH and NSBH systems respectively of 1.4~\texttimes~10\super{-2}, 
+%7.3~\texttimes~10\super{-4} and 3.6~\texttimes~10\super{-3} per year per $L_{10}$.
+%Five months of overlapping 
+%S5 and VSR1 data were also searched for the same range of signals~\cite{Abadie:2010f} giving 90\% confidence 
+%upper rates of 8.7~\texttimes~10\super{-3} per year per $L_{10}$, 2.2~\texttimes~10\super{-3} per year per 
+%$L_{10}$, and 4.4~\texttimes~10\super{-4} per year per $L_{10}$. The whole 2 years of LIGO S5 data were also 
+%used to search for higher mass binary coalescences with component mass between $1$\,--\,$99\,M_{\odot}$ and 
+%total masses of $25$\,--\,$100\,M_{\odot}$. No signal was seen, but a 90\% confidence upper limit rate on 
+%mergers of black-hole--binary systems with component masses between 19 and $28\,M_{\odot}$, and with 
+%negligible spin, was set at 2.0~Mpc\super{-3}~Myr\super{-1} \cite{Abadie:2011a}. A ``weakly modelled'' 
+%search (using a generic transient detection algorithm~\cite{2008CQGra..25k4029K}, but applying specific 
+%waveform polarisaion constraints) in LIGO S5 and Virgo VSR1 data was performed to look for intermediate mass 
+%black holes binaries (IMBHB) in the total mass range $100$\,--\,$450\,M_{\odot}$ with mass ratios between 
+%1:1 and 4:1~\cite{2012PhRvD..85j2004A}. Averaged over the mass range the search set a 90\% confidence rate 
+%limit of 0.9 Mpc\super{-3}\,Myr\super{-1}, with the most stringent limit being 
+%0.13~Mpc\super{-3}\,Myr\super{-1} for two black holes of mass $88\,{\rm M}_{\odot}$. 
 
 Searches for CBC signals from low mass sources (total masses between $2$\,--\,$25\,M_{\odot}$) 
 \cite{2012PhRvD..85h2002A}, and specifically for the inspiral, merger and ring-down of BBH systems 
