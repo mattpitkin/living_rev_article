@@ -577,20 +577,21 @@ modelled search has also been used to look for higher mass binary black hole sys
 source waveforms do not currently exist \cite{2008CQGra..25k4029K, 2012PhRvD..85j2004A}.
 
 A summary of the results modelled (primarily CBC) all-sky burst searched from the initial detector era is 
-given in Table~\ref{tab:cbc}. The senstive ranges given are the horizon distance for the searches. These are 
-not necessarily calculated using consistent component mass systems, and is some cases uses the best distance 
-whilst in others uses a run-averaged distance, so consult the associated reference for exact details. 
-These include searches spanning a range of source masses and mass ratios, specifically targeting binary 
-neutron star (BNS) systems, binary black hole (BBH) systems, neutron-star-black-hole (NSBH) systems and 
-intermediate mass black hole binaries (IMBHB).
+given in Table~\ref{tab:cbc}. The sensitive ranges given are rough bounds on the horizon distance for the searches. These are 
+not necessarily calculated using consistent component mass systems, and in some cases use the best distance 
+whilst in others use a typical or run-averaged distance, so consult the associated reference for exact details. 
+These results in Table~\ref{tab:cbc} are for searches spanning a range of source masses and mass ratios,
+specifically targeting binary neutron star (BNS) systems, stellar-mass binary black hole (BBH) systems (in some cases these being
+low mass primordial black holes), neutron-star-black-hole (NSBH) systems, and intermediate mass black holes (IMBH) or binaries (IMBHB).
 
+\begin{center}
 \begin{longtable}{c|cccc}
-  \caption[Summary of CBC searches]{A summary of searches for CBC gravitational wave signals using data from 
+\caption[Summary of CBC searches]{A summary of searches for CBC gravitational wave signals using data from 
 the initial detector era. Rates are given as 90\% confidence upper limits, although the units can vary 
 between searches, whilst some conversions can be found in \cite{Abadie:2010e}.}\label{tab:cbc} \\
 \hline
 Detectors/ & Mass & sensitivity & Rate & Ref./ \\
-observing runs & range (M$_\odot$) & range\footnotemark (Mpc) & limit & notes \\
+observing runs & range (M$_\odot$) & range (Mpc) & limit & notes \\
 \hline
 \hline
 LIGO S1 & 1--3 (BNS) & Milky Way & 170~year\super{-1}~MWEG\super{-1} & \cite{Abbott:2004c} \\
@@ -619,37 +620,50 @@ TAMA300 DT8 & & & & \\
 $1.6\!\times\!10^{-3}$~year\super{-1}~$L_{10}^{-1}$ & \multirow{2}{*}{\cite{Abbott:2009g}} \\
  & (BH ring-downs) & & (in mass range 85--390~M$_{\odot}$) & \\
 \hline
-\multirow{6}{*}{LIGO S5} & \multirow{3}{*}{2--35} &  $\sim 30$
-& $1.4\!\times\!10^{-2}$~year\super{-1}~$L_{10}^{-1}$ (BNS) & \multirow{3}{*}{\cite{Abbott:2009e, Abbott:2009f}} \\
- & & $\sim 100$ & $7.3\!\times\!10^{-4}$~year\super{-1}~$L_{10}^{-1}$ (BBH) & \\
- & & $\sim 60$ & $3.6\!\times\!10^{-3}$~year\super{-1}~$L_{10}^{-1}$ (NSBH) & \\
- \cline{2-5}
- & \multirow{3}{*}{1--99 (BBH)} & \multirow{3}{*}{\ldots} & 2~Myr\super{-1}~Mpc\super{-3} & 
-\multirow{3}{*}{\cite{Abadie:2011a}} \\
- & & & (component masses less  & \\
- & & & than 19 and 28~M$_{\odot}$) & \\
- \hline
-& & \multirow{3}{*}{2--35} & \multirow{3}{*}{37 (BNS)} &
-$8.7\!\times\!10^{-3}$~year\super{-1}~$L_{10}^{-1}$ (BNS) & \multirow{3}{*}{\cite{Abadie:2010f}} \\
-LIGO S5/ & &  & $4.4\!\times\!10^{-4}$~year\super{-1}~$L_{10}^{-1}$ (BBH) & \\
-Virgo VSR1 & &  & $2.2\!\times\!10^{-3}$~year\super{-1}~$L_{10}^{-1}$ (NSBH) & \\
+\multirow{6}{*}{LIGO S5} & \multirow{3}{*}{2--35}       & $\sim 30$  & $1.4\!\times\!10^{-2}$~year\super{-1}~$L_{10}^{-1}$ (BNS)  & \multirow{3}{*}{\cite{Abbott:2009e, Abbott:2009f}} \\
+                         &                              & $\sim 100$ & $7.3\!\times\!10^{-4}$~year\super{-1}~$L_{10}^{-1}$ (BBH)  & \\
+                         &                              & $\sim 60$  & $3.6\!\times\!10^{-3}$~year\super{-1}~$L_{10}^{-1}$ (NSBH) & \\
 \cline{2-5}
- & 100--450 (IMBHB) & 241 (for two & \multirow{2}{*}{0.13~Myr\super{-1}~Mpc\super{-3}} & 
-\cite{2012PhRvD..85j2004A} \\
- & (mass ratios 1:1 to 4:1) & 88~M$_{\odot}$ objects) & & (using method \cite{2008CQGra..25k4029K}) \\
+                         & \multirow{3}{*}{1--99 (BBH)} & \multirow{3}{*}{\ldots} & 2~Myr\super{-1}~Mpc\super{-3} & \multirow{3}{*}{\cite{Abadie:2011a}} \\
+                         &                              &                         & (component masses less        & \\
+                         &                              &                         & than 19 and 28~M$_{\odot}$)   & \\
 \hline
-LIGO S6/     & \multirow{3}{*}{2--25}    & 40                         & 130~Myr\super{-1}~Mpc\super{-3} (BNS) & \multirow{3}{*}{\cite{2012PhRvD..85h2002A}} \\
-Virgo VSR2,3 &                           & 80                         & 31~Myr\super{-1}~Mpc\super{-3} (NSBH) & \\
+           & \multirow{3}{*}{2--35}   & \multirow{3}{*}{37 (BNS)} & $8.7\!\times\!10^{-3}$~year\super{-1}~$L_{10}^{-1}$ (BNS)  & \multirow{3}{*}{\cite{Abadie:2010f}} \\
+LIGO S5/   &                          &                           & $4.4\!\times\!10^{-4}$~year\super{-1}~$L_{10}^{-1}$ (BBH)  & \\
+Virgo VSR1 &                          &                           & $2.2\!\times\!10^{-3}$~year\super{-1}~$L_{10}^{-1}$ (NSBH) & \\
+\cline{2-5}
+           & 100--450 (IMBHB)         & 241 (for two              & \multirow{2}{*}{0.13~Myr\super{-1}~Mpc\super{-3}} & \multirow{2}{*}{\cite{2012PhRvD..85j2004A, 2008CQGra..25k4029K}} \\
+           & (mass ratios 1:1 to 4:1) & 88~M$_{\odot}$ objects)   &                                                   & \\
+\hline
+             & \multirow{3}{*}{2--25}    & 40                         & 130~Myr\super{-1}~Mpc\super{-3} (BNS) & \multirow{3}{*}{\cite{2012PhRvD..85h2002A}} \\
+             &                           & 80                         & 31~Myr\super{-1}~Mpc\super{-3} (NSBH) & \\
              &                           & 90                         & 6.4~Myr\super{-1}~Mpc\super{-3} (BBH) & \\
 \cline{2-5}
-             & \multirow{2}{*}{25--100}  & \multirow{2}{*}{$\sim300$} & 0.33~Myr\super{-1}~Mpc\super{-3} & \multirow{2}{*}{\cite{2013PhRvD..87b2002A}} \\
-             &                           &                            & (component masses between 19 and 28~M$_{\odot}$) & \\
+LIGO S6/     & \multirow{3}{*}{25--100}  & \multirow{3}{*}{$\sim300$} & 0.33~Myr\super{-1}~Mpc\super{-3} & \multirow{3}{*}{\cite{2013PhRvD..87b2002A}} \\
+Virgo VSR2,3 &                           &                            & (component masses between        & \\
+             &                           &                            & 19 and 28~M$_{\odot}$)           & \\
 \cline{2-5}
              & \multirow{2}{*}{100--450} & \multirow{2}{*}{$\sim200$} & 0.12~Myr\super{-1}~Mpc\super{-3} & \multirow{2}{*}{\cite{2014PhRvD..89l2003A}} \\
              &                           &                            & (two 88~M$_{\odot}$ objects) \\
 \hline
+LIGO/     & 50--450                 & \multirow{3}{*}{$\lesssim 600$} & $6.9\!\times\!10^{-2}$~Myr\super{-1}~Mpc\super{-3} & \multirow{3}{*}{\cite{2014PhRvD..89j2006A}} \\
+Virgo     & (IMBH ring-downs with)  &                                 & (in mass range                                     & \\
+2005-2011 & mass ratios 1:1 to 4:1) &                                 & 100--150~M$_{\odot}$                               & \\
+\hline
 \hline
 \end{longtable}
+\end{center}
+
+During the S6 run the data also contained a ``blind injection'' in which a simulated CBC signal was applied to the detector 
+without the knowledge of the wider collaboration, to provide a thorough test of the analysis methods and 
+detection proceedure. This signal was recovered in the two LIGO detectors, although nothing was seen in Virgo 
+above the threshold for determining search triggers \cite{2012PhRvD..85h2002A}.
+
+A thorough comparison between the CBC rate limits produced during the initial detector era with population 
+synthesis models can be found in \cite{2016ApJ...819..108B}.
+
+As a proof-of-principle, several candidate transient signals observed with LIGO S6 and Virgo VSR2/3 were followed-up with 
+electromagnetic observations \cite{2012A&A...539A.124L, 2012A&A...541A.155A, 2012ApJS..203...28E, 2014ApJS..211....7A}. 
 
 %The first search for an inspiral signal with data from the LIGO S1 run looked for compact object 
 %coalescences with component masses between $1$\,--\,$3\,M_{\odot}$ and was sensitive to such sources within 
@@ -712,39 +726,30 @@ Virgo VSR2,3 &                           & 80                         & 31~Myr\s
 %limit of 0.9 Mpc\super{-3}\,Myr\super{-1}, with the most stringent limit being 
 %0.13~Mpc\super{-3}\,Myr\super{-1} for two black holes of mass $88\,{\rm M}_{\odot}$. 
 
-Searches for CBC signals from low mass sources (total masses between $2$\,--\,$25\,M_{\odot}$) 
-\cite{2012PhRvD..85h2002A}, and specifically for the inspiral, merger and ring-down of BBH systems 
-\cite{2013PhRvD..87b2002A}, have been performed using LIGO S6 and Virgo VSR2/3 data. The low-mass search set 
-90\% limits on rates for BNS, NSBH and BBH systems of 1.3~\texttimes~10\super{-4}, 
-3.1~\texttimes~10\super{-5}, and 6.4~\texttimes~10\super{-6} per Mpc\super{-3} per year respectively. The 
-BBH-specific search targeted sources with total masses between $25$\,--\,$100\,M_{\odot}$, and was sensitive 
-to the merger of two $20~M_{\odot}$ black-holes out to a distance of 300~Mpc \cite{2013PhRvD..87b2002A}. The 
-S6 data also contained a ``blind injection'' in which a simulated CBC signal was applied to the detector 
-without the knowledge of the wider collaboration, to provide a thorough test of the analysis methods and 
-detection proceedure. This signal was recovered in the two LIGO detectors, although nothing was seen in Virgo 
-above the threshold for determining search triggers \cite{2012PhRvD..85h2002A}. As a proof-of-principle,
-several candidate transient signals observed with LIGO S6 and Virgo VSR2/3 were followed-up with 
-electromagnetic observations \cite{2012A&A...539A.124L, 2012A&A...541A.155A, 2012ApJS..203...28E, 
-2014ApJS..211....7A}. As with S5 and VSR1 data, S6 and SVR2/3 data was searched for IMBHB signals with the 
-same mass range and ratios as used previously \cite{2014PhRvD..89l2003A}. Again, the most stringent rate 
-limit was set for two $88\,{\rm M}_{\odot}$ black holes at a value of 0.12~Mpc\super{-3}\,Myr\super{-1}.
+%Searches for CBC signals from low mass sources (total masses between $2$\,--\,$25\,M_{\odot}$) 
+%\cite{2012PhRvD..85h2002A}, and specifically for the inspiral, merger and ring-down of BBH systems 
+%\cite{2013PhRvD..87b2002A}, have been performed using LIGO S6 and Virgo VSR2/3 data. The low-mass search set 
+%90\% limits on rates for BNS, NSBH and BBH systems of 1.3~\texttimes~10\super{-4}, 
+%3.1~\texttimes~10\super{-5}, and 6.4~\texttimes~10\super{-6} per Mpc\super{-3} per year respectively. The 
+%BBH-specific search targeted sources with total masses between $25$\,--\,$100\,M_{\odot}$, and was sensitive 
+%to the merger of two $20~M_{\odot}$ black-holes out to a distance of 300~Mpc \cite{2013PhRvD..87b2002A}.
+%As with S5 and VSR1 data, S6 and SVR2/3 data was searched for IMBHB signals with the 
+%same mass range and ratios as used previously \cite{2014PhRvD..89l2003A}. Again, the most stringent rate 
+%limit was set for two $88\,{\rm M}_{\odot}$ black holes at a value of 0.12~Mpc\super{-3}\,Myr\super{-1}.
 
-All initial LIGO and Virgo data collected between 2005 and 2011 was used to search for just the ring-down 
-signals from perturbed intermediate mass black holes (IMBHs) \cite{2014PhRvD..89j2006A}. The search targeted 
-systems for which total mass of the binary producing the perturbed IMBH was between 
-$50$\,--\,$450\,M_{\odot}$, and (similarly to \cite{2012PhRvD..85j2004A}) mass ratios of between 1:1 and 4:1. 
-The most stringent 90\% confidence rate upper limit was set for non-spinning, equal mass IMBH mergers with 
-total masses between $100$\,--\,$150\,M_{\odot}$, at 6.9~\texttimes~10\super{-8} per Mpc\super{-3} per year.
-
-A thorough comparison between the CBC rate limits produced during the initial detector era with population 
-synthesis models can be found in \cite{2016ApJ...819..108B}.
+%All initial LIGO and Virgo data collected between 2005 and 2011 was used to search for just the ring-down 
+%signals from perturbed intermediate mass black holes (IMBHs) \cite{2014PhRvD..89j2006A}. The search targeted 
+%systems for which total mass of the binary producing the perturbed IMBH was between 
+%$50$\,--\,$450\,M_{\odot}$, and (similarly to \cite{2012PhRvD..85j2004A}) mass ratios of between 1:1 and 4:1. 
+%The most stringent 90\% confidence rate upper limit was set for non-spinning, equal mass IMBH mergers with 
+%total masses between $100$\,--\,$150\,M_{\odot}$, at 6.9~\texttimes~10\super{-8} per Mpc\super{-3} per year.
 
 One other kind of modeled burst search is that looking for gravitational waves produced by cusps in cosmic 
-(super)strings. Two searches were performed for such signals, with initially just over two weeks of LIGO S4 
-data were used~\cite{Abbott:2009j}, whilst a later search used all initial LIGO and Virgo data between 2005 
-and 2010 \cite{2014PhRvL.112m1101A}. The latter search \cite{2014PhRvL.112m1101A} was used to constrain the 
-rate of signals and parameter space (string tension, reconnection probability, and loop sizes), and provided 
-more stringent limits on string loop size and tension than other methods over part of the parameter space.
+(super)strings. Two searches were performed for such signals, initially with just over two weeks of LIGO S4 
+data~\cite{Abbott:2009j}, whilst a later search used all initial LIGO and Virgo data between 2005 
+and 2010~\cite{2014PhRvL.112m1101A}. The latter search~\cite{2014PhRvL.112m1101A} was used to constrain the 
+rate of signals and parts of the string parameter space (string tension, reconnection probability, and loop sizes),
+and provided more stringent limits on string loop size and tension than other methods for part of the parameter space.
 
 \subsubsection{Externally-triggered burst searches}
 
