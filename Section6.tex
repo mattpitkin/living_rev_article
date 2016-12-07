@@ -757,70 +757,133 @@ searches have been performed to look for bursts coincident (temporally and spati
 electromagnetic triggers, such as GRBs observed by Swift for example. These searches have used both excess 
 power and modeled matched-filter methods to look for signals.
 
-During S2 a particularly bright $\gamma$-ray burst event (\epubtkSIMBAD{GRB~030329}) occurred and was 
-specifically targeted using data from H1 and H2. The search looked for signals with duration less than 
-$\sim$~150~ms and in the frequency range 80\,--\,2048~Hz~\cite{Abbott:2005d}. This produced a best strain 
-upper limit for an unpolarised signal around the most sensitive region at  $\sim$~250~Hz of 
-$h_{\mathrm{rss}}=6\times10^{-21} \mathrm{\ Hz}^{-1/2}$.
-
-For S4 there were two burst searches targeting specific sources. The first target was the hyperflare from the 
-Soft $\gamma$-ray Repeater \epubtkSIMBAD{SGR~1806--20} (SGRs are thought to be ``magnetars'', neutron stars 
+A summary of the results for externally triggered burst searches during the initial detector era is given in Table~\ref{tab:extrig}.
+Most searches are for counterparts to GRBs, although other triggers are associated with with flares in
+Soft $\gamma$-ray Repeaters (SGRs are thought to be ``magnetars'', neutron stars 
 with extremely large magnetic fields of order 10\super{15}~Gauss, see e.g.\ the review by 
-\cite{Mereghetti2008}) on 27 December 2004 \cite{Hurley:2005} (this actually occurred before S4 in a period 
-when only the H1 detector was operating). The search looked for signals at frequencies corresponding to short 
-duration quasi-periodic oscillations (QPOs) observed in the X-ray light curve following the 
-flare~\cite{Abbott:2007c}. The most sensitive 90\% upper limit was for the 92.5~Hz QPO at $h_{\mathrm{rss}} =
-4.5\times10^{-22} \mathrm{\ Hz}^{-1/2}$, which corresponds to an energy emission limit
-of $4.3\times10^{-8}\,M_{\odot}c^2$ (of the same order as the total electromagnetic emission assuming 
-isotropy). The other search used LIGO data from S2, S3 and S4 to look for signals associated with 39 short 
-duration $\gamma$-ray bursts (GRBs) that occurred in coincidence with these runs~\cite{Abbott:2008c}. The GRB 
-triggers were provided by IPN, Konus-Wind, HETE-2, INTEGRAL and Swift as distributed by the GRB
-Coordinate Network~\cite{GCN}. The search looked in a 180-second window around the burst peak time (120 
-seconds before and 60 seconds after) and for each burst there were at least two detectors
-contributing data. No signal coincident with a GRB was observed and the sensitivities were not enough to give 
-any meaningful astrophysical constraints, although simulations suggest that for S4, as in the general burst
-search, it would have been sensitive to sine-Gaussian signals out to tens of Mpc for an energy release of 
-order a solar mass.
+\cite{Mereghetti2008}) and pulsar glitches (which could excite neutron star oscillations~\cite{1998MNRAS.299.1059A}), radio transients,
+neutrino signals, and optical supernovae.
 
-The first search of Virgo data in coincidence with a GRB was performed on data from a commissioning run in 
-September 2005. The long duration \epubtkSIMBAD{GRB~050915a} was observed by Swift on 15 September 2005 and 
-Virgo data was used to search for an unmodelled burst in a window of 180 seconds around (120~s before and 
-60~s after) the GRB peak time~\cite{Acernese:2008a}. The search produced a strain upper limit of order 
-10\super{-20} in the frequency range 200\,--\,1500~Hz, but was mainly used as a test-bed for setting up the 
-methodology for future searches, including coincidence analysis with LIGO.
+\begin{longtable}{c|ccccc}
+\caption[Summary of externally triggered burst searches]{A summary of searches for transient gravitational wave signals
+triggered by external events (e.g. GRBs) using data from 
+the initial detector era. The search type listed specifies whether unmodelled or modelled (matched filter)
+searches were used. Limits on $h_{\mathrm{rss}}$ are generally 90\% confidence upper limits.}\label{tab:extrig} \\
+\hline
+Detectors/     & \multirow{2}{*}{Source(s)} & Search  & sensitivity & $h_{\mathrm{rss}}$     & \multirow{2}{*}{Ref.} \\
+observing runs &                            & type(s) & range (Mpc) & limit (Hz\super{-1/2}) & \\
+\hline
+\hline
+LIGO S2 & \epubtkSIMBAD{GRB~030329} & unmodelled & \ldots & $6\!\times\!10^{-21}$ & \cite{Abbott:2005d} \\
+\hline
+\multirow{2}{*}{LIGO S4} & \epubtkSIMBAD{SGR~1806--20}   & \multirow{2}{*}{unmodelled} & \multirow{2}{*}{\ldots} & \multirow{2}{*}{$4.5\!\times\!10^{-22}$} & \multirow{2}{*}{\cite{Abbott:2007c}} 
+\\
+                         & hyperflare~\cite{Hurley:2005} &                             &                         &                                          & \\
+\hline
+LIGO S2/ & 39 short & \multirow{2}{*}{unmodelled} & $\sim 10$s (for $\sim 1$~M$_{\odot}c^2$ & \multirow{2}{*}{\ldots} & \multirow{2}{*}{\cite{Abbott:2008c}} \\
+S3/S4    & GRBs     &                             & energy release)                         &                         & \\
+\hline
+Virgo (2005   & \multirow{2}{*}{\epubtkSIMBAD{GRB~050915a}} & \multirow{2}{*}{unmodelled} & \multirow{2}{*}{\ldots} & $\sim 10^{-20}$ & \multirow{2}{*}{\cite{Acernese:2008a}} \\
+commisioning) &                                             &                             &                         &                  & \\
+\hline
+\multirow{14}{*}{LIGO S5} & \epubtkSIMBAD{GRB~051103} \cite{2005GCN..4197....1G} & unmodelled \&   & \multicolumn{2}{c}{excluded BNS or NSBH}                        & 
+\multirow{3}{*}{\cite{2012ApJ...755....2A}} \\
+                         & (just prior to S5)                                   & modelled (CBC \& & \multicolumn{2}{c}{source in local galaxy \epubtkSIMBAD{M81}}& \\
+                         &                                                      & ringdown)        & \multicolumn{2}{c}{($\sim 3.6$~Mpc) at $\gtrsim 98\%$ confidence}         & \\
+\cline{2-6}
+                         & \epubtkSIMBAD{GRB~070201}                   & unmodelled \& & \multicolumn{2}{c}{excluded BNS source} & \multirow{3}{*}{\cite{Abbott:2008g}} \\
+                         & \cite{Golenetskii:2007a, Golenetskii:2007b} & modelled      & \multicolumn{2}{c}{in local galaxy \epubtkSIMBAD{M31} 
+at} & \\
+                         &                                             &               & \multicolumn{2}{c}{99\% confidence} & \\
+\cline{2-6}
+ & Vela pulsar & \multirow{2}{*}{modelled} & \multirow{2}{*}{\ldots} & $h_0$ limit                  & \cite{Abadie:2010a} \\
+ & glitch      &                           &                         & 0.6--1.4$\!\times\!10^{-20}$ & \\
+\cline{2-6}
+ & 191 SGR/AXP & \multirow{2}{*}{unmodelled} & \multicolumn{2}{c}{Energy limits between}                             & \multirow{2}{*}{\cite{Abbott:2008h}} \\  
+ & flares      &                             & \multicolumn{2}{c}{$3\!\times\!10^{45}$ \& $9\!\times\!10^{52}$~erg} & \\
+\cline{2-6}
+ & \epubtkSIMBAD{SGR~1900+14} & \multirow{2}{*}{unmodelled} & \multicolumn{2}{c}{Energy limits between} & \multirow{2}{*}{\cite{Abbott:2009c}} \\
+ & ``storm''                  &                             & \multicolumn{2}{c}{$2\!\times\!10^{45}$ \& $6\!\times\!10^{50}$~erg}   \\
+\cline{2-6}
+ & 50 GRBs & unmodelled           & 33 (for                       & \multirow{2}{*}{\ldots} & \multirow{2}{*}{\cite{2013PhRvD..88l2004A}} \\
+ & (long)  & (10--1000~s signals) &  $E \sim 0.1$~M$_{\odot}c^2$) &                         & \\
+\hline
+LIGO S5    & 137 GRBs        & \multirow{2}{*}{unmodelled} & $\sim 15$ (for                & \multirow{2}{*}{\ldots} & \multirow{2}{*}{\cite{Abbott:2009d}} \\
+Virgo VSR1 & (long \& short) &                             & $E \sim 0.01$~M$_{\odot}c^2$) &                         & \\
+\cline{2-6}
+           & 22 GRBs         & \multirow{2}{*}{modelled}   & 6.7        & \multirow{2}{*}{\ldots} & \multirow{2}{*}{\cite{Abadie:2010b}} \\
+           & (short)         &                             & (for NSBH) &                         & \\
+\cline{2-6}
 
-Data from the S5 run has been used to search for signals associated with even more $\gamma$-ray bursts. One 
-search looked specifically for emissions from \epubtkSIMBAD{GRB~070201}~\cite{Golenetskii:2007a, 
-Golenetskii:2007b}, which showed evidence of originating in the nearby Andromeda galaxy (\epubtkSIMBAD{M31}). 
-The data around the time of this burst was used to look for an unmodelled burst and an inspiral signal as 
-might be expected from a short GRB. The analysis saw no gravitational-wave event associated with the GRB, but 
-ruled out the event being a neutron-star--binary inspiral located in \epubtkSIMBAD{M31} with a 99\% confidence
-\cite{Abbott:2008g}. Again, assuming a neutron-star--binary inspiral, but located outside \epubtkSIMBAD{M31}, 
-the analysis set a 90\% confidence limit that the source must be at a distance greater than 3.5~Mpc. Assuming 
-a signal again located in M31, the unmodelled burst search set an upper limit on the energy emitted via
-gravitational waves of $4.4\times10^{-4}\,M_{\odot}c^2$, which was well within the allowable range for this 
-being an SGR hyper-flare in \epubtkSIMBAD{M31}.
+\hline
+\hline
+\end{longtable}
 
-Another GRB (\epubtkSIMBAD{GRB~051103} \cite{2005GCN..4197....1G}) happened just prior to S5, with a 
-potential association with the local galaxy \epubtkSIMBAD{M81} at a distance of $\approx$~3.6~Mpc. 
-Despite being a day before the start of S5 LIGO data from H2 and L1 were available to analyse. Three specific 
-search methods were applied for this source: an unmodelled burst search \cite{2010NJPh...12e3034S}, a method 
-designed for neutron star \textit{f}-mode ring-downs \cite{2007CQGra..24S.659K} (under the assumption that 
-the source is a magnetar), and a matched filter search for a CBC signal. The search excluded any associated
-gravitational wave signal from a BNS, or NSBH, at greater than 98\% confidence for a source truly located in 
-\epubtkSIMBAD{M81}.
+%During S2 a particularly bright $\gamma$-ray burst event (\epubtkSIMBAD{GRB~030329}) occurred and was 
+%specifically targeted using data from H1 and H2. The search looked for signals with duration less than 
+%$\sim$~150~ms and in the frequency range 80\,--\,2048~Hz~\cite{Abbott:2005d}. This produced a best strain 
+%upper limit for an unpolarised signal around the most sensitive region at  $\sim$~250~Hz of 
+%$h_{\mathrm{rss}}=6\times10^{-21} \mathrm{\ Hz}^{-1/2}$.
 
-Searches for 137 GRBs (both short and long GRBs) that were observed, mainly with the Swift satellite, during 
-S5 and VSR1 have been performed again using unmodelled burst methods~\cite{Abbott:2009d} and for (22 short 
-bursts) inspiral signals~\cite{Abadie:2010b}. No evidence for a gravitational-wave signal coincident with 
-these events was seen. The unmodeled burst observations were used to set lower limits on the distance to each 
-GRB, with typical limits, assuming isotropic emission, at
-$D\sim15\mathrm{\ Mpc}(E^{\mathrm{iso}}_{\mathrm{GW}}/0.01\,M_{\odot}c^2)^{1/2}$. The inspiral search, which 
-was sensitive to CBCs with total system masses between $2\,M_{\odot}$ and $40\,M_{\odot}$, was able to 
-exclude with 90\% confidence any bursts being neutron-star--black-hole mergers within 6.7~Mpc, although the 
-peak distance distribution of GRBs is well beyond this. A search specifically targeting long-lived 
-($\approx$~10--1000~s) unmodelled gravitational wave bursts coincident with long GRBs observed by 
-\textit{Swift} has also been performed using LIGO S5 data \cite{2013PhRvD..88l2004A}.
+%For S4 there were two burst searches targeting specific sources. The first target was the hyperflare from the 
+%Soft $\gamma$-ray Repeater \epubtkSIMBAD{SGR~1806--20} (SGRs are thought to be ``magnetars'', neutron stars 
+%with extremely large magnetic fields of order 10\super{15}~Gauss, see e.g.\ the review by 
+%\cite{Mereghetti2008}) on 27 December 2004 \cite{Hurley:2005} (this actually occurred before S4 in a period 
+%when only the H1 detector was operating). The search looked for signals at frequencies corresponding to short 
+%duration quasi-periodic oscillations (QPOs) observed in the X-ray light curve following the 
+%flare~\cite{Abbott:2007c}. The most sensitive 90\% upper limit was for the 92.5~Hz QPO at $h_{\mathrm{rss}} =
+%4.5\times10^{-22} \mathrm{\ Hz}^{-1/2}$, which corresponds to an energy emission limit
+%of $4.3\times10^{-8}\,M_{\odot}c^2$ (of the same order as the total electromagnetic emission assuming 
+%isotropy).
+%The other search used LIGO data from S2, S3 and S4 to look for signals associated with 39 short 
+%duration $\gamma$-ray bursts (GRBs) that occurred in coincidence with these runs~\cite{Abbott:2008c}. The GRB 
+%triggers were provided by IPN, Konus-Wind, HETE-2, INTEGRAL and Swift as distributed by the GRB
+%Coordinate Network~\cite{GCN}. The search looked in a 180-second window around the burst peak time (120 
+%seconds before and 60 seconds after) and for each burst there were at least two detectors
+%contributing data. No signal coincident with a GRB was observed and the sensitivities were not enough to give 
+%any meaningful astrophysical constraints, although simulations suggest that for S4, as in the general burst
+%search, it would have been sensitive to sine-Gaussian signals out to tens of Mpc for an energy release of 
+%order a solar mass.
+
+%The first search of Virgo data in coincidence with a GRB was performed on data from a commissioning run in 
+%September 2005. The long duration \epubtkSIMBAD{GRB~050915a} was observed by Swift on 15 September 2005 and 
+%Virgo data was used to search for an unmodelled burst in a window of 180 seconds around (120~s before and 
+%60~s after) the GRB peak time~\cite{Acernese:2008a}. The search produced a strain upper limit of order 
+%10\super{-20} in the frequency range 200\,--\,1500~Hz, but was mainly used as a test-bed for setting up the 
+%methodology for future searches, including coincidence analysis with LIGO.
+
+%Data from the S5 run has been used to search for signals associated with even more $\gamma$-ray bursts. One 
+%search looked specifically for emissions from \epubtkSIMBAD{GRB~070201}~\cite{Golenetskii:2007a, 
+%Golenetskii:2007b}, which showed evidence of originating in the nearby Andromeda galaxy (\epubtkSIMBAD{M31}). 
+%The data around the time of this burst was used to look for an unmodelled burst and an inspiral signal as 
+%might be expected from a short GRB. The analysis saw no gravitational-wave event associated with the GRB, but 
+%ruled out the event being a neutron-star--binary inspiral located in \epubtkSIMBAD{M31} with a 99\% confidence
+%\cite{Abbott:2008g}. Again, assuming a neutron-star--binary inspiral, but located outside \epubtkSIMBAD{M31}, 
+%the analysis set a 90\% confidence limit that the source must be at a distance greater than 3.5~Mpc. Assuming 
+%a signal again located in M31, the unmodelled burst search set an upper limit on the energy emitted via
+%gravitational waves of $4.4\times10^{-4}\,M_{\odot}c^2$, which was well within the allowable range for this 
+%being an SGR hyper-flare in \epubtkSIMBAD{M31}.
+
+%Another GRB (\epubtkSIMBAD{GRB~051103} \cite{2005GCN..4197....1G}) happened just prior to S5, with a 
+%potential association with the local galaxy \epubtkSIMBAD{M81} at a distance of $\approx$~3.6~Mpc. 
+%Despite being a day before the start of S5 LIGO data from H2 and L1 were available to analyse. Three specific 
+%search methods were applied for this source: an unmodelled burst search \cite{2010NJPh...12e3034S}, a method 
+%designed for neutron star \textit{f}-mode ring-downs \cite{2007CQGra..24S.659K} (under the assumption that 
+%the source is a magnetar), and a matched filter search for a CBC signal. The search excluded any associated
+%gravitational wave signal from a BNS, or NSBH, at greater than 98\% confidence for a source truly located in 
+%\epubtkSIMBAD{M81}.
+
+%Searches for 137 GRBs (both short and long GRBs) that were observed, mainly with the Swift satellite, during 
+%S5 and VSR1 have been performed again using unmodelled burst methods~\cite{Abbott:2009d} and for (22 short 
+%bursts) inspiral signals~\cite{Abadie:2010b}. No evidence for a gravitational-wave signal coincident with 
+%these events was seen. The unmodeled burst observations were used to set lower limits on the distance to each 
+%GRB, with typical limits, assuming isotropic emission, at
+%$D\sim15\mathrm{\ Mpc}(E^{\mathrm{iso}}_{\mathrm{GW}}/0.01\,M_{\odot}c^2)^{1/2}$. The inspiral search, which 
+%was sensitive to CBCs with total system masses between $2\,M_{\odot}$ and $40\,M_{\odot}$, was able to 
+%exclude with 90\% confidence any bursts being neutron-star--black-hole mergers within 6.7~Mpc, although the 
+%peak distance distribution of GRBs is well beyond this. A search specifically targeting long-lived 
+%($\approx$~10--1000~s) unmodelled gravitational wave bursts coincident with long GRBs observed by 
+%\textit{Swift} has also been performed using LIGO S5 data \cite{2013PhRvD..88l2004A}.
 
 As with the S5 analysis, data from S6 and VSR2/3 has been used to search for 154 GRBs using both modelled and 
 unmodelled methods \cite{2012ApJ...760...12A}. Searches have also been performed for a further 196 long and 27 
@@ -854,12 +917,13 @@ search~\cite{Abadie:2010c} gave the lowest gravitational-wave emission-energy up
 bursts in the detector-sensitive band, and for \textit{f}-mode ring-downs (at 1090~Hz), of 
 3.0~\texttimes~10\super{44}~erg and 1.4~\texttimes~10\super{47}~erg respectively, assuming a distance of
 1~kpc. The \textit{f}-mode energy limits approach the range seen emitted electromagnetically during giant 
-flares. One of these flares, on 29 March 2006, was actually a ``storm'' of many flares from
-\epubtkSIMBAD{SGR~1900+14}. For this event a more sensitive search has been performed by stacking data around 
-the time of each flare~\cite{Abbott:2009c}. Waveform dependent upper limits of the gravitational-wave energy 
-emitted were set between 2~\texttimes~10\super{45}~erg and 6~\texttimes~10\super{50}~erg, which are an order 
-of magnitude lower than the previous upper limit for this storm (included in the search 
-of~\cite{Abbott:2008h}) and overlap with the range of electromagnetic energies emitted in SGR giant flares.
+flares.
+%One of these flares, on 29 March 2006, was actually a ``storm'' of many flares from
+%\epubtkSIMBAD{SGR~1900+14}. For this event a more sensitive search has been performed by stacking data around 
+%the time of each flare~\cite{Abbott:2009c}. Waveform dependent upper limits of the gravitational-wave energy 
+%emitted were set between 2~\texttimes~10\super{45}~erg and 6~\texttimes~10\super{50}~erg, which are an order 
+%of magnitude lower than the previous upper limit for this storm (included in the search 
+%of~\cite{Abbott:2008h}) and overlap with the range of electromagnetic energies emitted in SGR giant flares.
 
 As well as electromagnetic signals there could be neutrino counterparts to gravitational wave signals. The 
 first such search for a coincidence used LIGO S5 and Virgo VSR1 data and neutrino signals observed with 
@@ -868,13 +932,13 @@ signals and the gravitational wave observations \cite{2013JCAP...06..008A}. Furt
 Virgo data between 2005 to 2010, and neutrino observations from the IceCube detector 
 \cite{2014PhRvD..90j2002A} have also been performed, with no coincidences seen \cite{2014PhRvD..90j2002A}.
 
-Another possible source of gravitational waves associated with electromagnetically-observed phenomenon are 
-pulsar glitches. During these it is possible that various gravitational-wave--emitting vibrational modes of 
-the pulsar may be excited \cite{1998MNRAS.299.1059A}. A search has been performed for fundamental modes 
-(\textit{f}-modes) in S5 data following a glitch observed in the timing of the \epubtkSIMBAD{Vela} pulsar in 
-August 2006~\cite{Abadie:2010a}. Over the search frequency range of 1\,--\,3~kHz this provided upper limits 
-on the peak strain of 0.6\,--\,1.4~\texttimes~10\super{-20} depending on the spherical harmonic that was 
-excited.
+%Another possible source of gravitational waves associated with electromagnetically-observed phenomenon are 
+%pulsar glitches. During these it is possible that various gravitational-wave--emitting vibrational modes of 
+%the pulsar may be excited \cite{1998MNRAS.299.1059A}. A search has been performed for fundamental modes 
+%(\textit{f}-modes) in S5 data following a glitch observed in the timing of the \epubtkSIMBAD{Vela} pulsar in 
+%August 2006~\cite{Abadie:2010a}. Over the search frequency range of 1\,--\,3~kHz this provided upper limits 
+%on the peak strain of 0.6\,--\,1.4~\texttimes~10\super{-20} depending on the spherical harmonic that was 
+%excited.
 
 The first search to specifically target gravitational wave emission from core-collapse supernovae was 
 performed with data from LIGO, Virgo and GEO600 between 2007 and 2011~\cite{2016arXiv160501785A}. Two 
