@@ -584,7 +584,6 @@ These results in Table~\ref{tab:cbc} are for searches spanning a range of source
 specifically targeting binary neutron star (BNS) systems, stellar-mass binary black hole (BBH) systems (in some cases these being
 low mass primordial black holes), neutron-star-black-hole (NSBH) systems, and intermediate mass black holes (IMBH) or binaries (IMBHB).
 
-\begin{center}
 \begin{longtable}{c|cccc}
 \caption[Summary of CBC searches]{A summary of searches for CBC gravitational wave signals using data from 
 the initial detector era. Rates are given as 90\% confidence upper limits, although the units can vary 
@@ -652,7 +651,6 @@ Virgo     & (IMBH ring-downs with)  &                                 & (in mass
 \hline
 \hline
 \end{longtable}
-\end{center}
 
 During the S6 run the data also contained a ``blind injection'' in which a simulated CBC signal was applied to the detector 
 without the knowledge of the wider collaboration, to provide a thorough test of the analysis methods and 
@@ -680,33 +678,63 @@ $\gamma$-ray bursts (GRBs) are potentially caused by black-hole and neutron-star
 \cite{2014ARA&A..52...43B} for a review of short GRBs). Joint observation of a source as both a gravitational 
 wave and electromagnetic event can also greatly increases the confidence in a detection. Therefore many
 searches have been performed to look for bursts coincident (temporally and spatially) with external 
-electromagnetic triggers, such as GRBs observed by Swift for example. These searches have used both excess 
+electromagnetic triggers, such as GRBs observed by e.g.\ IPN, Konus-Wind, HETE-2, INTEGRAL and Swift as distributed by the GRB
+Coordinate Network~\cite{GCN}. These searches have used both unmodelled excess 
 power and modeled matched-filter methods to look for signals.
 
-During S2 a particularly bright $\gamma$-ray burst event (\epubtkSIMBAD{GRB~030329}) occurred and was 
-specifically targeted using data from H1 and H2. The search looked for signals with duration less than 
-$\sim$~150~ms and in the frequency range 80\,--\,2048~Hz~\cite{Abbott:2005d}. This produced a best strain 
-upper limit for an unpolarised signal around the most sensitive region at  $\sim$~250~Hz of 
-$h_{\mathrm{rss}}=6\times10^{-21} \mathrm{\ Hz}^{-1/2}$.
-
-For S4 there were two burst searches targeting specific sources. The first target was the hyperflare from the 
-Soft $\gamma$-ray Repeater \epubtkSIMBAD{SGR~1806--20} (SGRs are thought to be ``magnetars'', neutron stars 
+A summary of the results for externally triggered burst searches during the initial detector era is given in Table~\ref{tab:extrig}.
+Most searches are for counterparts to GRBs, whilst is some cases that are searches associated with flares in
+Soft $\gamma$-ray Repeaters (SGRs are thought to be ``magnetars'', neutron stars 
 with extremely large magnetic fields of order 10\super{15}~Gauss, see e.g.\ the review by 
-\cite{Mereghetti2008}) on 27 December 2004 \cite{Hurley:2005} (this actually occurred before S4 in a period 
-when only the H1 detector was operating). The search looked for signals at frequencies corresponding to short 
-duration quasi-periodic oscillations (QPOs) observed in the X-ray light curve following the 
-flare~\cite{Abbott:2007c}. The most sensitive 90\% upper limit was for the 92.5~Hz QPO at $h_{\mathrm{rss}} =
-4.5\times10^{-22} \mathrm{\ Hz}^{-1/2}$, which corresponds to an energy emission limit
-of $4.3\times10^{-8}\,M_{\odot}c^2$ (of the same order as the total electromagnetic emission assuming 
-isotropy). The other search used LIGO data from S2, S3 and S4 to look for signals associated with 39 short 
-duration $\gamma$-ray bursts (GRBs) that occurred in coincidence with these runs~\cite{Abbott:2008c}. The GRB 
-triggers were provided by IPN, Konus-Wind, HETE-2, INTEGRAL and Swift as distributed by the GRB
-Coordinate Network~\cite{GCN}. The search looked in a 180-second window around the burst peak time (120 
-seconds before and 60 seconds after) and for each burst there were at least two detectors
-contributing data. No signal coincident with a GRB was observed and the sensitivities were not enough to give 
-any meaningful astrophysical constraints, although simulations suggest that for S4, as in the general burst
-search, it would have been sensitive to sine-Gaussian signals out to tens of Mpc for an energy release of 
-order a solar mass.
+\cite{Mereghetti2008}).
+
+\begin{longtable}{c|ccccc}
+\caption[Summary of externally triggered burst searches]{A summary of searches for transient gravitational wave signals
+triggered by external events (e.g. GRBs) using data from 
+the initial detector era. The search type listed specifies whether unmodelled or modelled (matched filter)
+searches were used. Limits on $h_{\mathrm{rss}}$ are generally 90\% confidence upper limits.}\label{tab:extrig} \\
+\hline
+Detectors/     & \multirow{2}{*}{Source(s)} & Search  & sensitivity & $h_{\mathrm{rss}}$     & \multirow{2}{*}{Ref.} \\
+observing runs &                            & type(s) & range (Mpc) & limit (Hz\super{-1/2}) & \\
+\hline
+\hline
+LIGO S2 & \epubtkSIMBAD{GRB~030329} & unmodelled & \ldots & $6\!\times\!10^{-21}$ & \cite{Abbott:2005d} \\
+\hline
+\multirow{2}{*}{LIGO S4} & \epubtkSIMBAD{SGR~1806--20}   & \multirow{2}{*}{unmodelled} & \multirow{2}{*}{\ldots} & \multirow{2}{*}{$4.5\!\times\!10^{-22}$} & \multirow{2}{*}{\cite{Abbott:2007c}} 
+\\
+                         & hyperflare~\cite{Hurley:2005} &                             &                         &                                          & \\
+\hline
+LIGO S2/ & 39 short & \multirow{2}{*}{unmodelled} & $\sim 10$s (for $\sim 1$~M$_{\odot}c^2$ & \multirow{2}{*}{\ldots} & \multirow{2}{*}{\cite{Abbott:2008c}} \\
+S3/S4    & GRBs     &                             & energy release)                         &                         & \\
+\hline
+\hline
+\end{longtable}
+
+%During S2 a particularly bright $\gamma$-ray burst event (\epubtkSIMBAD{GRB~030329}) occurred and was 
+%specifically targeted using data from H1 and H2. The search looked for signals with duration less than 
+%$\sim$~150~ms and in the frequency range 80\,--\,2048~Hz~\cite{Abbott:2005d}. This produced a best strain 
+%upper limit for an unpolarised signal around the most sensitive region at  $\sim$~250~Hz of 
+%$h_{\mathrm{rss}}=6\times10^{-21} \mathrm{\ Hz}^{-1/2}$.
+
+%For S4 there were two burst searches targeting specific sources. The first target was the hyperflare from the 
+%Soft $\gamma$-ray Repeater \epubtkSIMBAD{SGR~1806--20} (SGRs are thought to be ``magnetars'', neutron stars 
+%with extremely large magnetic fields of order 10\super{15}~Gauss, see e.g.\ the review by 
+%\cite{Mereghetti2008}) on 27 December 2004 \cite{Hurley:2005} (this actually occurred before S4 in a period 
+%when only the H1 detector was operating). The search looked for signals at frequencies corresponding to short 
+%duration quasi-periodic oscillations (QPOs) observed in the X-ray light curve following the 
+%flare~\cite{Abbott:2007c}. The most sensitive 90\% upper limit was for the 92.5~Hz QPO at $h_{\mathrm{rss}} =
+%4.5\times10^{-22} \mathrm{\ Hz}^{-1/2}$, which corresponds to an energy emission limit
+%of $4.3\times10^{-8}\,M_{\odot}c^2$ (of the same order as the total electromagnetic emission assuming 
+%isotropy).
+%The other search used LIGO data from S2, S3 and S4 to look for signals associated with 39 short 
+%duration $\gamma$-ray bursts (GRBs) that occurred in coincidence with these runs~\cite{Abbott:2008c}. The GRB 
+%triggers were provided by IPN, Konus-Wind, HETE-2, INTEGRAL and Swift as distributed by the GRB
+%Coordinate Network~\cite{GCN}. The search looked in a 180-second window around the burst peak time (120 
+%seconds before and 60 seconds after) and for each burst there were at least two detectors
+%contributing data. No signal coincident with a GRB was observed and the sensitivities were not enough to give 
+%any meaningful astrophysical constraints, although simulations suggest that for S4, as in the general burst
+%search, it would have been sensitive to sine-Gaussian signals out to tens of Mpc for an energy release of 
+%order a solar mass.
 
 The first search of Virgo data in coincidence with a GRB was performed on data from a commissioning run in 
 September 2005. The long duration \epubtkSIMBAD{GRB~050915a} was observed by Swift on 15 September 2005 and 
@@ -1011,7 +1039,7 @@ LIGO/GEO600 S1 & \epubtkSIMBAD{PSR~J1939+2134} & $1.4\!\times\!10^{-22}$ & $2.9\
 \multirow{2}{*}{\cite{Abbott:2010a}} \\
  & & (PSR~J1602$-$7202) & (J2124$-$3358) & (Crab pulsar) & \\
 \cline{2-6}
- & 115 & \multicolumn{3}{c}{\multirow{2}{*}{looking for non-GR polarisations}} &
+ & \multirow{2}{*}{115} & \multicolumn{3}{c}{\multirow{2}{*}{looking for non-GR polarisations}} &
 \multirow{2}{*}{\cite{2015PhRvD..91h2002I}} \\
  & & & & & \\
 \cline{2-6}
