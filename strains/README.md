@@ -27,6 +27,8 @@ The LIGO O1 strain is the H1 strain curve from 24 Oct 2015 taken from [here](htt
 
 The script [plotruntimes.py](plotruntimes.py) generates a plot of the timeline of the initial detector era.
 
-The Einstein Telescope ([ET-D](ET_D_data.txt)) sensitivity curve is taken from [here](http://www.et-gw.eu/etsensitivities) and is defined in  [S. Hild _et al._, Classical and Quantum Gravity, Volume 28, 094013, 2011](http://iopscience.iop.org/article/10.1088/0264-9381/28/9/094013/meta).
+The Einstein Telescope ([ET-B](ET_B_data.txt), [ET-C](ET_C_data.txt) and [ET-D](ET_D_data.txt)) sensitivity curves are taken from [here](http://www.et-gw.eu/etsensitivities) and is defined in  [S. Hild _et al._, Classical and Quantum Gravity, Volume 28, 094013, 2011](http://iopscience.iop.org/article/10.1088/0264-9381/28/9/094013/meta).
+
+The "Cosmic Explorer" curve is taken from [B. Abbott _et al._, arXiv:1607.08697](https://arxiv.org/abs/1607.08697), and the actual curve can be found [here](https://dcc.ligo.org/LIGO-P1600143/public).
 
 The KAGRA curve is taken from equation 5 of [this article](https://arxiv.org/abs/1202.4031).
