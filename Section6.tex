@@ -77,7 +77,7 @@ merger rates, based on the known population of BNS systems, give a 95\% confiden
 1\,--\,1000~\texttimes~10\super{-6} per year per Milky Way Equivalent Galaxy (MWEG) \cite{Abadie:2010e, 
 Kalogera:2004a, Kalogera:2004b} (or potentially a factor of a few lower \cite{2015MNRAS.448..928K, 
 2016ApJ...819..108B}), where MWEG is equivalent to a volume that contains a blue light luminosity with $L = 
-9\times10^9\,L_{\odot}$ (MWEG was used in the S1 and S2 LIGO search, but was then changed to the $L_{10}$ 
+9\texttimes10\super{9}~L$_{\odot}$ (MWEG was used in the S1 and S2 LIGO search, but was then changed to the $L_{10}$ 
 unit, where $L_{10}$ is given as 10\super{10} times the blue-light luminosity of the Sun, although there is 
 only a 10\% difference between the two), with a peak in the distribution at 100~\texttimes~10\super{-6} per 
 year per MWEG -- or $\approx$~0.02 observable signals per year for initial LIGO at design sensitivity. The 
@@ -89,7 +89,7 @@ OShaughnessy:2008, Abbott:2008a}. As an example of how to convert from rates to 
 blue-light luminosities with respect to distance from the Earth in Mpcs, and the horizon distances of the LIGO 
 detectors from S2 through to S4, can be seen in Figure~3 of~\cite{Abbott:2008a}. However, for black-hole 
 binary systems we are now able to directly constrain the true rate using the sources observed by LIGO 
-\cite{2016arXiv160604856T}, which give conservative constraints of 2\,--\,600\,Gpc$^{-3}$\,yr$^{-1}$ 
+\cite{2016arXiv160604856T}, which give conservative constraints of 2\,--\,600~Gpc$^{-3}$~yr$^{-1}$ 
 \cite{2016arXiv160203842T}.}. A timeline, including estimated sensitivities, for the start of the advanced 
 detector era, along with updated signal rate estimates for coalescing binary neutron star systems is given 
 in \cite{lrr-2016-1}. However, in general, when at design sensitivity, the second generation detectors (see 
@@ -1013,17 +1013,10 @@ binary neutron star systems was $\sim 70$~Mpc~\cite{2016ApJ...832L..21A}, making
 to these sources than the best values achieved during S6~\cite{2012PhRvD..85h2002A}. The sensitivity curve during O1
 can be seen in Figure~\ref{fig:advcurves}.
 
-The second observing run of aLIGO (O2) began on 30 November 2016 and is currently underway at the time of writing this
-article.
-
 Instrumentation designed for a third aLIGO detector is now planned to be incorporated into
 a LIGO detector in India (LIGO-India) by the IndIGO Consortium~\cite{LIGOIndia, 2013IJMPD..2241010U}. LIGO-India
 gained `in principle' approval by the Indian government in February 2016, with site selection
 currently being finalised.
-
-Looking further into the future some work has been done on upgrading aLIGO to enhance its sensitivity within
-the constraints of the current observatories~\cite{2015PhRvD..91f2005M}, such as through the introduction
-of squeezed light.
 
 \subsubsection{Advanced Virgo}
 
@@ -1076,50 +1069,26 @@ transient sources waveform and polarisation.
 
 At 09:50:45 UTC on 14 September 2015 a gravitational wave signal from two coalescing black holes swept 
 over the Earth. This signal was picked up by the two LIGO detectors, with a $\sim 7$~ms delay between 
-arriving at the L1 detector and H1 detector~\cite{GW150914}. The signal (known as GW150914) had a coherent signal-to-noise 
+arriving at the L1 detector and H1 detector~\cite{GW150914}. The signal (known as GW150915) had a coherent signal-to-noise 
 ratio of 25 \cite{2016PhRvL.116x1102A}, was strong enough to be easily visually identifiable in spectrograms 
 and high-pass-and-notch-filtered time series of the data. This represented the first undeniable direct observation of 
 gravitational waves and validated the use of large-scale interferometric methods for their detection. The strength of
 the signal, and the unexpectedly high masses, meant it was first picked up by online unmodelled burst algorithms~\cite{2016PhRvD..93l2004A},
 although offline CBC-specific (see Section~\ref{sec:cbc}) searches~\cite{2016CQGra..33u5004U, 2016arXiv160404324M} were used to assess
 the final (greater than $5\sigma$) significance of the signal.
-The source was found to consist of two black holes with masses of 36 and 29~M$_{\odot}$ merging to form a
-final spinning black hole with a mass 62~M$_{\odot}$, and at a distance of 410~Mpc (where quoted values are the medians
-of the posterior probability distributions of the parameters)~\cite{2016PhRvL.116x1102A}. The meant that during the merger
-approximately 3~M$_{\odot}c^2$ of energy was radiated as gravitational waves. No deviations from the predictions of
-General Relativity were observed in the signal~\cite{2016PhRvL.116v1101A}. The observation has also allowed constraints on a
-stochastic background of BBH sources, which gives a prediction of such sources contributing an energy density spectrum of
-$\Omega_{\rm gw} \sim 10^{-9}$ at 25~Hz~\cite{2016PhRvL.116m1102A}. A nice derivation of some of the source properties
-from basic physics arguments is given in~\cite{basicphys}.
+The source was found to consist of two black holes with median masses of 36 and 29~M$_{\odot}$ merging to form a
+final spinning black hole of median mass 62~M$_{\odot}$, and at a median distance of 410~Mpc~\cite{2016PhRvL.116x1102A}.
+No deviations from predictions of General Relativity were found with the signal~\cite{2016PhRvL.116v1101A}.
 
-GW150914 was followed up with electromagnetic observations~\cite{2016ApJ...826L..13A}, and coincident neutrino triggers were searched
-for in ANTARES and IceCube data~\cite{2016PhRvD..93l2010A}. No convincing counterpart was found.
-
-A second confirmed signal was picked up at 03:38:53 UTC on December 26, 2015~\cite{GW151226}. This signal (known as GW151226)
+A second confirmed signal was picked up at 03:38:53 UTC on December 26, 2015~\cite{GW151226}. This signal
 was longer, but with a lower peak amplitude than the initial detection, and was thus not readily visible in the data, but
-was picked up by search algorithms looking for CBC signals~\cite{2016arXiv160404324M}. The signal was again found
-to be from a binary black hole system with masses of $sim 14$ and $\sim 8$~M$_{\odot}$, and a distance of 440~Mpc (again quoting
-median values)~\cite{GW151226}. A third potential signal (dubbed LVT151012), with an $\sim 90\%$ probability of being astrophysical was
-also observed during the run. If real this signal again points to its origin as a binary black hole merger. 
-
-A description of the search for BBH signals in the whole of O1 is given in~\cite{2016PhRvX...6d1015A}. This also discusses some of the
-astrophysical implications of all the observations, and further tests of General Relativity using all observed signals. The rate of
-BBH mergers has been constrained with these observations to be 9--240~Gpc\super{-3}~yr\super{-1} (see also \cite{rates, ratessup} for the rate
-estimate using just GW150914 and the rate calculation method).
-
-So far O1 data has also been searched for signals from BNS and NSBH mergers~\cite{2016ApJ...832L..21A}. No signals from
-those sources were observed, although sensitivities were good enough to give observable (angle-averaged) ranges of 70~Mpc
-and 110~Mpc for BNS and NSBH systems respectively. This also set rates limits of 12\,600~Gpc\super{-3}~yr\super{-1} and
-3\,600~Gpc\super{-3}~yr\super{-1} for BNS and NSBH systems respectively.
-
-Searches for other sources, such as Galactic rotating neutron stars and stochastic backgrounds are also being performed using
-O1 data. Analysis of data from the the currently underway O2 run are also being performed.
+was picked up by search algorithms looking for CBC signals.
 
 \subsection{Third-generation detectors}
 \label{subsec:et} 
 
-Currently design studies are under way for third-generation gravitational-wave
-observatories. A European initiative towards this is the Einstein Telescope (ET)~\cite{ETweb}. This is a European
+Currently design studies are under way for a third-generation gravitational-wave
+observatory called the Einstein Telescope (ET)~\cite{ETweb}. This is a European
 Commission funded study with working groups looking into various aspects of the
 design including the site location and characteristics (e.g.\, underground),
 suspensions technologies; detector topology and geometry (e.g.\, an equilateral
@@ -1134,10 +1103,10 @@ Investigations into the interferometric configuration have already been studied
 triple interferometer system made up from an equilateral triangle, an
 underground location, and potentially a xylophone configuration (two independent
 detectors covering different frequency ranges, i.e., ultimately giving six
-detectors in total, although constructed over a period of years).
+detectors in total, although constructed over a period of years). Three
+potential sensitivity curves are plotted in Figure~\ref{fig:etsens} for different
+configurations of detectors.
 
-Another third-generation design, dubbed ``Cosmic Explorer'', has also been proposed~\cite{2016arXiv160708697A, 2015PhRvD..91h2001D}.
-This would aim to have 40~km arms and be more sensitive than ET designs above $\sim 10$~Hz.
-
-Three potential ET sensitivity curves and the ``Cosmic Explorer'' sensitivity curve are plotted in
-Figure~\ref{fig:etsens}.
+Another third-generation design, dubbed ``Cosmic Explorer'', has also been proposed~\cite{2016arXiv160708697A}.
+This would aim to have 40~km arms and be more sensitive than ET designs, particularly at lower
+frequencies.
