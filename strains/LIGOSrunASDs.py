@@ -29,13 +29,13 @@ fig = pl.figure(figsize=(12,9))
 ax = pl.gca()
 
 # files containing strains
-strainfiles = {'S1': 'S1/llo_020907_strain.txt',
-               'S2': 'S2/llo_030301_strain.txt',
-               'S3': 'S3/lho4k_040104_strain.txt',
-               'S4': 'S4/lho4k_050226_strain.txt',
-               'S5': 'S5/lho4k_070318_strain.txt',
-               'S6': 'S6/lho4k_15May2010_05hrs17min45secUTC_strain.txt',
-               'SRD': 'LIGO_4k_SRD.txt'}
+strainfiles = {'S1': 'S1/llo_020907_strain.txt.gz',
+               'S2': 'S2/llo_030301_strain.txt.gz',
+               'S3': 'S3/lho4k_040104_strain.txt.gz',
+               'S4': 'S4/lho4k_050226_strain.txt.gz',
+               'S5': 'S5/lho4k_070318_strain.txt.gz',
+               'S6': 'S6/lho4k_15May2010_05hrs17min45secUTC_strain.txt.gz',
+               'SRD': 'LIGO_4k_SRD.txt.gz'}
 
 # colours for plotting strains (use colourblind friendly palettes e.g. http://mkweb.bcgsc.ca/biovis2012/color-blindness-palette.png)
 colors = {'S1': (36/255, 1, 36/255), 'S2': (146/255, 0, 0), 'S3': (109/255, 182/255, 1), 'S4': (73/255, 0, 146/255), 'S5': (1, 109/155, 182/255), 'S6': (0, 146/255, 146/255), 'SRD': 'k'}
