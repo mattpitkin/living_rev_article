@@ -31,9 +31,9 @@ fig = pl.figure(figsize=(12,9))
 ax = pl.gca()
 
 # files containing strains
-strainfiles = {'aLIGO': 'aligo_sensitivity.txt',
-               'AdvV': 'adv_sensitivity.txt',
-               'O1': 'O1/H1_O1_strain.txt'}
+strainfiles = {'aLIGO': 'aligo_sensitivity.txt.gz',
+               'AdvV': 'adv_sensitivity.txt.gz',
+               'O1': 'O1/H1_O1_strain.txt.gz'}
 
 # colours for plotting strains (use colourblind friendly palettes e.g. http://mkweb.bcgsc.ca/biovis2012/color-blindness-palette.png)
 colors = {'aLIGO': (36/255, 1, 36/255), 'AdvV': (109/255, 182/255, 1), 'KAGRA': (73/255, 0, 146/255), 'O1': (219/255, 109/255, 0)}
