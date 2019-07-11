@@ -31,10 +31,10 @@ fig = pl.figure(figsize=(12,9))
 ax = pl.gca()
 
 # files containing strains
-strainfiles = {'ETB': 'ET_B_data.txt',
-               'ETC': 'ET_C_data.txt',
-               'ETD': 'ET_D_data.txt',
-               'CE': 'cosmic_explorer.txt'}
+strainfiles = {'ETB': 'ET_B_data.txt.gz',
+               'ETC': 'ET_C_data.txt.gz',
+               'ETD': 'ET_D_data.txt.gz',
+               'CE': 'cosmic_explorer.txt.gz'}
 
 # colours for plotting strains (use colourblind friendly palettes e.g. http://mkweb.bcgsc.ca/biovis2012/color-blindness-palette.png)
 colors = {'ETB': (36/255, 1, 36/255), 'ETC': (109/255, 182/255, 1), 'ETD': (73/255, 0, 146/255), 'CE': (219/255, 109/255, 0)}
