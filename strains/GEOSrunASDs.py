@@ -29,16 +29,16 @@ fig = pl.figure(figsize=(12,9))
 ax = pl.gca()
 
 # S1-S5 strain file
-strains = np.loadtxt('GEOallruns.txt', comments='%')
+strains = np.loadtxt('GEOallruns.txt.gz', comments='%')
 allstrains = {'S1': strains[:,[0,1]],
               'S3I': strains[:,[0,2]],
               'S3II': strains[:,[0,3]],
               'S4': strains[:,[0,4]],
               'S5': strains[:,[0,5]],
               'S52': strains[:,[0,6]],
-              'S6': np.loadtxt('S6/GEO_s6_sens.txt'),   # S6 strain file
-              'S6e': np.loadtxt('S6/GEO_s6e_sens.txt'), # S6E strain file
-              'SRD': np.loadtxt('GEOdesign_550HzSRC.txt', comments='%')}
+              'S6': np.loadtxt('S6/GEO_s6_sens.txt.gz'),   # S6 strain file
+              'S6e': np.loadtxt('S6/GEO_s6e_sens.txt.gz'), # S6E strain file
+              'SRD': np.loadtxt('GEOdesign_550HzSRC.txt.gz', comments='%')}
 
 # colours for plotting strains (use colour blind friendly palettes e.g. http://mkweb.bcgsc.ca/biovis2012/color-blindness-palette.png)
 colors = {'S1': (36/255, 1, 36/255), 'S3I': (219/255, 109/255, 0), 'S3II': (146/255, 0, 0), 'S4': (182/255, 109/255, 1), 'S5': (0, 109/255, 219/255), 'S52': (73/255, 0, 146/255), 'S6': (1, 109/255, 182/255), 'S6e': (0, 146/255, 146/255), 'SRD': 'k'}
