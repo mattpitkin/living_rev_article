@@ -29,13 +29,13 @@ fig = pl.figure(figsize=(12,9))
 ax = pl.gca()
 
 # files containing strains
-strainfiles = {'WSR1': 'S5/VIRGOWSR1.txt',
-               'WSR10': 'S5/VIRGOWSR10.txt',
-               'VSR1': 'S5/VIRGOVSR1.txt',
-               'VSR2': 'S6/SensitivityH_VSR2_091020.txt',
-               'VSR3': 'S6/Sensitivity_VSR3_20100916_5Mpc.txt',
-               'VSR4': 'S6/Sensitivity_VSR4_20110805_11d8Mpc.txt',
-               'SRD': 'VIRGO_DesignSensitivityH.txt'}
+strainfiles = {'WSR1': 'S5/VIRGOWSR1.txt.gz',
+               'WSR10': 'S5/VIRGOWSR10.txt.gz',
+               'VSR1': 'S5/VIRGOVSR1.txt.gz',
+               'VSR2': 'S6/SensitivityH_VSR2_091020.txt.gz',
+               'VSR3': 'S6/Sensitivity_VSR3_20100916_5Mpc.txt.gz',
+               'VSR4': 'S6/Sensitivity_VSR4_20110805_11d8Mpc.txt.gz',
+               'SRD': 'VIRGO_DesignSensitivityH.txt.gz'}
 
 # colours for plotting strains (use colour blind friendly palettes e.g. http://mkweb.bcgsc.ca/biovis2012/color-blindness-palette.png)
 colors = {'WSR1': (36/255, 1, 36/255), 'WSR10': (219/255, 209/255, 0), 'VSR1': (146/255, 0, 0), 'VSR2': (73/255, 0, 146/255), 'VSR3': (1, 109/255, 182/255), 'VSR4': (0, 146/255, 146/255), 'SRD': 'k'}
